@@ -52,6 +52,7 @@ enum layers {
 #define RALT_F9  RALT(KC_F9)
 
 #define RALT_P   RALT(KC_P)
+#define RALT_B   RALT(KC_B)
 #define RALT_EN  RALT(KC_ENT)
 
 #define RALT_H   RALT(KC_H)
@@ -129,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      // yY       xX       cC       vV       bB       nN       mM       ,;       .:       -_ 
         CH_Y,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  CH_MINS,
 
-                          LA_NAV, KC_LSFT, KC_CAPS,  KC_SPC,  LA_NUM,  LA_DWM
+                          LA_NAV, KC_LSFT, KC_CAPS,  KC_SPC,  LA_NUM,  KC_ALGR
     ),
 
     [NUM] = LAYOUT_split_3x5_3(
@@ -147,31 +148,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [NAV] = LAYOUT_split_3x5_3(
+                 
+        KC_F10,  KC_F6,   KC_F5,   KC_F4,   XXXXXXX,  XXXXXXX, S_TAB,   KC_TAB,  KC_HOME, KC_END, 
 
-        SW_WIN,  KC_HOME, KC_END,  KC_MUTE, KC_VOLD, KC_VOLU, S_TAB,   KC_TAB,  XXXXXXX, QK_BOOT,
+        KC_F11,  KC_F3,   KC_F2,   KC_F1,   XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
 
-        OS_SHFT, OS_CTRL, OS_ALT,  OS_CMD,  KC_PSCR, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
-
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S_LEFT,  S_DOWN,  S_UP,    S_RGHT,  XXXXXXX,
+        KC_F12,  KC_F9,   KC_F8,   KC_F7,   QK_BOOT,  KC_PSCR, OS_CMD,  OS_SHFT, OS_ALT,  OS_CTRL, 
 
                           _______, _______, _______, _______, _______, _______
     ),
 
-    // currently unused (identical to DEF) 
     [EXT] = LAYOUT_split_3x5_3(
 
-     // qQ       wW       eE       rR       tT       zZ       uU       iI       oO       pP
-        KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    CH_Z,    KC_U,    KC_I,    KC_O,    KC_P,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S_TAB,   XXXXXXX, XXXXXXX,   
 
-     // aA       sS       dD       fF       gG       hH       jJ       kK       lL       nN
-        KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,   
 
-     // yY       xX       cC       vV       bB       nN       mM       ,;       .:       -_ 
-        CH_Y,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  CH_MINS,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_MUTE, KC_VOLD, KC_VOLU, SW_WIN,  
 
                           _______, _______, _______, _______, _______, _______
     ),
 
+    // currently unused 
     [DWM] = LAYOUT_split_3x5_3(
 
         RALT_F1, RALT_F2, RALT_F3, RALT_F4, RALT_F5, RALT_F6, RALT_F7, RALT_F8, RALT_F9, RALT_P,
@@ -187,7 +185,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
     case LA_NUM:
-    case LA_NAV:
+    // case LA_NAV:
         return true;
     default:
         return false;
