@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "swapper.h"
 
 enum layers {
-  DEF, // including shifted keycodes
+  DEF, // including shifted keycodes 
   NUM, // including shifted keycodes
   NAV,
   EXT,
