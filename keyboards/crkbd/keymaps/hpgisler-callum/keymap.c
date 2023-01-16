@@ -130,30 +130,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      // yY       xX       cC       vV       bB       nN       mM       ,;       .:       -_ 
         CH_Y,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  CH_MINS,
 
-                          LA_NAV, KC_LSFT, KC_CAPS,  KC_SPC,  LA_NUM,  KC_ALGR
+                          LA_NAV, KC_LSFT,  KC_CAPS, KC_SPC,  LA_NUM,  KC_ALGR
     ),
 
     [NUM] = LAYOUT_split_3x5_3(
 
-     // üè       6&       5%       4- ko    '?       |! ko    /\ ko    [{ ko    ]} ko    
-        CH_UDIA, KC_6,    KC_5,    KC_4,    CH_QUOT, CH_PIPE, CH_SLSH, CH_LBRC, CH_RBRC, KC_DEL, 
+     // üè       4- ko    5%       6&       #@ ko    |! ko    /\ ko    [{ ko    ]} ko
+        CH_UDIA, KC_4,    KC_5,    KC_6,    CH_HASH, CH_PIPE, CH_SLSH, CH_LBRC, CH_RBRC, KC_DEL,
 
-     // äà       3*       2"       1+       #@ ko    ~        0=       $( ko    BSPC) ko
-        CH_ADIA, KC_3,    KC_2,    KC_1,    CH_HASH, CH_TILD, KC_0,    CH_DLR,  KC_BSPC, KC_ENT,
+     // äà       1+       2"       3*       '?       ~        0=       $( ko    BSPC) ko
+        CH_ADIA, KC_1,    KC_2,    KC_3,    CH_QUOT, CH_TILD, KC_0,    CH_DLR,  KC_BSPC, KC_ENT,
         
-     // öé       9        8        7        ^`                         ,< ko    .> ko    -° ko
-        CH_ODIA, KC_9,    KC_8,    KC_7,    CH_CIRC, XXXXXXX, OS_ALT,  KC_COMM, KC_DOT,  CH_MINS,
+     // öé       7        8        9        ^`                         ,< ko    .> ko    -° ko
+        CH_ODIA, KC_7,    KC_8,    KC_9,    CH_CIRC, OS_SHFT, OS_ALT,  KC_COMM, KC_DOT,  CH_MINS,
 
                           _______, _______, _______, _______, _______, _______
     ),
 
     [NAV] = LAYOUT_split_3x5_3(
                  
-        KC_F10,  KC_F6,   KC_F5,   KC_F4,   XXXXXXX,  XXXXXXX, S_TAB,   KC_TAB,  KC_HOME, KC_END, 
+        KC_F10,  KC_F4,   KC_F5,   KC_F6,   XXXXXXX,  XXXXXXX, S_TAB,   KC_TAB,  KC_HOME, KC_END,
 
-        KC_F11,  KC_F3,   KC_F2,   KC_F1,   XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
+        KC_F11,  KC_F1,   KC_F2,   KC_F3,   XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
 
-        KC_F12,  KC_F9,   KC_F8,   KC_F7,   QK_BOOT,  KC_PSCR, OS_CMD,  OS_SHFT, OS_ALT,  OS_CTRL, 
+        KC_F12,  KC_F7,   KC_F8,   KC_F9,   QK_BOOT,  KC_PSCR, OS_CMD,  OS_SHFT, OS_ALT,  OS_CTRL,
 
                           _______, _______, _______, _______, _______, _______
     ),
