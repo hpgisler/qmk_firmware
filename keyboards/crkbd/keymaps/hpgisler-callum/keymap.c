@@ -82,7 +82,6 @@ const key_override_t hash_key_override = ko_make_basic(MOD_MASK_SHIFT, CH_HASH, 
 const key_override_t bspc_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, CH_RPRN); // Shift BSPC is )
 const key_override_t dlr_key_override  = ko_make_basic(MOD_MASK_SHIFT, CH_DLR,  CH_LPRN); // Shift $ is (
 const key_override_t slsh_key_override = ko_make_basic(MOD_MASK_SHIFT, CH_SLSH, CH_BSLS); // Shift / is '\'  
-const key_override_t adia_key_override = ko_make_basic(MOD_MASK_SHIFT, CH_ADIA, 0x0200 | CH_ADIA); // Shift ä is Ä  
 
 const key_override_t lNUM_comm_key_override = ko_make_with_layers(MOD_MASK_SHIFT, KC_COMM, CH_LABK, 1 << NUM); // on layer NUM, Shift , is <
 const key_override_t lNUM_dot_key_override  = ko_make_with_layers(MOD_MASK_SHIFT, KC_DOT,  CH_RABK, 1 << NUM); // on layer NUM, Shift . is >
@@ -97,7 +96,6 @@ const key_override_t** key_overrides = (const key_override_t*[]){
     &bspc_key_override,
     &dlr_key_override,
     &slsh_key_override,
-    &adia_key_override,
 
     &lNUM_comm_key_override,
     &lNUM_dot_key_override,
