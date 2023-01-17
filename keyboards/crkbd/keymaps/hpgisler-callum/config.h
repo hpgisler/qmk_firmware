@@ -54,5 +54,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_FORCE_HOLD
 
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+#define COMBO_COUNT 2
 
 #define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"

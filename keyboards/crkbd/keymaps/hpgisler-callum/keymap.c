@@ -87,6 +87,12 @@ const key_override_t lNUM_comm_key_override = ko_make_with_layers(MOD_MASK_SHIFT
 const key_override_t lNUM_dot_key_override  = ko_make_with_layers(MOD_MASK_SHIFT, KC_DOT,  CH_RABK, 1 << NUM); // on layer NUM, Shift . is >
 const key_override_t lNUM_mins_key_override = ko_make_with_layers(MOD_MASK_SHIFT, CH_MINS, CH_DEG,  1 << NUM); // on layer NUM, Shift - is °
 
+const uint16_t PROGMEM test_combo1[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM test_combo2[] = {KC_C, KC_D, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(test_combo1, OS_ALT),
+    COMBO(test_combo2, LCTL(KC_Z)), // keycodes with modifiers are possible too!
+};
 const key_override_t** key_overrides = (const key_override_t*[]){
     &lbrc_key_override,
     &rbrc_key_override,
@@ -156,14 +162,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [NUM] = LAYOUT_split_3x5_3(
 
-     // üè       4- ko    5%       6&       #@ ko    |! ko    /\ ko    [{ ko    ]} ko
-        CH_UDIA, KC_4,    KC_5,    KC_6,    CH_HASH, CH_PIPE, CH_SLSH, CH_LBRC, CH_RBRC, KC_DEL,
+     // üè       6&       5%       4- ko    #@ ko    |! ko    /\ ko    [{ ko    ]} ko
+        CH_UDIA, KC_6,    KC_5,    KC_4,    CH_HASH, CH_PIPE, CH_SLSH, CH_LBRC, CH_RBRC, KC_DEL,
 
-     // äà       1+       2"       3*       '?       ~        0=       $( ko    BSPC) ko
-        CH_ADIA, KC_1,    KC_2,    KC_3,    CH_QUOT, CH_TILD, KC_0,    CH_DLR,  KC_BSPC, KC_ENT,
+     // äà       3*       2"       1+       '?       ~        0=       $( ko    BSPC) ko
+        CH_ADIA, KC_3,    KC_2,    KC_1,    CH_QUOT, CH_TILD, KC_0,    CH_DLR,  KC_BSPC, KC_ENT,
         
-     // öé       7        8        9        ^`                         ,< ko    .> ko    -° ko
-        CH_ODIA, KC_7,    KC_8,    KC_9,    CH_CIRC, OS_SHFT, OS_ALT,  KC_COMM, KC_DOT,  CH_MINS,
+     // öé       9        8        7        ^`                         ,< ko    .> ko    -° ko
+        CH_ODIA, KC_9,    KC_8,    KC_7,    CH_CIRC, OS_SHFT, OS_ALT,  KC_COMM, KC_DOT,  CH_MINS,
 
                           _______, _______, _______, _______, _______, _______
     ),
