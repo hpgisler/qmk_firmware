@@ -109,26 +109,26 @@ const key_override_t** key_overrides = (const key_override_t*[]){
     NULL
 };
 
-bool caps_word_press_user(uint16_t keycode) {
-    switch (keycode) {
-        // Keycodes that continue Caps Word, with shift applied.
-        case KC_A ... KC_Z:
-        case CH_MINS:
-            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
-            return true;
+/* bool caps_word_press_user(uint16_t keycode) { */
+/*     switch (keycode) { */
+/*         Keycodes that continue Caps Word, with shift applied. */
+/*         case KC_A ... KC_Z: */
+/*         case CH_MINS: */
+/*             add_weak_mods(MOD_BIT(KC_LSFT));  Apply shift to next key. */
+/*             return true; */
 
-        // Keycodes that continue Caps Word, without shifting.
-        case KC_1 ... KC_0:
-        case KC_BSPC:
-        case KC_LSFT:
-        case KC_DEL:
-        case CH_UNDS:
-            return true;
+/*         Keycodes that continue Caps Word, without shifting. */
+/*         case KC_1 ... KC_0: */
+/*         case KC_BSPC: */
+/*         case KC_LSFT: */
+/*         case KC_DEL: */
+/*         case CH_UNDS: */
+/*             return true; */
 
-        default:
-            return false;  // Deactivate Caps Word.
-    }
-}
+/*         default: */
+/*             return false;  Deactivate Caps Word. */
+/*     } */
+/* } */
 
 /*
   This keymap is intended to be used with the OS
@@ -157,7 +157,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      // yY       xX       cC       vV       bB       nN       mM       ,;       .:       -_ 
         CH_Y,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  CH_MINS,
 
-                          LA_NAV, KC_LSFT,  KC_CAPS, KC_SPC,  LA_NUM,  KC_ALGR
+                          KC_CAPS, KC_LSFT, LA_NAV,  LA_NUM,  KC_SPC,  KC_ALGR
     ),
 
     [NUM] = LAYOUT_split_3x5_3(
@@ -176,11 +176,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [NAV] = LAYOUT_split_3x5_3(
                  
-        KC_F10,  KC_F4,   KC_F5,   KC_F6,   XXXXXXX,  XXXXXXX, S_TAB,   KC_TAB,  KC_HOME, KC_END,
+        KC_F10,  KC_F6,   KC_F5,   KC_F4,   XXXXXXX,  XXXXXXX, S_TAB,   KC_TAB,  KC_HOME, KC_END,
 
         KC_F11,  KC_F1,   KC_F2,   KC_F3,   XXXXXXX,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_ENT,
 
-        KC_F12,  KC_F7,   KC_F8,   KC_F9,   QK_BOOT,  KC_PSCR, OS_CMD,  OS_SHFT, OS_ALT,  OS_CTRL,
+        KC_F12,  KC_F9,   KC_F8,   KC_F7,   QK_BOOT,  KC_PSCR, OS_CMD,  OS_SHFT, OS_ALT,  OS_CTRL,
 
                           _______, _______, _______, _______, _______, _______
     ),
