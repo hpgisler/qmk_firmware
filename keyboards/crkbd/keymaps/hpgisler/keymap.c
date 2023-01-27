@@ -106,12 +106,12 @@ const key_override_t right_key_override= ko_make_basic(MOD_MASK_SHIFT, KC_RIGHT,
 const key_override_t bspc_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC,  KC_DEL);  // Shift bspc is del  
 
 
-const uint16_t PROGMEM test_combo1[] = {KC_K, KC_L, COMBO_END};
-const uint16_t PROGMEM test_combo2[] = {KC_C, KC_D, COMBO_END};
-combo_t key_combos[COMBO_COUNT] = {
-    COMBO(test_combo1, OS_ALT),
-    COMBO(test_combo2, LCTL(KC_Z)), // keycodes with modifiers are possible too!
-};
+/* const uint16_t PROGMEM test_combo1[] = {KC_K, KC_L, COMBO_END}; */
+/* const uint16_t PROGMEM test_combo2[] = {KC_C, KC_D, COMBO_END}; */
+/* combo_t key_combos[COMBO_COUNT] = { */
+/*     COMBO(test_combo1, OS_ALT), */
+/*     COMBO(test_combo2, LCTL(KC_Z)), // keycodes with modifiers are possible too! */
+/* }; */
 const key_override_t** key_overrides = (const key_override_t*[]){
     &grv_key_override,
     &euro_key_override,
@@ -237,30 +237,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
-bool is_oneshot_cancel_key(uint16_t keycode) {
-    switch (keycode) {
-    case LA_NUM:
-    // case LA_NAV:
-        return true;
-    default:
-        return false;
-    }
-}
+/* bool is_oneshot_cancel_key(uint16_t keycode) { */
+/*     switch (keycode) { */
+/*     case LA_NUM: */
+/*     // case LA_NAV: */
+/*         return true; */
+/*     default: */
+/*         return false; */
+/*     } */
+/* } */
 
-bool is_oneshot_ignored_key(uint16_t keycode) {
-    switch (keycode) {
-    case LA_NUM:
-    case LA_NAV:
-    case KC_LSFT:
-    case OS_SHFT:
-    case OS_CTRL:
-    case OS_ALT:
-    case OS_CMD:
-        return true;
-    default:
-        return false;
-    }
-}
+/* bool is_oneshot_ignored_key(uint16_t keycode) { */
+/*     switch (keycode) { */
+/*     case LA_NUM: */
+/*     case LA_NAV: */
+/*     case KC_LSFT: */
+/*     case OS_SHFT: */
+/*     case OS_CTRL: */
+/*     case OS_ALT: */
+/*     case OS_CMD: */
+/*         return true; */
+/*     default: */
+/*         return false; */
+/*     } */
+/* } */
 
 bool sw_win_active = false;
 bool sw_lang_active = false;
@@ -270,36 +270,36 @@ oneshot_state os_ctrl_state = os_up_unqueued;
 oneshot_state os_alt_state = os_up_unqueued;
 oneshot_state os_cmd_state = os_up_unqueued;
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    update_swapper(
-        &sw_win_active, KC_LGUI, KC_TAB, SW_WIN,
-        keycode, record
-    );
-    update_swapper(
-        &sw_lang_active, KC_LCTL, KC_SPC, SW_LANG,
-        keycode, record
-    );
+/* bool process_record_user(uint16_t keycode, keyrecord_t *record) { */
+/*     update_swapper( */
+/*         &sw_win_active, KC_LGUI, KC_TAB, SW_WIN, */
+/*         keycode, record */
+/*     ); */
+/*     update_swapper( */
+/*         &sw_lang_active, KC_LCTL, KC_SPC, SW_LANG, */
+/*         keycode, record */
+/*     ); */
 
-    update_oneshot(
-        &os_shft_state, KC_LSFT, OS_SHFT,
-        keycode, record
-    );
-    update_oneshot(
-        &os_ctrl_state, KC_LCTL, OS_CTRL,
-        keycode, record
-    );
-    update_oneshot(
-        &os_alt_state, KC_LALT, OS_ALT,
-        keycode, record
-    );
-    update_oneshot(
-        &os_cmd_state, KC_LCMD, OS_CMD,
-        keycode, record
-    );
+/*     update_oneshot( */
+/*         &os_shft_state, KC_LSFT, OS_SHFT, */
+/*         keycode, record */
+/*     ); */
+/*     update_oneshot( */
+/*         &os_ctrl_state, KC_LCTL, OS_CTRL, */
+/*         keycode, record */
+/*     ); */
+/*     update_oneshot( */
+/*         &os_alt_state, KC_LALT, OS_ALT, */
+/*         keycode, record */
+/*     ); */
+/*     update_oneshot( */
+/*         &os_cmd_state, KC_LCMD, OS_CMD, */
+/*         keycode, record */
+/*     ); */
 
-    return true;
-}
+/*     return true; */
+/* } */
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-  return update_tri_layer_state(state, L1, L2, U1);
-}
+/* layer_state_t layer_state_set_user(layer_state_t state) { */
+/*   return update_tri_layer_state(state, L1, L2, U1); */
+/* } */
