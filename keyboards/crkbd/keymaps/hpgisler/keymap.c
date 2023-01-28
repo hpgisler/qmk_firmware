@@ -167,10 +167,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , CH_Z    , KC_U    , KC_I    , KC_O    , KC_P    ,
 
      // aA        Ctl_sS    Sft_dD    Alt_fF    gG        hH        Alt_jJ    Sft_kK    Ctl_lL    ü
-        KC_A,LCTL_T(KC_S),LSFT_T(KC_D),LALT_T(KC_F),KC_G,KC_H,LALT_T(KC_J),RSFT_T(KC_K),RCTL_T(KC_L),CH_UDIA,
+        KC_A,LCTL_T(KC_S),LSFT_T(KC_D),LALT_T(KC_F),ALGR_T(KC_G),ALGR_T(KC_H),LALT_T(KC_J),RSFT_T(KC_K),RCTL_T(KC_L),CH_UDIA,
 
      // yY        xX        cC        AGr_vV    (bB)      (nN)      AGr_mM    ,;        .:        -_ 
-        CH_Y    , KC_X    , KC_C  ,ALGR_T(KC_V),KC_B    , KC_N  ,ALGR_T(KC_M),KC_COMM , KC_DOT  , CH_MINS ,
+        CH_Y    , KC_X    , KC_C    , KC_V    ,KC_B     , KC_N    , KC_M    , KC_COMM , KC_DOT  , CH_MINS ,
 
      //                               L2        L1        U1 SPC    U2
                             XXXXXXX , MO(L2)  , MO(L1)  , MOU1_SPC, MO(U2)  , XXXXXXX
@@ -193,14 +193,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [L2] = LAYOUT_split_3x5_3(
                                
-     //           Q                                                           R         P
-        XXXXXXX , KC_Q    , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_R    , KC_P    , XXXXXXX ,
+     //           Q         P                                                 ?         !
+        XXXXXXX , KC_Q    , KC_P    , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , CH_QUES , CH_EXLM , XXXXXXX ,
 
-     //           LCtl      LSft      LAlt                Z         U         ?         !         ö
-        XXXXXXX , KC_LCTL , KC_LSFT , KC_LALT , XXXXXXX , CH_Z,LALT_T(KC_U),RSFT_T(CH_QUES),RCTL_T(CH_EXLM),CH_ODIA ,
+     // zZ        LCtl bB   LSft rR   LAlt tT                       LAlt nN   RSft uU   RCtl ä    ö
+        KC_Z,LCTL_T(KC_B),LSFT_T(KC_R),LALT_T(KC_T),XXXXXXX,XXXXXXX,LALT_T(KC_N),RSFT_T(KC_U),RCTL_T(CH_ADIA),CH_ODIA ,
 
-     //           €§        @         #                             N         T         B         ä
-        XXXXXXX , CH_EURO , CH_AT   , CH_HASH , XXXXXXX , XXXXXXX , KC_N    , KC_T    , KC_B    , CH_ADIA ,
+     //           €§        @         #                             
+        XXXXXXX , CH_EURO , CH_AT   , CH_HASH , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,   
 
 
                             XXXXXXX , _______ , XXXXXXX , _______ , XXXXXXX , XXXXXXX
@@ -224,13 +224,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [U2] = LAYOUT_split_3x5_3(
                                
      // 
-        XXXXXXX , KC_ESC  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX ,
+        XXXXXXX , KC_ESC  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_BSPC , XXXXXXX ,
 
      //
-        XXXXXXX , XXXXXXX , KC_LSFT , XXXXXXX , XXXXXXX , KC_LEFT ,KC_DOWN,RSFT_T(KC_UP),KC_RIGHT,XXXXXXX ,
+        XXXXXXX , XXXXXXX , KC_LSFT , XXXXXXX , XXXXXXX , KC_LEFT ,KC_DOWN,RSFT_T(KC_UP),KC_RIGHT, KC_ENT ,
 
      //
-        XXXXXXX , XXXXXXX , KC_F12  , KC_F11  , XXXXXXX , XXXXXXX , KC_ENT  , KC_BSPC , XXXXXXX , XXXXXXX ,
+        XXXXXXX , XXXXXXX , KC_F12  , KC_F11  , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX ,
 
 
                             XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ , XXXXXXX
