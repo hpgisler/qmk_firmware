@@ -16,6 +16,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 // clang-format off
+#include "keycodes.h"
 #include QMK_KEYBOARD_H
 #include "keymap_swiss_de.h"
 #include <stdio.h>
@@ -23,12 +24,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "swapper.h"
 
 enum layers {
-  BA, // base layer, includes shifted keycodes
-  L1, // 1st lower layer
-  L2, // 2nd lower layer, includes shifted keycodes
-  U1, // 1st upper layer
-  U2  // 2nd upper layer, includes shifted keycodes
+  AL1,
+  AL2,
+  SYM1,
+  SYM2,
+  NUM,
+  SYS,
+  FUN,
+  AL2U
 };
+
+
 
 #define MOU1_SPC   LT(U1, KC_SPC)
 
@@ -92,6 +98,7 @@ enum keycodes {
     OS_CTRL,
     OS_ALT,
     OS_CMD,
+    REPEAT,
 
     SW_WIN,  // Switch to next window         (cmd-tab)
     SW_LANG, // Switch to next input language (ctl-spc)
@@ -160,6 +167,111 @@ const key_override_t** key_overrides = (const key_override_t*[]){
   will be maped to symbols by OS differently than would be the case with us keymap.
 */
 
+#define LAYOUT_split_9( \
+       L11, L12, L13,                     R11, R12, R13,      \
+  L20, L21, L22, L23,                     R21, R22, R23, R24, \
+                      L31, L32, R31, R32 \
+  ) \
+  { \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, }, \
+    { KC_NO, KC_NO, L11, L12, L13, KC_NO }, \
+    { KC_NO, L20, L21, L22, L23, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, L31, L32 }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, }, \
+    { KC_NO, KC_NO, R13, R12, R11, KC_NO }, \
+    { KC_NO, R24, R23, R22, R21, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, KC_NO, R32, R31 }  \
+  }
+
+
+// Tap Dance declarations
+enum {
+    TD_UP_PGUP,
+    TD_LE_HOME,
+    TD_DO_PGDO,
+    TD_RI_END,
+};
+
+// Tap Dance definitions
+qk_tap_dance_action_t tap_dance_actions[] = {
+    // Tap once for Escape, twice for Caps Lock
+    [TD_UP_PGUP] = ACTION_TAP_DANCE_DOUBLE(KC_UP, KC_PGUP),
+    [TD_LE_HOME] = ACTION_TAP_DANCE_DOUBLE(KC_LEFT, KC_HOME),
+    [TD_DO_PGDO] = ACTION_TAP_DANCE_DOUBLE(KC_DOWN, KC_PGDN),
+    [TD_RI_END]  = ACTION_TAP_DANCE_DOUBLE(KC_RIGHT, KC_END),
+};
+
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    [AL1] = LAYOUT_split_9(
+                                            LCTL_T(KC_L)   , LALT_T(KC_G)   , LT(FUN , KC_D) , LT(FUN, KC_H)  , RALT_T(KC_U)   , RCTL_T(KC_O)   ,
+
+                           LT(NUM, KC_I)  , LT(SYM2, KC_S) , LT(SYM1, KC_R) , LT(SYS, KC_T)  , LT(SYS, KC_N)  , LT(SYM1, KC_E) , LT(SYM2, KC_A) , LT(NUM, KC_C)  ,
+
+                                                             KC_SPC         , REPEAT         , OSL(AL2U)      , OSL(AL2)
+                           ),
+
+    [AL2] = LAYOUT_split_9(
+                                            KC_V           , KC_W           , KC_M           , KC_F           , CH_QUOT        , CH_Z           ,
+
+                           KC_Q           , KC_J           , KC_P           , KC_K           , KC_B           , CH_DOT         , KC_X           , CH_Y           ,
+
+                                                             KC_LSFT        , _______        , XXXXXXX        , OSL(AL2U)            
+                           ),
+    
+    [SYM1] = LAYOUT_split_9(
+                                            CH_EURO        , CH_HASH        , CH_DLR         , CH_LABK        , CH_RABK        , CH_CIRC        ,
+
+                           CH_GRV         , CH_TILD        , CH_UNDS        , CH_BSLS        , CH_LBRC        , CH_RBRC        , CH_PIPE        , CH_SLSH       ,
+
+                                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_RGUI
+                           ),
+    
+    [SYM2] = LAYOUT_split_9(
+                                            CH_AT          , XXXXXXX        , CH_QUES        , CH_LPRN        , CH_RPRN        , CH_SCLN        ,
+
+                           CH_ASTR        , CH_PERC        , CH_EXLM        , CH_DQUO        , CH_LCBR        , CH_RCBR        , CH_AMPR        , CH_COLN       ,
+
+                                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_RGUI
+                           ),
+    
+    [NUM] = LAYOUT_split_9(
+                                            LCTL_T(KC_DOT) , LALT_T(KC_0)   , LT(SYS , KC_1) , LT(SYS , KC_2) , RALT_T(KC_3)   , RCTL_T(KC_4)   ,
+
+                           CH_MINS        , CH_PLUS        , KC_5           , KC_6           , KC_7           , KC_8           , KC_9           , CH_EQL       ,
+
+                                                             LSFT_T(TO(AL1)), _______        , _______        , KC_RGUI
+                           ),
+    
+    [SYS] = LAYOUT_split_9(
+                                            KC_ESC         , LSFT(KC_TAB)   , KC_TAB         , XXXXXXX        , TD(TD_UP_PGUP) , KC_BSPC        ,
+
+                           XXXXXXX        , KC_DEL         , XXXXXXX        , XXXXXXX        , TD(TD_LE_HOME) , TD(TD_DO_PGDO) , TD(TD_RI_END)  , KC_ENT       ,
+
+                                                             LSFT_T(TO(AL1)), KC_LALT        , XXXXXXX        , KC_RGUI    
+                           ),
+    
+    
+    [FUN] = LAYOUT_split_9(
+                                            LCTL_T(KC_F11) , LALT_T(KC_F10) , KC_F1          , KC_F2          , RALT_T(KC_F3)  , RCTL_T(KC_F4)  ,
+
+                           XXXXXXX        , KC_F12         , KC_F5          , KC_F6          , KC_F7          , KC_F8          , KC_F9          , XXXXXXX      ,
+
+                                                             ALGR_T(TO(AL1)), _______        , _______        , KC_RGUI
+                           ),
+    
+    [AL2U] = LAYOUT_split_9(
+                                            LSFT(KC_V)     , LSFT(KC_W)     , LSFT(KC_M)     , LSFT(KC_F)     , CH_DQUO        , LSFT(CH_Z)     ,
+
+                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_P)     , LSFT(KC_K)     , LSFT(KC_B)     , CH_COMM        , LSFT(KC_X)     , LSFT(CH_Y)    ,
+
+                                                             XXXXXXX        , _______        , XXXXXXX        , XXXXXXX
+                           ),
+ 
+};
+                               
+
+/*
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BA] = LAYOUT_split_3x5_3(
                                
@@ -236,7 +348,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ , XXXXXXX
     ),
 };
-
+*/
 /* bool is_oneshot_cancel_key(uint16_t keycode) { */
 /*     switch (keycode) { */
 /*     case LA_NUM: */
@@ -303,3 +415,61 @@ oneshot_state os_cmd_state = os_up_unqueued;
 /* layer_state_t layer_state_set_user(layer_state_t state) { */
 /*   return update_tri_layer_state(state, L1, L2, U1); */
 /* } */
+// Used to extract the basic tapping keycode from a dual-role key.
+// Example: GET_TAP_KC(MT(MOD_RSFT, KC_E)) == KC_E
+#define GET_TAP_KC(dual_role_key) dual_role_key & 0xFF
+uint16_t last_keycode = KC_NO;
+uint8_t last_modifier = 0;
+
+// Initialize variables holding the bitfield
+// representation of active modifiers.
+uint8_t mod_state;
+uint8_t oneshot_mod_state;
+
+void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
+    if (keycode != REPEAT) {
+        // Early return when holding down a pure layer key
+        // to retain modifiers
+        switch (keycode) {
+            case QK_DEF_LAYER ... QK_DEF_LAYER_MAX:
+            case QK_MOMENTARY ... QK_MOMENTARY_MAX:
+            case QK_LAYER_MOD ... QK_LAYER_MOD_MAX:
+            case QK_ONE_SHOT_LAYER ... QK_ONE_SHOT_LAYER_MAX:
+            case QK_TOGGLE_LAYER ... QK_TOGGLE_LAYER_MAX:
+            case QK_TO ... QK_TO_MAX:
+            case QK_LAYER_TAP_TOGGLE ... QK_LAYER_TAP_TOGGLE_MAX:
+                return;
+        }
+        last_modifier = oneshot_mod_state > mod_state ? oneshot_mod_state : mod_state;
+        switch (keycode) {
+            case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
+            case QK_MOD_TAP ... QK_MOD_TAP_MAX:
+                if (record->event.pressed) {
+                    last_keycode = GET_TAP_KC(keycode);
+                }
+                break;
+            default:
+                if (record->event.pressed) {
+                    last_keycode = keycode;
+                }
+                break;
+        }
+    } else { // keycode == REPEAT
+        if (record->event.pressed) {
+            register_mods(last_modifier);
+            register_code16(last_keycode);
+        } else {
+            unregister_code16(last_keycode);
+            unregister_mods(last_modifier);
+        }
+    }
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    process_repeat_key(keycode, record);
+    // It's important to update the mod variables *after* calling process_repeat_key, or else
+    // only a single modifier from the previous key is repeated (e.g. Ctrl+Shift+T then Repeat produces Shift+T)
+    mod_state = get_mods();
+    oneshot_mod_state = get_oneshot_mods();
+    return true;
+};
