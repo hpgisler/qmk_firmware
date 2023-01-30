@@ -25,13 +25,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 enum layers {
   AL1,
+  AL1U,
   AL2,
+  AL2U,
   SYM1,
   SYM2,
   NUM,
   SYS,
   FUN,
-  AL2U
 };
 
 
@@ -104,13 +105,11 @@ enum keycodes {
     SW_LANG, // Switch to next input language (ctl-spc)
 };
 
-const key_override_t grv_key_override  = ko_make_basic(MOD_MASK_SHIFT, CH_GRV,   CH_ACUT); // Shift ` is ´
-const key_override_t euro_key_override = ko_make_basic(MOD_MASK_SHIFT, CH_EURO,  CH_SECT); // Shift € is §
-const key_override_t left_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LEFT,  KC_HOME); // Shift Left is Home
-const key_override_t down_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOWN,  KC_PGDN); // Shift down is PgDn
-const key_override_t up_key_override   = ko_make_basic(MOD_MASK_SHIFT, KC_UP,    KC_PGUP); // Shift up is PgUp 
-const key_override_t right_key_override= ko_make_basic(MOD_MASK_SHIFT, KC_RIGHT, KC_END);  // Shift right is End 
-const key_override_t bspc_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC,  KC_DEL);  // Shift bspc is del  
+const key_override_t left_key_override = ko_make_basic(MOD_MASK_ALT, KC_LEFT,  KC_HOME); // Shift Left is Home
+const key_override_t down_key_override = ko_make_basic(MOD_MASK_ALT, KC_DOWN,  KC_PGDN); // Shift down is PgDn
+const key_override_t up_key_override   = ko_make_basic(MOD_MASK_ALT, KC_UP,    KC_PGUP); // Shift up is PgUp 
+const key_override_t right_key_override= ko_make_basic(MOD_MASK_ALT, KC_RIGHT, KC_END);  // Shift right is End 
+const key_override_t bspc_key_override = ko_make_basic(MOD_MASK_ALT, KC_BSPC,  KC_DEL);  // Shift bspc is del  
 
 
 /* const uint16_t PROGMEM test_combo1[] = {KC_K, KC_L, COMBO_END}; */
@@ -120,8 +119,6 @@ const key_override_t bspc_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, 
 /*     COMBO(test_combo2, LCTL(KC_Z)), // keycodes with modifiers are possible too! */
 /* }; */
 const key_override_t** key_overrides = (const key_override_t*[]){
-    &grv_key_override,
-    &euro_key_override,
     &left_key_override,
     &down_key_override,
     &up_key_override,
@@ -183,91 +180,96 @@ const key_override_t** key_overrides = (const key_override_t*[]){
     { KC_NO, KC_NO, KC_NO, KC_NO, R32, R31 }  \
   }
 
-
-// Tap Dance declarations
-enum {
-    TD_UP_PGUP,
-    TD_LE_HOME,
-    TD_DO_PGDO,
-    TD_RI_END,
-};
-
-// Tap Dance definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
-    // Tap once for Escape, twice for Caps Lock
-    [TD_UP_PGUP] = ACTION_TAP_DANCE_DOUBLE(KC_UP, KC_PGUP),
-    [TD_LE_HOME] = ACTION_TAP_DANCE_DOUBLE(KC_LEFT, KC_HOME),
-    [TD_DO_PGDO] = ACTION_TAP_DANCE_DOUBLE(KC_DOWN, KC_PGDN),
-    [TD_RI_END]  = ACTION_TAP_DANCE_DOUBLE(KC_RIGHT, KC_END),
-};
-
+#define LAYOUT_split_10( \
+       L11, L12, L13,                     R11, R12, R13,      \
+  L20, L21, L22, L23,                     R21, R22, R23, R24, \
+                 L30, L31, L32, R31, R32, R33                 \
+  ) \
+  { \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, }, \
+    { KC_NO, KC_NO, L11, L12, L13, KC_NO }, \
+    { KC_NO, L20, L21, L22, L23, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, L30, L31, L32 },        \
+    { KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, }, \
+    { KC_NO, KC_NO, R13, R12, R11, KC_NO }, \
+    { KC_NO, R24, R23, R22, R21, KC_NO }, \
+    { KC_NO, KC_NO, KC_NO, R33, R32, R31 }  \
+  }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [AL1] = LAYOUT_split_9(
-                                            LCTL_T(KC_L)   , LALT_T(KC_G)   , LT(FUN , KC_D) , LT(FUN, KC_H)  , RALT_T(KC_U)   , RCTL_T(KC_O)   ,
+    [AL1] = LAYOUT_split_10(
+                                            LCTL_T(KC_L)   , LALT_T(KC_G)   , LT(SYS , KC_D) , LT(SYS, KC_H)  , RALT_T(KC_U)   , RCTL_T(KC_O)   ,
 
-                           LT(NUM, KC_I)  , LT(SYM2, KC_S) , LT(SYM1, KC_R) , LT(SYS, KC_T)  , LT(SYS, KC_N)  , LT(SYM1, KC_E) , LT(SYM2, KC_A) , LT(NUM, KC_C)  ,
+                           LT(NUM, KC_I)  , LT(SYM2, KC_S) , LT(SYM1, KC_R) , LT(FUN, KC_T)  , LT(FUN, KC_N)  , LT(SYM1, KC_E) , LT(SYM2, KC_A) , LT(NUM, KC_C)  ,
 
-                                                             KC_SPC         , REPEAT         , OSL(AL2U)      , OSL(AL2)
+                                            REPEAT         , KC_SPC         , OSL(AL1U)      , OSL(AL2U)      , OSL(AL2)       , KC_ALGR
                            ),
 
-    [AL2] = LAYOUT_split_9(
+    [AL1U] = LAYOUT_split_10(
+                                            LSFT(KC_L)     , LSFT(KC_G)     , LSFT(KC_D)     , LSFT(KC_H)     , LSFT(KC_U)     , LSFT(CH_O)     ,
+
+                           LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_R)     , LSFT(KC_T)     , LSFT(KC_N)     , LSFT(KC_E)     , LSFT(KC_A)     , LSFT(CH_C)     ,
+
+                                            _______        , _______        , _______        , _______        , _______         , _______
+                           ),
+ 
+    [AL2] = LAYOUT_split_10(
                                             KC_V           , KC_W           , KC_M           , KC_F           , CH_QUOT        , CH_Z           ,
 
                            KC_Q           , KC_J           , KC_P           , KC_K           , KC_B           , CH_DOT         , KC_X           , CH_Y           ,
 
-                                                             KC_LSFT        , _______        , XXXXXXX        , OSL(AL2U)            
+                                            _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
-    [SYM1] = LAYOUT_split_9(
-                                            CH_EURO        , CH_HASH        , CH_DLR         , CH_LABK        , CH_RABK        , CH_CIRC        ,
-
-                           CH_GRV         , CH_TILD        , CH_UNDS        , CH_BSLS        , CH_LBRC        , CH_RBRC        , CH_PIPE        , CH_SLSH       ,
-
-                                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_RGUI
-                           ),
-    
-    [SYM2] = LAYOUT_split_9(
-                                            CH_AT          , XXXXXXX        , CH_QUES        , CH_LPRN        , CH_RPRN        , CH_SCLN        ,
-
-                           CH_ASTR        , CH_PERC        , CH_EXLM        , CH_DQUO        , CH_LCBR        , CH_RCBR        , CH_AMPR        , CH_COLN       ,
-
-                                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_RGUI
-                           ),
-    
-    [NUM] = LAYOUT_split_9(
-                                            LCTL_T(KC_DOT) , LALT_T(KC_0)   , LT(SYS , KC_1) , LT(SYS , KC_2) , RALT_T(KC_3)   , RCTL_T(KC_4)   ,
-
-                           CH_MINS        , CH_PLUS        , KC_5           , KC_6           , KC_7           , KC_8           , KC_9           , CH_EQL       ,
-
-                                                             LSFT_T(TO(AL1)), _______        , _______        , KC_RGUI
-                           ),
-    
-    [SYS] = LAYOUT_split_9(
-                                            KC_ESC         , LSFT(KC_TAB)   , KC_TAB         , XXXXXXX        , TD(TD_UP_PGUP) , KC_BSPC        ,
-
-                           XXXXXXX        , KC_DEL         , XXXXXXX        , XXXXXXX        , TD(TD_LE_HOME) , TD(TD_DO_PGDO) , TD(TD_RI_END)  , KC_ENT       ,
-
-                                                             LSFT_T(TO(AL1)), KC_LALT        , XXXXXXX        , KC_RGUI    
-                           ),
-    
-    
-    [FUN] = LAYOUT_split_9(
-                                            LCTL_T(KC_F11) , LALT_T(KC_F10) , KC_F1          , KC_F2          , RALT_T(KC_F3)  , RCTL_T(KC_F4)  ,
-
-                           XXXXXXX        , KC_F12         , KC_F5          , KC_F6          , KC_F7          , KC_F8          , KC_F9          , XXXXXXX      ,
-
-                                                             ALGR_T(TO(AL1)), _______        , _______        , KC_RGUI
-                           ),
-    
-    [AL2U] = LAYOUT_split_9(
+    [AL2U] = LAYOUT_split_10(
                                             LSFT(KC_V)     , LSFT(KC_W)     , LSFT(KC_M)     , LSFT(KC_F)     , CH_DQUO        , LSFT(CH_Z)     ,
 
-                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_P)     , LSFT(KC_K)     , LSFT(KC_B)     , CH_COMM        , LSFT(KC_X)     , LSFT(CH_Y)    ,
+                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_P)     , LSFT(KC_K)     , LSFT(KC_B)     , CH_COMM        , LSFT(KC_X)     , LSFT(CH_Y)     ,
 
-                                                             XXXXXXX        , _______        , XXXXXXX        , XXXXXXX
+                                            _______        , _______        , _______        , _______        , _______        , _______
                            ),
  
+    [SYM1] = LAYOUT_split_10(
+                                            CH_EURO        , CH_HASH        , CH_DLR         , CH_LABK        , CH_RABK        , CH_CIRC        ,
+
+                           CH_GRV         , CH_TILD        , CH_UNDS        , CH_BSLS        , CH_LBRC        , CH_RBRC        , CH_PIPE        , CH_SLSH        ,
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+    
+    [SYM2] = LAYOUT_split_10(
+                                            CH_AT          , XXXXXXX        , CH_QUES        , CH_LPRN        , CH_RPRN        , CH_SCLN        ,
+
+                           CH_ASTR        , CH_PERC        , CH_EXLM        , CH_DQUO        , CH_LCBR        , CH_RCBR        , CH_AMPR        , CH_COLN        ,
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+      
+    [NUM] = LAYOUT_split_10(
+                                            LCTL_T(KC_3)   , LALT_T(KC_2)   , LT(SYS , KC_1) , LT(SYS , KC_4) , RALT_T(KC_5)   , RCTL_T(KC_6)   ,
+
+                           CH_PLUS        , CH_EQL         , KC_DOT         , KC_0           , KC_7           , KC_8           , KC_9           , CH_MINS        ,
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+    
+    [SYS] = LAYOUT_split_10(
+                                            LCTL_T(KC_ESC) , KC_LALT        , XXXXXXX        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
+
+                                  XXXXXXX        , XXXXXXX , LSFT(KC_TAB)   , KC_TAB         , KC_LEFT        , KC_DEL         , KC_BSPC        , KC_ENT         ,
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+    
+    
+    [FUN] = LAYOUT_split_10(
+                                            LCTL_T(KC_F3)  , LALT_T(KC_F2)  , KC_F1          , KC_F4          , RALT_T(KC_F5)  , RCTL_T(KC_F6)  ,
+
+                           KC_LGUI        , KC_F12         , KC_F11         , KC_F10         , KC_F7          , KC_F8          , KC_F9          , XXXXXXX      ,
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+    
 };
                                
 
