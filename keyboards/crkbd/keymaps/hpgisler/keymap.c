@@ -33,6 +33,7 @@ enum layers {
   NUM,
   SYS,
   FUN,
+  FUNLo,
 };
 
 
@@ -198,9 +199,9 @@ const key_override_t** key_overrides = (const key_override_t*[]){
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [AL1] = LAYOUT_split_10(
-                                            LCTL_T(KC_L)   , LALT_T(KC_G)   , LT(SYS , KC_D) , LT(SYS, KC_H)  , RALT_T(KC_U)   , RCTL_T(KC_O)   ,
+                                            LT(FUN,KC_L)   , LALT_T(KC_G)   , LCTL_T(KC_D)   , RCTL_T(KC_H)   , LALT_T(KC_U)   , LT(FUN,KC_O)   ,
 
-                           LT(NUM, KC_I)  , LT(SYM2, KC_S) , LT(SYM1, KC_R) , LT(FUN, KC_T)  , LT(FUN, KC_N)  , LT(SYM1, KC_E) , LT(SYM2, KC_A) , LT(NUM, KC_C)  ,
+                           LT(NUM, KC_I)  , LT(SYM2, KC_S) , LT(SYM1, KC_R) , LT(SYS , KC_T) , LT(SYS , KC_N) , LT(SYM1, KC_E) , LT(SYM2, KC_A) , LT(NUM, KC_C)  ,
 
                                             REPEAT         , KC_SPC         , OSL(AL1U)      , OSL(AL2U)      , OSL(AL2)       , KC_ALGR
                            ),
@@ -214,7 +215,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
  
     [AL2] = LAYOUT_split_10(
-                                            KC_V           , KC_W           , KC_M           , KC_F           , CH_QUOT        , CH_Z           ,
+                                            KC_V           , LALT_T(KC_W)   , LCTL_T(KC_M)   , RCTL_T(KC_F)   , LALT_T(CH_QUOT), CH_Z           ,
 
                            KC_Q           , KC_J           , KC_P           , KC_K           , KC_B           , CH_DOT         , KC_X           , CH_Y           ,
 
@@ -246,7 +247,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
       
     [NUM] = LAYOUT_split_10(
-                                            LCTL_T(KC_3)   , LALT_T(KC_2)   , LT(SYS , KC_1) , LT(SYS , KC_4) , RALT_T(KC_5)   , RCTL_T(KC_6)   ,
+                                            KC_1           , KC_2           , KC_3           , KC_4           , KC_5           , KC_6           ,
 
                            CH_PLUS        , CH_EQL         , KC_DOT         , KC_0           , KC_7           , KC_8           , KC_9           , CH_MINS        ,
 
@@ -254,7 +255,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
     
     [SYS] = LAYOUT_split_10(
-                                            LCTL_T(KC_ESC) , KC_LALT        , XXXXXXX        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
+                                            KC_ESC         , KC_LALT        , KC_LCTL        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
 
                                   XXXXXXX        , XXXXXXX , LSFT(KC_TAB)   , KC_TAB         , KC_LEFT        , KC_DEL         , KC_BSPC        , KC_ENT         ,
 
@@ -263,9 +264,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
     
     [FUN] = LAYOUT_split_10(
-                                            LCTL_T(KC_F3)  , LALT_T(KC_F2)  , KC_F1          , KC_F4          , RALT_T(KC_F5)  , RCTL_T(KC_F6)  ,
+                                            KC_F1          , RALT_T(KC_F2)  , LCTL_T(KC_F3)  , RCTL_T(KC_F4)  , RALT_T(KC_F5)  , KC_F6          ,
 
-                           KC_LGUI        , KC_F12         , KC_F11         , KC_F10         , KC_F7          , KC_F8          , KC_F9          , XXXXXXX      ,
+                           KC_LGUI        , KC_F10         , KC_F11         , KC_F12         , KC_F7          , KC_F8          , KC_F9          , XXXXXXX      ,
+
+                                            _______        , MO(FUNLo)      , KC_ALGR        , KC_ALGR        , MO(FUNLo)      , _______
+                           ),
+    
+    [FUNLo] = LAYOUT_split_10(
+                          ALGR(LSFT(KC_C)), XXXXXXX        , XXXXXXX        , ALGR(KC_J)     , ALGR(KC_K)     , ALGR(KC_L)     ,
+
+                          ALGR(LSFT(KC_Q)), ALGR(KC_D)     , ALGR(KC_I)     , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_T)     , ALGR(KC_M)     , ALGR(KC_P)         ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
