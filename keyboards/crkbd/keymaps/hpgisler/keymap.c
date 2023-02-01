@@ -33,7 +33,7 @@ enum layers {
   NUM,
   SYS,
   FUN,
-  FUNLo,
+  FUNHi,
 };
 
 
@@ -266,15 +266,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN] = LAYOUT_split_10(
                                             KC_F1          , RALT_T(KC_F2)  , LCTL_T(KC_F3)  , RCTL_T(KC_F4)  , RALT_T(KC_F5)  , KC_F6          ,
 
-                           KC_LGUI        , KC_F10         , KC_F11         , KC_F12         , KC_F7          , KC_F8          , KC_F9          , XXXXXXX      ,
+                           KC_LGUI        , KC_F10         , KC_F11         , KC_F12         , KC_F7          , KC_F8          , KC_F9          , XXXXXXX        ,
 
-                                            _______        , MO(FUNLo)      , KC_ALGR        , KC_ALGR        , MO(FUNLo)      , _______
+                                            _______        , -------        , MO(FUNHi)      , MO(FUNHi)      , -------        , _______
                            ),
     
-    [FUNLo] = LAYOUT_split_10(
+    [FUNHi] = LAYOUT_split_10(
+
                           ALGR(LSFT(KC_C)), XXXXXXX        , XXXXXXX        , ALGR(KC_J)     , ALGR(KC_K)     , ALGR(KC_L)     ,
 
-                          ALGR(LSFT(KC_Q)), ALGR(KC_D)     , ALGR(KC_I)     , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_T)     , ALGR(KC_M)     , ALGR(KC_P)         ,
+                          ALGR(LSFT(KC_Q)), ALGR(KC_D)     , ALGR(KC_I)     , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_T)     , ALGR(KC_M)     , ALGR(KC_P)     ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
