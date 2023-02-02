@@ -233,7 +233,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
     
     [SYS0] = LAYOUT_split_10(
-                                            LALT_T(KC_ESC) , KC_LCTL        , XXXXXXX        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
+                                            KC_LALT        , KC_LCTL        , KC_ESC         , KC_DOWN        , KC_UP          , KC_RIGHT       ,
 
                             KC_LSFT       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_ENT         , KC_LEFT        ,  KC_BSPC        , KC_TAB          ,
 
