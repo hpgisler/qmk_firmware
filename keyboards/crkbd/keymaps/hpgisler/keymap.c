@@ -203,7 +203,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
                                             LT(NUM0,KC_L)  , LT(SYM0, KC_G) , LT(SYS0 , KC_D), LT(SYS0 , KC_H), LT(SYM0, KC_U) , LT(NUM0,KC_O)  ,
 
-                           KC_I           , LT(FUN0, KC_S) , LALT_T(KC_R)   , LCTL_T(KC_T)   , RCTL_T(KC_N)   , LALT_T(KC_E)   , LT(FUN0, KC_A) , KC_C           ,
+                           KC_I           , LCTL_T(KC_S)   , LALT_T(KC_R)   , LT(FUN0, KC_T) , LT(FUN0, KC_N) , LALT_T(KC_E)   , RCTL_T(KC_A) , KC_C           ,
 
                                             REPEAT         , KC_SPC         , OSL(ALA2)      , OSL(ALA3)      , OSL(ALA1)      , XXXXXXX
                            ),
@@ -211,7 +211,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA1] = LAYOUT_split_10(
                                             KC_V           , KC_W           , KC_M           , KC_F           , CH_DOT , CH_Z  ,
 
-                           KC_Q           , KC_J           , LALT_T(KC_P)   , LCTL_T(KC_K)   , RCTL_T(KC_B)   , LALT_T(CH_COMM), KC_X           , CH_Y           ,
+                           KC_Q           , KC_J           , LCTL_T(KC_P)   , LALT_T(KC_K)   , RALT_T(KC_B)   , LCTL_T(CH_COMM), KC_X           , CH_Y           ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -285,7 +285,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN0] = LAYOUT_split_10(
                                             XXXXXXX        , ALGR(KC_T)     , ALGR(KC_M)     , KC_F1          , KC_F2          , KC_F3          ,
 
-                           ALGR(KC_B)     , ALGR(KC_I), RALT_T(ALGR(KC_J)),LSFT_T(ALGR(KC_K)), KC_F4          , KC_F5          , KC_F6          , KC_LGUI        ,
+                           ALGR(LSFT(KC_C)) , LSFT_T(ALGR(KC_B)),RALT_T(ALGR(KC_J)),ALGR(KC_K)     , KC_F4          , KC_F5          , KC_F6          , KC_LGUI        ,
 
                                             _______        , MO(FUN1)       , _______        , _______        , MO(FUN1)       , _______
                            ),
@@ -293,7 +293,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN1] = LAYOUT_split_10(
                                             XXXXXXX        , ALGR(KC_P)     , ALGR(KC_ENT)   , KC_F7          , KC_F8          , KC_F9          ,
 
-                           ALGR(LSFT(KC_C)),ALGR(KC_D)     , ALGR(KC_H)     , ALGR(KC_L)     , KC_F10         , KC_F11         , KC_F12         ,ALGR(LSFT(KC_Q)),
+                           ALGR(KC_D)     , ALGR(KC_I)     , ALGR(KC_H)     , ALGR(KC_L)     , KC_F10         , KC_F11         , KC_F12         ,ALGR(LSFT(KC_Q)),
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -501,5 +501,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // only a single modifier from the previous key is repeated (e.g. Ctrl+Shift+T then Repeat produces Shift+T)
     mod_state = get_mods();
     oneshot_mod_state = get_oneshot_mods();
+    switch (keycode) {
+
+    case RALT_T(ALGR(KC_J)):
+      if (record->tap.count && record->event.pressed) {
+        tap_code16(ALGR(KC_J));
+        return false;        // Return false to ignore further processing of key
+      }
+      break;
+
+    case LSFT_T(ALGR(KC_B)):
+      if (record->tap.count && record->event.pressed) {
+        tap_code16(ALGR(KC_B));
+        return false;        // Return false to ignore further processing of key
+      }
+      break;
+    }
     return true;
 };
