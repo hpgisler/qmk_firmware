@@ -235,7 +235,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYS0] = LAYOUT_split_10(
                                             LALT_T(KC_ESC) , KC_LCTL        , XXXXXXX        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
 
-                            KC_LSFT       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_LEFT        , KC_ENT         , KC_BSPC        , KC_TAB          ,
+                            KC_LSFT       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_ENT         , KC_LEFT        ,  KC_BSPC        , KC_TAB          ,
 
                                             _______        , MO(SYS1)       , _______        , _______        , MO(SYS1)       , _______
                            ),
@@ -244,7 +244,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYS1] = LAYOUT_split_10(
                                             KC_PSCR        , XXXXXXX        , XXXXXXX        , KC_PGDN        , KC_PGUP        , KC_END         ,
 
-                           XXXXXXX       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_HOME        , LSFT(KC_ENT)    , KC_DEL         , LSFT(KC_TAB)    ,
+                            XXXXXXX       , XXXXXXX        , XXXXXXX        , XXXXXXX        , LSFT(KC_ENT)   , KC_HOME        , KC_DEL         , LSFT(KC_TAB)    ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
