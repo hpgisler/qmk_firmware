@@ -24,16 +24,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "swapper.h"
 
 enum layers {
-  AL1,
-  AL1U,
-  AL2,
-  AL2U,
+  ALA0,
+  ALA1,
+  ALA2,
+  ALA3,
+  SYS0,
+  SYS1,
+  NUM0,
+  NUM1,
+  SYM0,
   SYM1,
-  SYM2,
-  NUM,
-  SYS,
-  FUN,
-  FUNHi,
+  FUN0,
+  FUN1,
 };
 
 
@@ -198,15 +200,23 @@ const key_override_t** key_overrides = (const key_override_t*[]){
   }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [AL1] = LAYOUT_split_10(
-                                            LT(FUN,KC_L)   , LALT_T(KC_G)   , LCTL_T(KC_D)   , RCTL_T(KC_H)   , LALT_T(KC_U)   , LT(FUN,KC_O)   ,
+    [ALA0] = LAYOUT_split_10(
+                                            LT(NUM0,KC_L)  , LALT_T(KC_G)   , LCTL_T(KC_D)   , RCTL_T(KC_H)   , LALT_T(KC_U)   , LT(NUM0,KC_O)  ,
 
-                           LT(NUM, KC_I)  , LT(SYM2, KC_S) , LT(SYM1, KC_R) , LT(SYS , KC_T) , LT(SYS , KC_N) , LT(SYM1, KC_E) , LT(SYM2, KC_A) , LT(NUM, KC_C)  ,
+                           KC_I           , LT(FUN0, KC_S) , LT(SYM0, KC_R) , LT(SYS0 , KC_T), LT(SYS0 , KC_N), LT(SYM0, KC_E) , LT(FUN0, KC_A) , KC_C           ,
 
-                                            REPEAT         , KC_SPC         , OSL(AL1U)      , OSL(AL2U)      , OSL(AL2)       , KC_ALGR
+                                            REPEAT         , KC_SPC         , OSL(ALA2)      , OSL(ALA3)      , OSL(ALA1)      , XXXXXXX
                            ),
 
-    [AL1U] = LAYOUT_split_10(
+    [ALA1] = LAYOUT_split_10(
+                                            KC_V           , LALT_T(KC_W)   , LCTL_T(KC_M)   , RCTL_T(KC_F)   , LALT_T(CH_DOT) , CH_Z           ,
+
+                           KC_Q           , KC_J           , KC_P           , KC_K           , KC_B           , CH_COMM        , KC_X           , CH_Y           ,
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+    
+    [ALA2] = LAYOUT_split_10(
                                             LSFT(KC_L)     , LSFT(KC_G)     , LSFT(KC_D)     , LSFT(KC_H)     , LSFT(KC_U)     , LSFT(CH_O)     ,
 
                            LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_R)     , LSFT(KC_T)     , LSFT(KC_N)     , LSFT(KC_E)     , LSFT(KC_A)     , LSFT(CH_C)     ,
@@ -214,68 +224,76 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             _______        , _______        , _______        , _______        , _______         , _______
                            ),
  
-    [AL2] = LAYOUT_split_10(
-                                            KC_V           , LALT_T(KC_W)   , LCTL_T(KC_M)   , RCTL_T(KC_F)   , LALT_T(CH_QUOT), CH_Z           ,
+    [ALA3] = LAYOUT_split_10(
+                                            LSFT(KC_V)     , LSFT(KC_W)     , LSFT(KC_M)     , LSFT(KC_F)     , CH_COLN        , LSFT(CH_Z)     ,
 
-                           KC_Q           , KC_J           , KC_P           , KC_K           , KC_B           , CH_DOT         , KC_X           , CH_Y           ,
+                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_P)     , LSFT(KC_K)     , LSFT(KC_B)     , CH_SCLN        , LSFT(KC_X)     , LSFT(CH_Y)     ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
-    [AL2U] = LAYOUT_split_10(
-                                            LSFT(KC_V)     , LSFT(KC_W)     , LSFT(KC_M)     , LSFT(KC_F)     , CH_DQUO        , LSFT(CH_Z)     ,
+    [SYS0] = LAYOUT_split_10(
+                                            KC_ESC         , KC_LALT        , KC_LCTL        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
 
-                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_P)     , LSFT(KC_K)     , LSFT(KC_B)     , CH_COMM        , LSFT(KC_X)     , LSFT(CH_Y)     ,
+                            XXXXXXX       , KC_PSCR        , LSFT(KC_TAB)   , KC_TAB         , KC_LEFT        , KC_DEL         , KC_BSPC        , KC_ENT         ,
+
+                                            _______        , MO(SYS1)       , _______        , _______        , MO(SYS1)       , _______
+                           ),
+    
+    
+    [SYS1] = LAYOUT_split_10(
+                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_PGDN        , KC_PGUP        , KC_END         ,
+
+                            XXXXXXX       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_HOME        , XXXXXXX        , XXXXXXX        , XXXXXXX        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
- 
+    
+    
+    [NUM0] = LAYOUT_split_10(
+                                            CH_ODIA        , CH_ADIA        , CH_UDIA        , KC_1           , KC_2           , KC_3           ,
+
+                           XXXXXXX        , CH_EGRV        , CH_AGRV        , CH_EACU        , KC_4           , KC_5           , KC_6           , CH_MINS        ,
+
+                                            _______        , MO(NUM1)       , _______        , _______        , MO(NUM1)       , _______
+                           ),
+    
+    [NUM1] = LAYOUT_split_10(
+                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,
+
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_ASTR        , KC_PLUS        , KC_EQL         , KC_0           ,
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+    
+    [SYM0] = LAYOUT_split_10(
+                                            CH_QUOT        , CH_DQUO        , CH_TILD        , CH_LPRN        , CH_RPRN        , CH_AMPR        ,
+
+                           CH_EXLM        , CH_UNDS        , CH_PIPE        , CH_BSLS        , CH_SLSH        , CH_QUES        , CH_PERC        , CH_AT          ,
+
+                                            _______        , MO(SYM1)       , _______        , _______        , MO(SYM1)       , _______
+                           ),
+    
     [SYM1] = LAYOUT_split_10(
-                                            CH_EURO        , CH_HASH        , CH_DLR         , CH_LABK        , CH_RABK        , CH_CIRC        ,
+                                            CH_GRV         , XXXXXXX        , XXXXXXX        , CH_LCBR        , CH_RCBR        , CH_LABK        ,
 
-                           CH_GRV         , CH_TILD        , CH_UNDS        , CH_BSLS        , CH_LBRC        , CH_RBRC        , CH_PIPE        , CH_SLSH        ,
-
-                                            _______        , _______        , _______        , _______        , _______        , _______
-                           ),
-    
-    [SYM2] = LAYOUT_split_10(
-                                            CH_AT          , XXXXXXX        , CH_QUES        , CH_LPRN        , CH_RPRN        , CH_SCLN        ,
-
-                           CH_ASTR        , CH_PERC        , CH_EXLM        , CH_DQUO        , CH_LCBR        , CH_RCBR        , CH_AMPR        , CH_COLN        ,
+                           CH_EURO        , CH_CIRC        , CH_DLR         , CH_HASH        , CH_LBRC        , CH_RBRC        , CH_RABK        , XXXXXXX        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
       
-    [NUM] = LAYOUT_split_10(
-                                            KC_1           , KC_2           , KC_3           , KC_4           , KC_5           , KC_6           ,
+    [FUN0] = LAYOUT_split_10(
+                                            XXXXXXX        , ALGR(KC_T)     , ALGR(KC_M)     , KC_F1          , KC_F2          , KC_F3          ,
 
-                           CH_PLUS        , CH_EQL         , KC_DOT         , KC_0           , KC_7           , KC_8           , KC_9           , CH_MINS        ,
+                           ALGR(KC_B)     , ALGR(KC_I), RALT_T(ALGR(KC_J)),LSFT_T(ALGR(KC_K)), KC_F4          , KC_F5          , KC_F6          , KC_LGUI        ,
 
-                                            _______        , _______        , _______        , _______        , _______        , _______
+                                            _______        , MO(FUN1)       , _______        , _______        , MO(FUN1)       , _______
                            ),
     
-    [SYS] = LAYOUT_split_10(
-                                            KC_ESC         , KC_LALT        , KC_LCTL        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
+    [FUN1] = LAYOUT_split_10(
+                                            XXXXXXX        , ALGR(KC_P)     , ALGR(KC_ENT)   , KC_F7          , KC_F8          , KC_F9          ,
 
-                                  XXXXXXX        , XXXXXXX , LSFT(KC_TAB)   , KC_TAB         , KC_LEFT        , KC_DEL         , KC_BSPC        , KC_ENT         ,
-
-                                            _______        , _______        , _______        , _______        , _______        , _______
-                           ),
-    
-    
-    [FUN] = LAYOUT_split_10(
-                                            KC_F1          , RALT_T(KC_F2)  , LCTL_T(KC_F3)  , RCTL_T(KC_F4)  , RALT_T(KC_F5)  , KC_F6          ,
-
-                           KC_LGUI        , KC_F10         , KC_F11         , KC_F12         , KC_F7          , KC_F8          , KC_F9          , XXXXXXX        ,
-
-                                            _______        , -------        , MO(FUNHi)      , MO(FUNHi)      , -------        , _______
-                           ),
-    
-    [FUNHi] = LAYOUT_split_10(
-
-                          ALGR(LSFT(KC_C)), XXXXXXX        , XXXXXXX        , ALGR(KC_J)     , ALGR(KC_K)     , ALGR(KC_L)     ,
-
-                          ALGR(LSFT(KC_Q)), ALGR(KC_D)     , ALGR(KC_I)     , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_T)     , ALGR(KC_M)     , ALGR(KC_P)     ,
+                           ALGR(LSFT(KC_C)),ALGR(KC_D)     , ALGR(KC_H)     , ALGR(KC_L)     , KC_F10         , KC_F11         , KC_F12         ,ALGR(LSFT(KC_Q)),
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
