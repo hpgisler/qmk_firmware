@@ -201,17 +201,17 @@ const key_override_t** key_overrides = (const key_override_t*[]){
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
-                                            LT(NUM0,KC_L)  , LALT_T(KC_G)   , LCTL_T(KC_D)   , RCTL_T(KC_H)   , LALT_T(KC_U)   , LT(NUM0,KC_O)  ,
+                                            LT(NUM0,KC_L)  , LT(SYM0, KC_G) , LT(SYS0 , KC_D), LT(SYS0 , KC_H), LT(SYM0, KC_U) , LT(NUM0,KC_O)  ,
 
-                           KC_I           , LT(FUN0, KC_S) , LT(SYM0, KC_R) , LT(SYS0 , KC_T), LT(SYS0 , KC_N), LT(SYM0, KC_E) , LT(FUN0, KC_A) , KC_C           ,
+                           KC_I           , LT(FUN0, KC_S) , LALT_T(KC_R)   , LCTL_T(KC_T)   , RCTL_T(KC_N)   , LALT_T(KC_E)   , LT(FUN0, KC_A) , KC_C           ,
 
                                             REPEAT         , KC_SPC         , OSL(ALA2)      , OSL(ALA3)      , OSL(ALA1)      , XXXXXXX
                            ),
 
     [ALA1] = LAYOUT_split_10(
-                                            KC_V           , LALT_T(KC_W)   , LCTL_T(KC_M)   , RCTL_T(KC_F)   , LALT_T(CH_DOT) , CH_Z           ,
+                                            KC_V           , KC_W           , KC_M           , KC_F           , CH_DOT , CH_Z  ,
 
-                           KC_Q           , KC_J           , KC_P           , KC_K           , KC_B           , CH_COMM        , KC_X           , CH_Y           ,
+                           KC_Q           , KC_J           , LALT_T(KC_P)   , LCTL_T(KC_K)   , RCTL_T(KC_B)   , LALT_T(CH_COMM), KC_X           , CH_Y           ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -233,18 +233,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
     
     [SYS0] = LAYOUT_split_10(
-                                            KC_ESC         , KC_LALT        , KC_LCTL        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
+                                            LALT_T(KC_ESC) , KC_LCTL        , XXXXXXX        , KC_DOWN        , KC_UP          , KC_RIGHT       ,
 
-                            XXXXXXX       , KC_PSCR        , LSFT(KC_TAB)   , KC_TAB         , KC_LEFT        , KC_DEL         , KC_BSPC        , KC_ENT         ,
+                            KC_LSFT       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_LEFT        , KC_ENT         , KC_BSPC        , KC_TAB          ,
 
                                             _______        , MO(SYS1)       , _______        , _______        , MO(SYS1)       , _______
                            ),
     
     
     [SYS1] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_PGDN        , KC_PGUP        , KC_END         ,
+                                            KC_PSCR        , XXXXXXX        , XXXXXXX        , KC_PGDN        , KC_PGUP        , KC_END         ,
 
-                            XXXXXXX       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_HOME        , XXXXXXX        , XXXXXXX        , XXXXXXX        ,
+                           XXXXXXX       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_HOME        , LSFT(KC_ENT)    , KC_DEL         , LSFT(KC_TAB)    ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
