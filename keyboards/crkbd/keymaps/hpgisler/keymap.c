@@ -124,18 +124,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
     
     [SYS0] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , LCTL(KC_G)     ,  KC_TAB        , KC_UP          , KC_BSPC        ,
+                                            XXXXXXX        , XXXXXXX        , LCTL(KC_G)     , KC_LEFT        , KC_RIGHT       , KC_TAB        ,
 
-                            KC_LSFT       , KC_LCTL        , KC_LALT        , KC_ESC         ,  KC_LEFT       , KC_DOWN        , KC_RIGHT       , KC_ENT         ,
+                            KC_LSFT       , KC_LCTL        , KC_LALT        , KC_ESC         , KC_DOWN        , KC_UP          , KC_BSPC       , KC_ENT          ,
 
                                             _______        , MO(SYS1)       , _______        , _______        , MO(SYS1)       , _______
                            ),
     
-    
-    [SYS1] = LAYOUT_split_10(
-                                            KC_PSCR        , XXXXXXX        , XXXXXXX        , LSFT(KC_TAB)   , KC_PGUP        , KC_DEL         ,
 
-                            KC_LSFT       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_HOME        , KC_PGDN        , KC_END         , LSFT(KC_ENT)   ,
+    [SYS1] = LAYOUT_split_10(
+                                            KC_PSCR        , XXXXXXX        , XXXXXXX        , KC_HOME        , KC_END         , LSFT(KC_TAB)   ,
+
+                            KC_LSFT       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_PGDN        , KC_PGUP        , KC_DEL         , LSFT(KC_ENT)   ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -144,31 +144,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NUM0] = LAYOUT_split_10(
                                             CH_EGRV        , CH_AGRV        , CH_EACU        , KC_4           , KC_5           , KC_6           , 
 
-                           XXXXXXX        , CH_ODIA        , CH_ADIA        , CH_UDIA        , KC_1           , KC_2           , KC_3           , CH_MINS        ,
+                           XXXXXXX        , CH_ODIA        , CH_ADIA        , CH_UDIA        , KC_1           , KC_2           , KC_3           , KC_0          ,
 
                                             _______        , MO(NUM1)       , _______        , _______        , MO(NUM1)       , _______
                            ),
     
     [NUM1] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_ASTR        , CH_EQL         ,
+                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,  KC_0          ,
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_MINS        , CH_DOT         , CH_EQL         , 
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
     [SYM0] = LAYOUT_split_10(
-                                            CH_AT          , CH_PIPE        , CH_PERC        , CH_LPRN        , CH_RPRN        , CH_UNDS        , 
+                                            CH_UNDS        , CH_PIPE        , CH_PERC        , CH_LPRN        , CH_RPRN        , CH_QUES        , 
 
-                           CH_DLR         , CH_QUOT        , CH_DQUO        , CH_TILD        , CH_SLSH        , CH_QUES        , CH_AMPR        , CH_EXLM        ,
+                           CH_DLR         , CH_QUOT        , CH_DQUO        , CH_TILD        , CH_SLSH        , CH_ASTR        , CH_AMPR        , CH_MINS        ,
 
                                             _______        , MO(SYM1)       , _______        , _______        , MO(SYM1)       , _______
                            ),
     
     [SYM1] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , CH_HASH        , CH_LCBR        , CH_RCBR        , CH_LABK        ,
+                                            CH_AT          , XXXXXXX        , CH_HASH        , CH_LCBR        , CH_RCBR        , CH_LABK        ,
 
-                           CH_EURO        , CH_GRV         , CH_CIRC        , CH_BSLS        , CH_LBRC        , CH_RBRC        , CH_RABK        , XXXXXXX        ,
+                           CH_EURO        , CH_GRV         , CH_CIRC        , CH_BSLS        , CH_LBRC        , CH_RBRC        , CH_RABK        , CH_EXLM        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
