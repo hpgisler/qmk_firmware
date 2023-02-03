@@ -182,7 +182,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
     
     [FUN1] = LAYOUT_split_10(
-                                        LCTL_T(ALGR(KC_D)) , ALGR(KC_I)     , KC_LSFT        , KC_F10         , KC_F11         , KC_F12         ,
+                                        LCTL_T(ALGR(KC_I)) , ALGR(KC_D)     , KC_LSFT        , KC_F10         , KC_F11         , KC_F12         ,
 
                          ALGR(LSFT(KC_C)) , XXXXXXX        , ALGR(KC_K)     , ALGR(KC_J)     , ALGR(KC_F7)    , ALGR(KC_F8)    , ALGR(KC_F9)    , ALGR(LSFT(KC_Q)),
 
@@ -250,23 +250,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     oneshot_mod_state = get_oneshot_mods();
     switch (keycode) {
 
-    case RALT_T(ALGR(KC_T)):
+    case LCTL_T(ALGR(KC_H)):
       if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_T));
+        tap_code16(ALGR(KC_H));
         return false;        // Return false to ignore further processing of key
       }
       break;
 
-    case RALT_T(ALGR(KC_K)):
+    case LCTL_T(ALGR(KC_I)):
       if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_K));
+        tap_code16(ALGR(KC_I));
         return false;        // Return false to ignore further processing of key
       }
       break;
 
-    case LSFT_T(ALGR(KC_P)):
+    case LSFT_T(ALGR(KC_B)):
       if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_P));
+        tap_code16(ALGR(KC_B));
         return false;        // Return false to ignore further processing of key
       }
       break;
