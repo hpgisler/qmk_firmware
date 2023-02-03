@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="2.0130499"
-     inkscape:cx="932.16767"
-     inkscape:cy="403.61643"
+     inkscape:zoom="2.4643543"
+     inkscape:cx="385.29362"
+     inkscape:cy="233.12394"
      inkscape:window-width="2560"
      inkscape:window-height="1578"
      inkscape:window-x="0"
      inkscape:window-y="22"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer18"
+     inkscape:current-layer="layer9"
      showguides="true"
      inkscape:lockguides="true">
     <inkscape:grid
@@ -1899,7 +1899,7 @@
            x="631.86188"
            y="142.20329"
            id="text7629"
-           transform="translate(291.00464,274.21813)"><tspan
+           transform="translate(241.00464,219.21812)"><tspan
              sodipodi:role="line"
              id="tspan7627"
              x="631.86188"
@@ -1910,7 +1910,7 @@
            x="678.08484"
            y="207.19989"
            id="text7637"
-           transform="translate(144.78168,159.22152)"><tspan
+           transform="translate(144.78168,209.22153)"><tspan
              sodipodi:role="line"
              id="tspan7635"
              x="678.08484"
@@ -1918,24 +1918,24 @@
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="895.17932"
-           y="375.6214"
+           x="845.17932"
+           y="370.6214"
            id="text55062"><tspan
              sodipodi:role="line"
              id="tspan55060"
-             x="895.17932"
-             y="375.6214"
+             x="845.17932"
+             y="370.6214"
              style="text-align:start;text-anchor:start;stroke:none">___</tspan></text>
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="1190.3912"
-           y="375.6214"
+           x="1240.3912"
+           y="370.6214"
            id="text55076"><tspan
              sodipodi:role="line"
              id="tspan55074"
-             x="1190.3912"
-             y="375.6214"
+             x="1240.3912"
+             y="370.6214"
              style="text-align:start;text-anchor:start;stroke:none">___</tspan></text>
         <text
            xml:space="preserve"
@@ -1943,7 +1943,7 @@
            x="530.40924"
            y="192.80203"
            id="text7633"
-           transform="translate(342.45728,218.61939)"><tspan
+           transform="translate(292.45728,173.61938)"><tspan
              sodipodi:role="line"
              id="tspan7631"
              x="530.40924"
@@ -1954,7 +1954,7 @@
            x="186.769"
            y="188.28423"
            id="text9093"
-           transform="translate(636.09752,237.33719)"><tspan
+           transform="translate(636.09752,187.33719)"><tspan
              sodipodi:role="line"
              id="tspan9091"
              x="186.769"
@@ -1965,7 +1965,7 @@
            x="238.28223"
            y="192.53201"
            id="text9089"
-           transform="translate(634.58429,228.08941)"><tspan
+           transform="translate(634.58429,178.0894)"><tspan
              sodipodi:role="line"
              id="tspan9087"
              x="238.28223"
@@ -2022,7 +2022,7 @@
            x="1180.6888"
            y="978.25903"
            id="text7011"
-           transform="translate(37.389605,-552.63761)"><tspan
+           transform="translate(37.389605,-602.63761)"><tspan
              sodipodi:role="line"
              id="tspan7009"
              x="1180.6888"
@@ -2033,7 +2033,7 @@
            x="1230.097"
            y="973.02393"
            id="text7015"
-           transform="translate(37.981401,-552.40251)"><tspan
+           transform="translate(37.981401,-602.40251)"><tspan
              sodipodi:role="line"
              id="tspan7013"
              x="1230.097"
@@ -2044,7 +2044,7 @@
            x="1280.1234"
            y="978.24438"
            id="text7019"
-           transform="translate(37.955034,-552.45154)"><tspan
+           transform="translate(37.955034,-602.45154)"><tspan
              sodipodi:role="line"
              id="tspan7017"
              x="1280.1234"
@@ -2055,33 +2055,33 @@
            x="1576.4623"
            y="979.29303"
            id="text7023"
-           transform="translate(-358.38383,-603.67162)"><tspan
+           transform="translate(-358.38383,-553.67162)"><tspan
              sodipodi:role="line"
              id="tspan7021"
              x="1576.4623"
-             y="979.29303">F7</tspan></text>
+             y="979.29303">AlGr-F7</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
            x="1625.1023"
            y="973.84503"
            id="text7027"
-           transform="translate(-357.02385,-603.22362)"><tspan
+           transform="translate(-357.02385,-553.22362)"><tspan
              sodipodi:role="line"
              id="tspan7025"
              x="1625.1023"
-             y="973.84503">F8</tspan></text>
+             y="973.84503">AlGr-F8</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
            x="1674.4999"
            y="979.45374"
            id="text7031"
-           transform="translate(-356.42143,-603.6609)"><tspan
+           transform="translate(-356.42143,-553.6609)"><tspan
              sodipodi:role="line"
              id="tspan7029"
              x="1674.4999"
-             y="979.45374">F9</tspan></text>
+             y="979.45374">AlGr-F9</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -2109,7 +2109,7 @@
              sodipodi:role="line"
              id="tspan7033"
              x="1025.6298"
-             y="923.69403">LShift</tspan></text>
+             y="923.69403">LCtl</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -2125,12 +2125,12 @@
            xml:space="preserve"
            style="font-size:8px;line-height:normal;font-family:Arial;text-align:center;text-decoration-color:#000000;text-anchor:middle;display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
            x="922.86652"
-           y="375.62143"
+           y="425.62143"
            id="text7621"><tspan
              sodipodi:role="line"
              id="tspan7619"
              x="922.86652"
-             y="375.62143"
+             y="425.62143"
              style="font-size:8px;stroke:none">AlGr-j</tspan></text>
         <text
            xml:space="preserve"
@@ -2138,7 +2138,7 @@
            x="236.58392"
            y="192.39429"
            id="text9097"
-           transform="translate(686.28259,233.22713)"><tspan
+           transform="translate(686.28259,174.02713)"><tspan
              sodipodi:role="line"
              id="tspan9095"
              x="236.58392"
@@ -2149,7 +2149,7 @@
            x="580.18549"
            y="138.31938"
            id="text7625"
-           transform="translate(292.68103,232.30203)"><tspan
+           transform="translate(292.68103,282.30204)"><tspan
              sodipodi:role="line"
              id="tspan7623"
              x="580.18549"
@@ -2160,7 +2160,7 @@
            x="628.67267"
            y="192.80154"
            id="text7641"
-           transform="translate(294.19385,173.61987)"><tspan
+           transform="translate(244.19385,218.61988)"><tspan
              sodipodi:role="line"
              id="tspan7639"
              x="628.67267"
@@ -2171,7 +2171,7 @@
            x="579.48407"
            y="188.62419"
            id="text7645"
-           transform="translate(293.38245,172.79722)"><tspan
+           transform="translate(343.38245,227.79723)"><tspan
              sodipodi:role="line"
              id="tspan7643"
              x="579.48407"
@@ -2182,66 +2182,66 @@
            x="1181.4967"
            y="928.78033"
            id="text6983"
-           transform="translate(36.581743,-562.35892)"><tspan
+           transform="translate(36.581743,-512.35892)"><tspan
              sodipodi:role="line"
              id="tspan6981"
              x="1181.4967"
-             y="928.78033">F1</tspan></text>
+             y="928.78033">AlGr-F1</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
            x="1231.0988"
            y="924.51349"
            id="text6987"
-           transform="translate(36.979692,-563.09208)"><tspan
+           transform="translate(36.979692,-513.09208)"><tspan
              sodipodi:role="line"
              id="tspan6985"
              x="1231.0988"
-             y="924.51349">F2</tspan></text>
+             y="924.51349">AlGr-F2</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
            x="1279.5237"
            y="928.52295"
            id="text6991"
-           transform="translate(38.554766,-561.93011)"><tspan
+           transform="translate(38.554766,-511.93011)"><tspan
              sodipodi:role="line"
              id="tspan6989"
              x="1279.5237"
-             y="928.52295">F3</tspan></text>
+             y="928.52295">AlGr-F3</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
            x="1576.4099"
            y="927.96899"
            id="text6995"
-           transform="translate(-358.33146,-511.54757)"><tspan
+           transform="translate(-358.33146,-561.54757)"><tspan
              sodipodi:role="line"
              id="tspan6993"
              x="1576.4099"
-             y="927.96899">F4</tspan></text>
+             y="927.96899">AlGr-F4</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
            x="1625.3553"
            y="923.74133"
            id="text6999"
-           transform="translate(-357.27689,-512.31991)"><tspan
+           transform="translate(-357.27689,-562.31991)"><tspan
              sodipodi:role="line"
              id="tspan6997"
              x="1625.3553"
-             y="923.74133">F5</tspan></text>
+             y="923.74133">AlGr-F5</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66667px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
            x="1674.2545"
            y="927.37579"
            id="text7003"
-           transform="translate(-356.17606,-510.78295)"><tspan
+           transform="translate(-356.17606,-560.78295)"><tspan
              sodipodi:role="line"
              id="tspan7001"
              x="1674.2545"
-             y="927.37579">F6</tspan></text>
+             y="927.37579">AlGr-F6</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;display:inline;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -2254,17 +2254,6 @@
              x="1130.7877"
              y="992.13684"
              style="font-size:8px">LGui</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.33333px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-           x="1020.5256"
-           y="946.87585"
-           id="text7039"
-           transform="translate(-175.34626,-585.45444)"><tspan
-             sodipodi:role="line"
-             id="tspan7037"
-             x="1020.5256"
-             y="946.87585">RAlt</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.33333px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
@@ -2292,24 +2281,24 @@
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="895.17932"
-           y="366.42139"
+           x="845.17932"
+           y="361.42139"
            id="text55066"><tspan
              sodipodi:role="line"
              id="tspan55064"
-             x="895.17932"
-             y="366.42139"
+             x="845.17932"
+             y="361.42139"
              style="text-align:start;text-anchor:start;stroke:none">___</tspan></text>
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;display:inline;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="1190.3912"
-           y="366.42139"
+           x="1240.3912"
+           y="361.42139"
            id="text55080"><tspan
              sodipodi:role="line"
              id="tspan55078"
-             x="1190.3912"
-             y="366.42139"
+             x="1240.3912"
+             y="361.42139"
              style="text-align:start;text-anchor:start;stroke:none">___</tspan></text>
         <text
            xml:space="preserve"
@@ -2332,18 +2321,29 @@
              sodipodi:role="line"
              id="tspan19789"
              x="1025.6298"
-             y="923.69403">LShift</tspan></text>
+             y="923.69403">LCtl</tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.33333px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
-           x="1020.5256"
-           y="946.87585"
-           id="text21180"
-           transform="translate(-175.34626,-576.25444)"><tspan
+           x="1025.6298"
+           y="923.69403"
+           id="text30244"
+           transform="translate(-130.45044,-557.27262)"><tspan
              sodipodi:role="line"
-             id="tspan21178"
-             x="1020.5256"
-             y="946.87585">RAlt</tspan></text>
+             id="tspan30242"
+             x="1025.6298"
+             y="923.69403">LSft</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.33333px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+           x="1025.6298"
+           y="923.69403"
+           id="text30248"
+           transform="translate(-130.45044,-548.07262)"><tspan
+             sodipodi:role="line"
+             id="tspan30246"
+             x="1025.6298"
+             y="923.69403">LSft</tspan></text>
       </g>
       <text
          xml:space="preserve"
@@ -6249,8 +6249,7 @@
        inkscape:groupmode="layer"
        id="layer19"
        inkscape:label="ALPHA"
-       style="display:inline"
-       sodipodi:insensitive="true">
+       style="display:inline">
       <g
          inkscape:groupmode="layer"
          id="layer30"
@@ -7691,13 +7690,13 @@
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="149.43724"
-           y="111.63874"
+           x="199.43724"
+           y="116.63874"
            id="text8366"><tspan
              sodipodi:role="line"
              id="tspan8364"
-             x="149.43724"
-             y="111.63874"
+             x="199.43724"
+             y="116.63874"
              style="text-align:start;text-anchor:start;stroke:none">LAlt</tspan></text>
         <text
            xml:space="preserve"
@@ -7713,13 +7712,13 @@
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="544.64917"
-           y="111.63874"
+           x="494.64917"
+           y="116.63874"
            id="text8374"><tspan
              sodipodi:role="line"
              id="tspan8372"
-             x="544.64917"
-             y="111.63874"
+             x="494.64917"
+             y="116.63874"
              style="text-align:start;text-anchor:start;stroke:none">LAlt</tspan></text>
         <text
            xml:space="preserve"
@@ -7981,13 +7980,13 @@
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="149.43724"
-           y="102.43874"
+           x="199.43724"
+           y="107.43874"
            id="text7699"><tspan
              sodipodi:role="line"
              id="tspan7697"
-             x="149.43724"
-             y="102.43874"
+             x="199.43724"
+             y="107.43874"
              style="text-align:start;text-anchor:start;stroke:none">LAlt</tspan></text>
         <text
            xml:space="preserve"
@@ -8003,13 +8002,13 @@
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="544.64917"
-           y="102.43874"
+           x="494.64917"
+           y="107.43874"
            id="text7707"><tspan
              sodipodi:role="line"
              id="tspan7705"
-             x="544.64917"
-             y="102.43874"
+             x="494.64917"
+             y="107.43874"
              style="text-align:start;text-anchor:start;stroke:none">LAlt</tspan></text>
         <text
            xml:space="preserve"
@@ -8036,13 +8035,13 @@
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="199.43724"
-           y="107.43874"
+           x="149.43724"
+           y="102.43874"
            id="text9716"><tspan
              sodipodi:role="line"
              id="tspan9714"
-             x="199.43724"
-             y="107.43874"
+             x="149.43724"
+             y="102.43874"
              style="text-align:start;text-anchor:start;stroke:none">FUN ..</tspan></text>
         <text
            xml:space="preserve"
@@ -8078,13 +8077,13 @@
         <text
            xml:space="preserve"
            style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
-           x="494.64917"
-           y="107.43874"
+           x="544.64917"
+           y="102.43874"
            id="text9736"><tspan
              sodipodi:role="line"
              id="tspan9734"
-             x="494.64917"
-             y="107.43874"
+             x="544.64917"
+             y="102.43874"
              style="text-align:start;text-anchor:start;stroke:none">FUN ..</tspan></text>
         <text
            xml:space="preserve"
@@ -8108,6 +8107,16 @@
              x="370.05814"
              y="63.476097"
              style="font-size:6.66667px;text-align:center;text-anchor:middle;stroke:none">(ALA0)</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:5.33333px;line-height:normal;font-family:Arial;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000"
+           x="49.437237"
+           y="172.43875"
+           id="text26884"><tspan
+             sodipodi:role="line"
+             id="tspan26882"
+             x="49.437237"
+             y="172.43875">LSft</tspan></text>
       </g>
       <text
          xml:space="preserve"

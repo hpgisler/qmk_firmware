@@ -92,9 +92,9 @@ const key_override_t** key_overrides = (const key_override_t*[]){
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
-                                            LCTL_T(KC_L)   , LALT_T(KC_G)   , LT(FUN0,KC_D)  , LT(FUN0 ,KC_H) , LALT_T(KC_U)   , RCTL_T(KC_O)   ,
+                                            LCTL_T(KC_L)   , LT(FUN0 ,KC_G) , LALT_T(KC_D)   , LALT_T(KC_H)   , LT(FUN0 ,KC_U) , RCTL_T(KC_O)   ,
 
-                           KC_I           , LT(NUM0,KC_S)  , LT(SYM0,KC_R)  , LT(SYS0 ,KC_T) , LT(SYS0, KC_N) , LT(SYM0, KC_E) , LT(NUM0,KC_A)  , KC_C           ,
+                           LSFT_T(KC_I)   , LT(NUM0,KC_S)  , LT(SYM0,KC_R)  , LT(SYS0 ,KC_T) , LT(SYS0, KC_N) , LT(SYM0, KC_E) , LT(NUM0,KC_A)  , KC_C           ,
 
                                             REPEAT         , KC_SPC         , OSL(ALA2)      , OSL(ALA3)      , OSL(ALA1)      , XXXXXXX
                            ),
@@ -152,7 +152,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NUM1] = LAYOUT_split_10(
                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_ASTR        , CH_EQL         ,
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,  KC_0           ,
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,  KC_0          ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -174,17 +174,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
     [FUN0] = LAYOUT_split_10(
-                                     LSFT_T(ALGR(KC_P)) ,RALT_T(ALGR(KC_T)) , ALGR(KC_M)     , KC_F1          , KC_F2          , KC_F3          ,
+                                        LCTL_T(ALGR(KC_H)) , ALGR(KC_L)  ,LSFT_T(ALGR(KC_B)) , ALGR(KC_F4)    , ALGR(KC_F5)    , ALGR(KC_F6)    , 
 
-                            ALGR(KC_ENT)   , XXXXXXX       , ALGR(KC_H)     , ALGR(KC_L)     , KC_F4          , KC_F5          , KC_F6          ,  KC_LGUI       ,
+                           ALGR(KC_ENT)   , ALGR(KC_P)     , ALGR(KC_M)     , ALGR(KC_T)     , ALGR(KC_F1)    , ALGR(KC_F2)    , ALGR(KC_F3)    , KC_LGUI        ,
 
                                             _______        , MO(FUN1)       , _______        , _______        , MO(FUN1)       , _______
                            ),
     
     [FUN1] = LAYOUT_split_10(
-                                            KC_LSFT     ,RALT_T(ALGR(KC_K)) , ALGR(KC_J)     , KC_F7          , KC_F8          , KC_F9          ,
+                                        LCTL_T(ALGR(KC_D)) , ALGR(KC_I)     , KC_LSFT        , KC_F10         , KC_F11         , KC_F12         ,
 
-                         ALGR(LSFT(KC_C)) , ALGR(KC_D)     , ALGR(KC_I)     , ALGR(KC_B)     , KC_F10         , KC_F11         , KC_F12         ,ALGR(LSFT(KC_Q)),
+                         ALGR(LSFT(KC_C)) , XXXXXXX        , ALGR(KC_K)     , ALGR(KC_J)     , ALGR(KC_F7)    , ALGR(KC_F8)    , ALGR(KC_F9)    , ALGR(LSFT(KC_Q)),
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
