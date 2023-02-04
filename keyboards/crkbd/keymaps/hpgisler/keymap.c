@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include "keymap_swiss_de.h"
 #include <stdio.h>
+#include "features/achordion.h"
 
 enum keycodes {
     REPEAT = SAFE_RANGE,
@@ -243,7 +244,12 @@ void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
     process_repeat_key(keycode, record);
+    if (!process_achordion(keycode, record)) {
+      return false;
+    }
+
     // It's important to update the mod variables *after* calling process_repeat_key, or else
     // only a single modifier from the previous key is repeated (e.g. Ctrl+Shift+T then Repeat produces Shift+T)
     mod_state = get_mods();
@@ -273,3 +279,32 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 };
+
+void matrix_scan_user(void) {
+  achordion_task();
+}
+
+bool achordion_chord(uint16_t tap_hold_keycode,
+                     keyrecord_t* tap_hold_record,
+                     uint16_t other_keycode,
+                     keyrecord_t* other_record) {
+  // Exceptionally consider the following chords as holds, even though they are on the same hand.
+  /* switch (tap_hold_keycode) { */
+  /*   case HOME_A:  // A + U. */
+  /*     if (other_keycode == HOME_U) { return true; } */
+  /*     break; */
+
+  /*   case HOME_S:  // S + H and S + G. */
+  /*     if (other_keycode == HOME_H || other_keycode == KC_G) { return true; } */
+  /*     break; */
+  /* } */
+
+  // Also allow same-hand holds when the other key is in the rows below the
+  // alphas. I need the `% (MATRIX_ROWS / 2)` because my keyboard is split.
+  if (other_record->event.key.row % (MATRIX_ROWS / 2) >= 3 /*thumbs rows*/) {
+    return true;
+  }
+
+  // Otherwise, follow the opposite hands rule.
+  return achordion_opposite_hands(tap_hold_record, other_record);
+}

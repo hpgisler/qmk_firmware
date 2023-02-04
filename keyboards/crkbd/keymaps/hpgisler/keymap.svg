@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="2.5749361"
-     inkscape:cx="1239.4482"
-     inkscape:cy="411.07816"
-     inkscape:window-width="1790"
-     inkscape:window-height="1576"
+     inkscape:zoom="3.9608398"
+     inkscape:cx="583.58836"
+     inkscape:cy="173.82677"
+     inkscape:window-width="2560"
+     inkscape:window-height="1578"
      inkscape:window-x="0"
      inkscape:window-y="22"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer18"
+     inkscape:current-layer="layer9"
      showguides="true"
      inkscape:lockguides="true">
     <inkscape:grid
@@ -64,7 +64,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="18-Keys"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <g
        inkscape:groupmode="layer"
        id="layer29"
@@ -981,7 +982,8 @@
        inkscape:groupmode="layer"
        id="layer26"
        inkscape:label="FUNCTIONAL"
-       style="display:inline">
+       style="display:inline"
+       sodipodi:insensitive="true">
       <g
          inkscape:groupmode="layer"
          id="g10979"
@@ -6272,8 +6274,7 @@
        inkscape:groupmode="layer"
        id="layer19"
        inkscape:label="ALPHA"
-       style="display:inline"
-       sodipodi:insensitive="true">
+       style="display:inline">
       <g
          inkscape:groupmode="layer"
          id="layer30"
