@@ -42,22 +42,12 @@ enum layers {
 };
 
 
-const key_override_t left_key_override = ko_make_basic(MOD_MASK_ALT, KC_LEFT,  KC_HOME); // Shift Left is Home
-const key_override_t down_key_override = ko_make_basic(MOD_MASK_ALT, KC_DOWN,  KC_PGDN); // Shift down is PgDn
-const key_override_t up_key_override   = ko_make_basic(MOD_MASK_ALT, KC_UP,    KC_PGUP); // Shift up is PgUp 
-const key_override_t right_key_override= ko_make_basic(MOD_MASK_ALT, KC_RIGHT, KC_END);  // Shift right is End 
-const key_override_t bspc_key_override = ko_make_basic(MOD_MASK_ALT, KC_BSPC,  KC_DEL);  // Shift bspc is del  
-
-
-const key_override_t** key_overrides = (const key_override_t*[]){
-    &left_key_override,
-    &down_key_override,
-    &up_key_override,
-    &right_key_override,
-    &bspc_key_override,
-
-    NULL
-};
+// just for demo purposes..
+/* const key_override_t bspc_key_override = ko_make_basic(MOD_MASK_ALT, KC_BSPC,  KC_DEL);  // Shift bspc is del   */
+/* const key_override_t** key_overrides = (const key_override_t*[]){ */
+/*     &bspc_key_override, */
+/*     NULL */
+/* }; */
 
 #define LAYOUT_split_9( \
        L11, L12, L13,                     R11, R12, R13,      \
