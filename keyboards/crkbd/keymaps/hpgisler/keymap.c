@@ -124,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
 
     [SYS1] = LAYOUT_split_10(
-                                            KC_PSCR        , XXXXXXX        , XXXXXXX        , KC_HOME        , KC_END         , LSFT(KC_TAB)   ,
+                                            KC_PSCR        , XXXXXXX        , XXXXXXX        , LSFT(KC_TAB)   , KC_HOME        , KC_END         ,
 
                             KC_LSFT       , XXXXXXX        , XXXXXXX        , LCTL(KC_G)     , KC_PGDN        , KC_PGUP        , KC_DEL         , LSFT(KC_ENT)   ,
 
