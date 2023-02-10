@@ -85,9 +85,9 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
-                                            LCTL_T(KC_L)   , LT(FUN0 ,KC_G) , LALT_T(KC_D)   , LALT_T(KC_H)   , LT(FUN0 ,KC_U) , RCTL_T(KC_O)   ,
+                                            LCTL_T(KC_L)   , LT(FUN0 ,KC_D) , LALT_T(KC_G)   , LALT_T(KC_H)   , LT(FUN0 ,KC_U) , RCTL_T(KC_O)   ,
 
-                           LSFT_T(KC_I)   , LT(NUM0,KC_S)  , LT(SYM0,KC_R)  , LT(SYS0 ,KC_T) , LT(SYS0, KC_N) , LT(SYM0, KC_E) , LT(NUM0,KC_A)  , RSFT_T(KC_C)   ,
+                           LSFT_T(KC_I)   , LT(NUM0,KC_S)  , LT(SYM0,KC_T)  , LT(SYS0 ,KC_R) , LT(SYS0, KC_N) , LT(SYM0, KC_E) , LT(NUM0,KC_A)  , RSFT_T(KC_C)   ,
 
                                             REPEAT         , KC_SPC         , OSL(ALA2)      , OSL(ALA3)      , OSL(ALA1)      , XXXXXXX
                            ),
@@ -101,9 +101,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
     
     [ALA2] = LAYOUT_split_10(
-                                            LSFT(KC_L)     , LSFT(KC_G)     , LSFT(KC_D)     , LSFT(KC_H)     , LSFT(KC_U)     , LSFT(CH_O)     ,
+                                            LSFT(KC_L)     , LSFT(KC_D)     , LSFT(KC_G)     , LSFT(KC_H)     , LSFT(KC_U)     , LSFT(CH_O)     ,
 
-                           LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_R)     , LSFT(KC_T)     , LSFT(KC_N)     , LSFT(KC_E)     , LSFT(KC_A)     , LSFT(CH_C)     ,
+                           LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_T)     , LSFT(KC_R)     , LSFT(KC_N)     , LSFT(KC_E)     , LSFT(KC_A)     , LSFT(CH_C)     ,
 
                                             _______        , _______        , _______        , _______        , _______         , _______
                            ),
