@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYS0] = LAYOUT_split_10(
                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_TAB         , KC_LEFT        , KC_RIGHT       ,
 
-                            KC_LSFT       , KC_LCTL        , KC_LALT        , KC_ESC         , KC_DOWN        , KC_UP          , KC_BSPC        , KC_ENT         ,
+                            KC_LSFT       , KC_LCTL        , KC_LALT        , LCTL(KC_G)     , KC_DOWN        , KC_UP          , KC_BSPC        , KC_ENT         ,
 
                                             _______        , MO(SYS1)       , _______        , _______        , MO(SYS1)       , _______
                            ),
@@ -128,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYS1] = LAYOUT_split_10(
                                             KC_PSCR        , XXXXXXX        , XXXXXXX        , LSFT(KC_TAB)   , KC_HOME        , KC_END         ,
 
-                            KC_LSFT       , XXXXXXX        , XXXXXXX        , LCTL(KC_G)     , KC_PGDN        , KC_PGUP        , KC_DEL         , LSFT(KC_ENT)   ,
+                            KC_LSFT       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_PGDN        , KC_PGUP        , KC_DEL         , LSFT(KC_ENT)   ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -199,6 +199,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 };
                                
+
+const uint16_t PROGMEM esc_combo[] = {LT(SYS0 ,KC_R) , LT(SYS0, KC_N), COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+  COMBO(esc_combo, KC_ESC),
+};
 
 // Used to extract the basic tapping keycode from a dual-role key.
 // Example: GET_TAP_KC(MT(MOD_RSFT, KC_E)) == KC_E
