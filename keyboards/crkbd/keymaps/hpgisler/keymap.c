@@ -39,6 +39,8 @@ enum layers {
   SYM1,
   FUN0,
   FUN1,
+  FUN2,
+  FUN3,
 };
 
 
@@ -165,21 +167,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
     [FUN0] = LAYOUT_split_10(
-                                        LCTL_T(ALGR(KC_H)) , ALGR(KC_L)  ,LSFT_T(ALGR(KC_B)) , ALGR(KC_F4)    , ALGR(KC_F5)    , ALGR(KC_F6)    , 
+                                             LCTL_T(KC_F6) , KC_F5        ,LSFT_T(KC_F4) ,RSFT_T(ALGR(KC_F4)) ,ALGR(KC_F5) ,RCTL_T(ALGR(KC_F6)) , 
 
-                           ALGR(KC_ENT)   , ALGR(KC_P)     , ALGR(KC_K)     , ALGR(KC_J)     , ALGR(KC_F1)    , ALGR(KC_F2)    , ALGR(KC_F3)    , KC_LGUI        ,
+                           XXXXXXX        , KC_F3          , KC_F2          , KC_F1          , ALGR(KC_F1)    , ALGR(KC_F2)    , ALGR(KC_F3)    , KC_LGUI        ,
 
-                                            _______        , MO(FUN1)       , _______        , _______        , MO(FUN1)       , _______
+                                            _______        , MO(FUN2)       , _______        , _______        , MO(FUN1)       , _______
                            ),
-    
-    [FUN1] = LAYOUT_split_10(
-                                        LCTL_T(ALGR(KC_I)) , ALGR(KC_D)     , KC_LSFT        , ALGR(KC_F7)    , ALGR(KC_F8)    , ALGR(KC_F9)    ,
 
-                         ALGR(LSFT(KC_C)) , XXXXXXX        , ALGR(KC_T)     , ALGR(KC_M)     , KC_F10         , KC_F11         , KC_F12         , ALGR(LSFT(KC_Q)),
+    [FUN1] = LAYOUT_split_10(
+                                            LCTL_T(KC_F9)  , KC_F8        ,LSFT_T(KC_F7) ,RSFT_T(ALGR(KC_F7)) ,ALGR(KC_F8) ,RCTL_T(ALGR(KC_F9)) ,
+
+                          ALGR(LSFT(KC_Q)), KC_F12         , KC_F11         , KC_F10         ,ALGR_T(KC_F10)  , ALGR_T(KC_F11) , ALGR_T(KC_F12)  , XXXXXXX        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
-    
+
+    [FUN2] = LAYOUT_split_10(
+                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_L)     ,
+
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_J)     , ALGR(KC_K)     , ALGR(KC_ENT)   , ALGR(KC_P)     ,
+
+                                            _______        , _______        , _______        , _______        , MO(FUN3)       , _______        
+                           ),
+                                            
+    [FUN3] = LAYOUT_split_10(
+                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_I)     , ALGR(KC_D)     , 
+
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_M)     , ALGR(KC_T)     , XXXXXXX      ,ALGR(LSFT(KC_C)) , 
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
 };
                                
 
@@ -246,23 +263,29 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     oneshot_mod_state = get_oneshot_mods();
     switch (keycode) {
 
-    case LCTL_T(ALGR(KC_H)):
+    case RSFT_T(ALGR(KC_F4)):
       if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_H));
+        tap_code16(ALGR(KC_F4));
+        return false;        // Return false to ignore further processing of key
+      }
+      
+    case RCTL_T(ALGR(KC_F6)):
+      if (record->tap.count && record->event.pressed) {
+        tap_code16(ALGR(KC_F6));
         return false;        // Return false to ignore further processing of key
       }
       break;
 
-    case LCTL_T(ALGR(KC_I)):
+    case RSFT_T(ALGR(KC_F7)):
       if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_I));
+        tap_code16(ALGR(KC_F7));
         return false;        // Return false to ignore further processing of key
       }
       break;
-
-    case LSFT_T(ALGR(KC_B)):
+      
+    case RCTL_T(ALGR(KC_F9)):
       if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_B));
+        tap_code16(ALGR(KC_F9));
         return false;        // Return false to ignore further processing of key
       }
       break;
