@@ -23,16 +23,16 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="2.1841146"
-     inkscape:cx="386.65553"
-     inkscape:cy="305.15798"
+     inkscape:zoom="2.922276"
+     inkscape:cx="347.50311"
+     inkscape:cy="220.88947"
      inkscape:window-width="2560"
      inkscape:window-height="1578"
      inkscape:window-x="0"
      inkscape:window-y="22"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer16"
-     showguides="false"
+     inkscape:current-layer="layer11"
+     showguides="true"
      inkscape:lockguides="true">
     <inkscape:grid
        type="xygrid"
@@ -6461,8 +6461,7 @@
        inkscape:groupmode="layer"
        id="layer19"
        inkscape:label="ALPHA"
-       style="display:inline"
-       sodipodi:insensitive="true">
+       style="display:inline">
       <g
          inkscape:groupmode="layer"
          id="layer30"
@@ -7390,7 +7389,7 @@
            x="1240.4642"
            y="898.24121"
            id="text2730"
-           transform="translate(-1063.3398,-768.20247)"><tspan
+           transform="translate(-1013.3398,-763.20247)"><tspan
              sodipodi:role="line"
              id="tspan2728"
              x="1240.4642"
@@ -7401,7 +7400,7 @@
            x="1291.3337"
            y="901.81128"
            id="text2734"
-           transform="translate(-1064.2093,-766.77254)"><tspan
+           transform="translate(-1114.2093,-771.77254)"><tspan
              sodipodi:role="line"
              id="tspan2732"
              x="1291.3337"
@@ -7764,7 +7763,7 @@
            x="1230.5776"
            y="898.18243"
            id="text2674"
-           transform="translate(-1053.4532,-786.54369)"><tspan
+           transform="translate(-1003.4532,-781.54369)"><tspan
              sodipodi:role="line"
              id="tspan2672"
              x="1230.5776"
@@ -7775,7 +7774,7 @@
            x="1279.3462"
            y="901.99561"
            id="text2678"
-           transform="translate(-1052.2218,-785.35687)"><tspan
+           transform="translate(-1102.2218,-790.35687)"><tspan
              sodipodi:role="line"
              id="tspan2676"
              x="1279.3462"
