@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA1] = LAYOUT_split_10(
                                             KC_V           , KC_M           , KC_W           , KC_F           , CH_DOT ,         CH_Z           ,
 
-                           KC_Q           , KC_J           , LCTL_T(KC_P)   , LALT_T(KC_K)   , RALT_T(KC_B)   , LCTL_T(CH_COMM), KC_X           , CH_Y           ,
+                           KC_Q           , KC_J           , LCTL_T(KC_K)   , LALT_T(KC_P)   , RALT_T(KC_B)   , LCTL_T(CH_COMM), KC_X           , CH_Y           ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA3] = LAYOUT_split_10(
                                             LSFT(KC_V)     , LSFT(KC_M)     , LSFT(KC_W)     , LSFT(KC_F)     , CH_COLN        , LSFT(CH_Z)     ,
 
-                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_P)     , LSFT(KC_K)     , LSFT(KC_B)     , CH_SCLN        , LSFT(KC_X)     , LSFT(CH_Y)     ,
+                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_K)     , LSFT(KC_P)     , LSFT(KC_B)     , CH_SCLN        , LSFT(KC_X)     , LSFT(CH_Y)     ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -150,18 +150,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
-    [SYM0] = LAYOUT_split_10(
-                                            CH_UNDS        , CH_PIPE        , CH_PERC        , CH_LPRN        , CH_RPRN        , CH_QUES        , 
 
-                           CH_DLR         , CH_QUOT        , CH_DQUO        , CH_TILD        , CH_SLSH        , CH_ASTR        , CH_AMPR        , CH_MINS        ,
+    [SYM0] = LAYOUT_split_10(
+                                            CH_AT          , CH_PIPE        , CH_QUES        , CH_LPRN        , CH_RPRN        , CH_AMPR        , 
+
+                           CH_DLR         , CH_TILD        , CH_QUOT        , CH_DQUO        , CH_ASTR        , CH_SLSH        , CH_PERC        , CH_MINS        ,
 
                                             _______        , MO(SYM1)       , _______        , _______        , MO(SYM1)       , _______
                            ),
     
     [SYM1] = LAYOUT_split_10(
-                                            CH_AT          , XXXXXXX        , CH_HASH        , CH_LCBR        , CH_RCBR        , CH_LABK        ,
+                                            XXXXXXX        , CH_HASH        , CH_EXLM        , CH_LCBR        , CH_RCBR        , CH_LABK        ,
 
-                           CH_EURO        , CH_GRV         , CH_CIRC        , CH_BSLS        , CH_LBRC        , CH_RBRC        , CH_RABK        , CH_EXLM        ,
+                           CH_EURO        , CH_BSLS        , CH_GRV         , CH_CIRC        , CH_LBRC        , CH_RBRC        , CH_RABK        , CH_UNDS        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),

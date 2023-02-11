@@ -24,14 +24,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="2.922276"
-     inkscape:cx="1046.9579"
-     inkscape:cy="393.35778"
+     inkscape:cx="1067.4899"
+     inkscape:cy="266.40194"
      inkscape:window-width="2560"
      inkscape:window-height="1578"
      inkscape:window-x="0"
      inkscape:window-y="22"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer18"
+     inkscape:current-layer="layer13"
      showguides="true"
      inkscape:lockguides="true">
     <inkscape:grid
@@ -981,7 +981,8 @@
        inkscape:groupmode="layer"
        id="layer26"
        inkscape:label="FUNCTIONAL"
-       style="display:inline">
+       style="display:inline"
+       sodipodi:insensitive="true">
       <g
          inkscape:groupmode="layer"
          id="g10979"
@@ -2561,8 +2562,7 @@
        inkscape:groupmode="layer"
        id="layer21"
        inkscape:label="SYMBOL"
-       style="display:inline"
-       sodipodi:insensitive="true">
+       style="display:inline">
       <g
          inkscape:groupmode="layer"
          id="g10575"
@@ -3570,7 +3570,7 @@
            x="1230.2196"
            y="907.94867"
            id="text3287"
-           transform="translate(-307.35309,-791.30993)"><tspan
+           transform="translate(-339.04029,-796.30993)"><tspan
              sodipodi:role="line"
              id="tspan3285"
              x="1230.2196"
@@ -3614,7 +3614,7 @@
            x="1674.2375"
            y="910.26624"
            id="text3303"
-           transform="translate(-801.37103,-748.62749)"><tspan
+           transform="translate(-733.05823,-743.62749)"><tspan
              sodipodi:role="line"
              id="tspan3301"
              x="1674.2375"
@@ -3625,7 +3625,7 @@
            x="1130.5438"
            y="975.35669"
            id="text3307"
-           transform="translate(-307.67731,-808.71794)"><tspan
+           transform="translate(-239.36451,-813.71794)"><tspan
              sodipodi:role="line"
              id="tspan3305"
              x="1130.5438"
@@ -3743,7 +3743,7 @@
            x="1191.946"
            y="910.18292"
            id="text3868"
-           transform="translate(-369.07953,-793.54418)"><tspan
+           transform="translate(-350.76673,-802.74418)"><tspan
              sodipodi:role="line"
              id="tspan3866"
              x="1191.946"
@@ -3754,7 +3754,7 @@
            x="1291.5634"
            y="957.99805"
            id="text3872"
-           transform="translate(26.515089,-850.38787)"><tspan
+           transform="translate(-350.38404,-850.5593)"><tspan
              sodipodi:role="line"
              id="tspan3870"
              x="1291.5634"
@@ -3765,7 +3765,7 @@
            x="1191.5017"
            y="960.84698"
            id="text3892"
-           transform="translate(-268.63519,-853.40824)"><tspan
+           transform="translate(144.88954,-803.23681)"><tspan
              sodipodi:role="line"
              id="tspan3890"
              x="1191.5017"
@@ -3776,7 +3776,7 @@
            x="1239.6647"
            y="956.99274"
            id="text3896"
-           transform="translate(128.41377,-775.35398)"><tspan
+           transform="translate(-298.48536,-840.354)"><tspan
              sodipodi:role="line"
              id="tspan3894"
              x="1239.6647"
@@ -3787,7 +3787,7 @@
            x="1686.922"
            y="960.5965"
            id="text3912"
-           transform="translate(-368.84355,-802.98632)"><tspan
+           transform="translate(-350.53075,-852.98632)"><tspan
              sodipodi:role="line"
              id="tspan3910"
              x="1686.922"
@@ -3798,7 +3798,7 @@
            x="1291.8304"
            y="957.73615"
            id="text3900"
-           transform="translate(-418.96393,-805.29739)"><tspan
+           transform="translate(-350.65113,-800.29739)"><tspan
              sodipodi:role="line"
              id="tspan3898"
              x="1291.8304"
@@ -3809,7 +3809,7 @@
            x="1181.5748"
            y="960.03394"
            id="text3311"
-           transform="translate(-258.70831,-802.59518)"><tspan
+           transform="translate(-340.39551,-802.59518)"><tspan
              sodipodi:role="line"
              id="tspan3309"
              x="1181.5748"
@@ -3820,7 +3820,7 @@
            x="1230.2365"
            y="954.26477"
            id="text3315"
-           transform="translate(-407.36994,-846.82603)"><tspan
+           transform="translate(156.1548,-772.62602)"><tspan
              sodipodi:role="line"
              id="tspan3313"
              x="1230.2365"
@@ -3831,7 +3831,7 @@
            x="1279.8119"
            y="957.88489"
            id="text3319"
-           transform="translate(-356.94537,-791.24614)"><tspan
+           transform="translate(-438.63257,-791.24614)"><tspan
              sodipodi:role="line"
              id="tspan3317"
              x="1279.8119"
@@ -3853,7 +3853,7 @@
            x="1725.1185"
            y="976.95386"
            id="text3335"
-           transform="translate(-507.04008,-819.5151)"><tspan
+           transform="translate(-438.72728,-824.5151)"><tspan
              sodipodi:role="line"
              id="tspan3333"
              x="1725.1185"
@@ -3864,7 +3864,7 @@
            x="1625.0742"
            y="898.41156"
            id="text2686"
-           transform="translate(-802.2077,-740.97281)"><tspan
+           transform="translate(-733.8949,-745.97281)"><tspan
              sodipodi:role="line"
              id="tspan2684"
              x="1625.0742"
@@ -3875,7 +3875,7 @@
            x="1635.5941"
            y="954.14343"
            id="text41557"
-           transform="translate(-367.51567,-801.70468)"><tspan
+           transform="translate(-399.20287,-796.70468)"><tspan
              sodipodi:role="line"
              id="tspan41555"
              x="1635.5941"
@@ -5187,7 +5187,8 @@
        inkscape:groupmode="layer"
        id="layer25"
        inkscape:label="SYSTEM"
-       style="display:inline">
+       style="display:inline"
+       sodipodi:insensitive="true">
       <g
          inkscape:groupmode="layer"
          id="g11181"
@@ -7444,7 +7445,7 @@
            x="1240.9482"
            y="945.72382"
            id="text2746"
-           transform="translate(-1063.8238,-765.68506)"><tspan
+           transform="translate(-1013.8238,-760.68506)"><tspan
              sodipodi:role="line"
              id="tspan2744"
              x="1240.9482"
@@ -7455,7 +7456,7 @@
            x="1291.6217"
            y="950.05481"
            id="text2750"
-           transform="translate(-1064.4973,-765.01606)"><tspan
+           transform="translate(-1114.4973,-770.01606)"><tspan
              sodipodi:role="line"
              id="tspan2748"
              x="1291.6217"
@@ -7840,7 +7841,7 @@
            x="1230.644"
            y="945.83429"
            id="text2702"
-           transform="translate(-1053.5196,-784.19554)"><tspan
+           transform="translate(-1003.5196,-779.19554)"><tspan
              sodipodi:role="line"
              id="tspan2700"
              x="1230.644"
@@ -7851,7 +7852,7 @@
            x="1280.4945"
            y="950.14948"
            id="text2706"
-           transform="translate(-1053.3701,-783.51072)"><tspan
+           transform="translate(-1103.3701,-788.51072)"><tspan
              sodipodi:role="line"
              id="tspan2704"
              x="1280.4945"
