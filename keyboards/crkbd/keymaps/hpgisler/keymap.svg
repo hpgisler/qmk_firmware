@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="2.922276"
-     inkscape:cx="1067.4899"
-     inkscape:cy="266.40194"
+     inkscape:cx="368.37725"
+     inkscape:cy="275.64132"
      inkscape:window-width="2560"
      inkscape:window-height="1578"
      inkscape:window-x="0"
@@ -2562,7 +2562,8 @@
        inkscape:groupmode="layer"
        id="layer21"
        inkscape:label="SYMBOL"
-       style="display:inline">
+       style="display:inline"
+       sodipodi:insensitive="true">
       <g
          inkscape:groupmode="layer"
          id="g10575"
@@ -6472,8 +6473,7 @@
        inkscape:groupmode="layer"
        id="layer19"
        inkscape:label="ALPHA"
-       style="display:inline"
-       sodipodi:insensitive="true">
+       style="display:inline">
       <g
          inkscape:groupmode="layer"
          id="layer30"
