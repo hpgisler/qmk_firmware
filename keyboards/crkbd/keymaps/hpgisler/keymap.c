@@ -169,7 +169,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN0] = LAYOUT_split_10(
                                              LCTL_T(KC_F6) , KC_F5        ,LSFT_T(KC_F4) ,RSFT_T(ALGR(KC_F4)) ,ALGR(KC_F5) ,RCTL_T(ALGR(KC_F6)) , 
 
-                           XXXXXXX        , KC_F3          , KC_F2          , KC_F1          , ALGR(KC_F1)    , ALGR(KC_F2)    , ALGR(KC_F3)    , KC_LGUI        ,
+                           XXXXXXX        , KC_F3          , KC_F2          , KC_F1          , ALGR(KC_F1)    , ALGR(KC_F2)    , ALGR(KC_F3)    , ALGR(KC_P)     ,
 
                                             _______        , MO(FUN2)       , _______        , _______        , MO(FUN1)       , _______
                            ),
@@ -177,7 +177,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN1] = LAYOUT_split_10(
                                             LCTL_T(KC_F9)  , KC_F8        ,LSFT_T(KC_F7) ,RSFT_T(ALGR(KC_F7)) ,ALGR(KC_F8) ,RCTL_T(ALGR(KC_F9)) ,
 
-                          ALGR(LSFT(KC_Q)), KC_F12         , KC_F11         , KC_F10         ,ALGR_T(KC_F10)  , ALGR_T(KC_F11) , ALGR_T(KC_F12)  , XXXXXXX        ,
+                          ALGR(LSFT(KC_Q)), KC_F12         , KC_F11         , KC_F10         ,ALGR_T(KC_F10)  , ALGR_T(KC_F11) , ALGR_T(KC_F12)  , KC_LGUI       ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),

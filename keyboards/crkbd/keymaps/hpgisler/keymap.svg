@@ -24,14 +24,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="2.922276"
-     inkscape:cx="347.50311"
-     inkscape:cy="220.88947"
+     inkscape:cx="1046.9579"
+     inkscape:cy="393.35778"
      inkscape:window-width="2560"
      inkscape:window-height="1578"
      inkscape:window-x="0"
      inkscape:window-y="22"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer11"
+     inkscape:current-layer="layer18"
      showguides="true"
      inkscape:lockguides="true">
     <inkscape:grid
@@ -981,8 +981,7 @@
        inkscape:groupmode="layer"
        id="layer26"
        inkscape:label="FUNCTIONAL"
-       style="display:inline"
-       sodipodi:insensitive="true">
+       style="display:inline">
       <g
          inkscape:groupmode="layer"
          id="g10979"
@@ -2095,6 +2094,17 @@
              y="267.05673"
              style="font-size:5.33333px;text-align:start;text-anchor:start"
              id="tspan1807">___</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:normal;font-family:Arial;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:center;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+           x="678.08484"
+           y="207.19989"
+           id="text3277"
+           transform="translate(689.99362,224.22153)"><tspan
+             sodipodi:role="line"
+             id="tspan3275"
+             x="678.08484"
+             y="207.19989">AlGr-p</tspan></text>
       </g>
       <g
          inkscape:groupmode="layer"
@@ -2250,7 +2260,7 @@
            x="1130.7877"
            y="992.13684"
            id="text7007"
-           transform="translate(237.29074,-560.71542)"><tspan
+           transform="translate(237.29074,-551.51542)"><tspan
              sodipodi:role="line"
              id="tspan7005"
              x="1130.7877"
@@ -6461,7 +6471,8 @@
        inkscape:groupmode="layer"
        id="layer19"
        inkscape:label="ALPHA"
-       style="display:inline">
+       style="display:inline"
+       sodipodi:insensitive="true">
       <g
          inkscape:groupmode="layer"
          id="layer30"
