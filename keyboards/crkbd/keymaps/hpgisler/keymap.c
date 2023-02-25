@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_T)     , LSFT(KC_R)     , RALT_T(KC_B)   , LCTL_T(CH_COMM), KC_X           , CH_Y           ,
 
-                                            _______        , MO(ALA3)       , _______        , _______        , -------        , _______
+                                            _______        , MO(ALA3)       , _______        , _______        , _______        , _______
                            ),
     
     [ALA2] = LAYOUT_split_10(
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            KC_Q           , KC_J           , LCTL_T(KC_K)   , LALT_T(KC_P)   , LSFT(KC_N)     , LSFT(KC_E)     , LSFT(KC_A)     , LSFT(CH_C)     ,
 
-                                            _______        , -------        , _______        , _______        , MO(ALA3)      , _______
+                                            _______        , _______        , _______        , _______        , MO(ALA3)      , _______
                            ),
  
     [ALA3] = LAYOUT_split_10(
@@ -113,7 +113,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                             LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_K)     , LSFT(KC_P)     , LSFT(KC_B)     , CH_SCLN        , LSFT(KC_X)     , LSFT(CH_Y)     ,
 
-                                            _______        , -------        , _______        , _______        , -------        , _______
+                                            _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
     [SYS0] = LAYOUT_split_10(
