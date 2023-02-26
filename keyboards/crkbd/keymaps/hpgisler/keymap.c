@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            LSFT_T(KC_I)   , LT(NUM0,KC_S)  , LT(SYM0,KC_T)  , LT(SYS0 ,KC_R) , LT(SYS0, KC_N) , LT(SYM0, KC_E) , LT(NUM0,KC_A)  , RSFT_T(KC_C)   ,
 
-                                            REPEAT         , OSL(ALA2)      , KC_SPC         , XXXXXXX        , OSL(ALA1)      , XXXXXXX
+                                           XXXXXXX         , OSL(ALA2)      , KC_SPC         , REPEAT         , OSL(ALA1)      , XXXXXXX
                            ),
 
     [ALA1] = LAYOUT_split_10(
