@@ -35,6 +35,7 @@ enum layers {
   SYS1,
   NUM0,
   NUM1,
+  NUM2,
   SYM0,
   SYM1,
   FUN0,
@@ -139,18 +140,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            XXXXXXX        , CH_ODIA        , CH_ADIA        , CH_UDIA        , KC_1           , KC_2           , KC_3           , KC_0          ,
 
-                                            _______        , MO(NUM1)       , _______        , _______        , MO(NUM1)       , _______
+                                            _______        , MO(NUM2)       , _______        , _______        , MO(NUM1)       , _______
                            ),
     
     [NUM1] = LAYOUT_split_10(
                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_MINS        , CH_DOT         , CH_EQL         , 
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_BSPC        , KC_ENT         , XXXXXXX        , CH_EQL         , 
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
 
+    [NUM2] = LAYOUT_split_10(
+                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_COLN        , CH_DOT         ,
+
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_ASTR        , CH_SLSH        , CH_PERC        , CH_MINS        , 
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+    
     [SYM0] = LAYOUT_split_10(
                                             CH_AT          , CH_PIPE        , CH_QUES        , CH_LPRN        , CH_RPRN        , CH_AMPR        , 
 
