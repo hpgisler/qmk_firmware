@@ -155,7 +155,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NUM2] = LAYOUT_split_10(
                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_COLN        , CH_DOT         ,
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_ASTR        , CH_SLSH        , CH_PERC        , CH_MINS        , 
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_ASTR        , CH_SLSH        , CH_MINS        , CH_PERC        , 
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -163,7 +163,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYM0] = LAYOUT_split_10(
                                             CH_AT          , CH_PIPE        , CH_QUES        , CH_LPRN        , CH_RPRN        , CH_AMPR        , 
 
-                           CH_DLR         , CH_TILD        , CH_QUOT        , CH_DQUO        , CH_ASTR        , CH_SLSH        , CH_PERC        , CH_MINS        ,
+                           CH_DLR         , CH_TILD        , CH_QUOT        , CH_DQUO        , CH_ASTR        , CH_SLSH        , CH_MINS        , CH_PERC        ,
 
                                             _______        , MO(SYM1)       , _______        , _______        , MO(SYM1)       , _______
                            ),
@@ -171,7 +171,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYM1] = LAYOUT_split_10(
                                             XXXXXXX        , CH_HASH        , CH_EXLM        , CH_LCBR        , CH_RCBR        , CH_LABK        ,
 
-                           CH_EURO        , CH_BSLS        , CH_GRV         , CH_CIRC        , CH_LBRC        , CH_RBRC        , CH_RABK        , CH_UNDS        ,
+                           CH_EURO        , CH_BSLS        , CH_GRV         , CH_CIRC        , CH_LBRC        , CH_RBRC        , CH_UNDS        , CH_RABK        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
