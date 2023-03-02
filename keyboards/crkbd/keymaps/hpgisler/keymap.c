@@ -42,6 +42,7 @@ enum layers {
   FUN1,
   FUN2,
   FUN3,
+  SPC0,
 };
 
 
@@ -90,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            LSFT_T(KC_I)   , LT(NUM0,KC_S)  , LT(SYM0,KC_T)  , LT(SYS0 ,KC_R) , LT(SYS0, KC_N) , LT(SYM0, KC_E) , LT(NUM0,KC_A)  , RSFT_T(KC_C)   ,
 
-                                           XXXXXXX         , OSL(ALA1)      , KC_SPC         , REPEAT         , OSL(ALA2)      , XXXXXXX
+                                            XXXXXXX         , OSL(ALA1)     ,LT(SPC0, KC_SPC), REPEAT         , OSL(ALA2)      , XXXXXXX
                            ),
 
     [ALA1] = LAYOUT_split_10(
@@ -207,6 +208,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
+
+    [SPC0] = LAYOUT_split_10(
+                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        ,
+
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_ENT         , KC_BSPC        , KC_DEL         , XXXXXXX        , 
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+    
 };
                                
 
@@ -225,6 +235,15 @@ uint8_t last_modifier = 0;
 // representation of active modifiers.
 uint8_t mod_state;
 uint8_t oneshot_mod_state;
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(SPC0, KC_SPC):
+            return TAPPING_TERM + 1000;
+        default:
+            return TAPPING_TERM;
+    }
+}
 
 void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
     if (keycode != REPEAT) {
