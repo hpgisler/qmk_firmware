@@ -95,11 +95,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
     [ALA1] = LAYOUT_split_10(
-                                            LSFT(KC_L)     , LSFT(KC_D)     , LSFT(KC_G)     , KC_F           , CH_DOT ,         CH_Z           ,
+                                            LSFT(KC_L)     , LSFT(KC_D)     , LSFT(KC_G)     , KC_F           , CH_COMM ,         CH_Z           ,
 
-                           LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_T)     , LSFT(KC_R)     , RALT_T(KC_B)   , LCTL_T(CH_COMM), KC_X           , CH_Y           ,
+                           LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_T)     , LSFT(KC_R)     , RALT_T(KC_B)   , LCTL_T(CH_DOT), KC_X           , CH_Y           ,
 
-                                            _______        , _______       , _______        , _______        , MO(ALA3)        , _______
+                                            _______        , _______        , _______        , _______        , MO(ALA3)        , _______
                            ),
     
     [ALA2] = LAYOUT_split_10(
@@ -107,13 +107,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            KC_Q           , KC_J           , LCTL_T(KC_K)   , LALT_T(KC_P)   , LSFT(KC_N)     , LSFT(KC_E)     , LSFT(KC_A)     , LSFT(CH_C)     ,
 
-                                            _______        , MO(ALA3)        , _______        , _______        , _______      , _______
+                                            _______        , MO(ALA3)       , _______        , _______        , _______      , _______
                            ),
  
     [ALA3] = LAYOUT_split_10(
-                                            LSFT(KC_V)     , LSFT(KC_M)     , LSFT(KC_W)     , LSFT(KC_F)     , CH_COLN        , LSFT(CH_Z)     ,
+                                            LSFT(KC_V)     , LSFT(KC_M)     , LSFT(KC_W)     , LSFT(KC_F)     , CH_SCLN        , LSFT(CH_Z)     ,
 
-                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_K)     , LSFT(KC_P)     , LSFT(KC_B)     , CH_SCLN        , LSFT(KC_X)     , LSFT(CH_Y)     ,
+                            LSFT(KC_Q)    , LSFT(KC_J)     , LSFT(KC_K)     , LSFT(KC_P)     , LSFT(KC_B)     , CH_COLN        , LSFT(KC_X)     , LSFT(CH_Y)     ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -141,38 +141,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            XXXXXXX        , CH_ODIA        , CH_ADIA        , CH_UDIA        , KC_1           , KC_2           , KC_3           , KC_0          ,
 
-                                            _______        , MO(NUM2)       , _______        , _______        , MO(NUM1)       , _______
+                                            _______        , MO(NUM1)       , _______        , _______        , MO(NUM2)       , _______
                            ),
     
     [NUM1] = LAYOUT_split_10(
                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_BSPC        , KC_ENT         , XXXXXXX        , CH_EQL         , 
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_MINS        , CH_DOT         , KC_BSPC        , KC_ENT         ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
 
     [NUM2] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_COLN        , CH_DOT         ,
+                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_EQL         , CH_SLSH        , CH_ASTR        ,
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_ASTR        , CH_SLSH        , CH_MINS        , CH_PERC        , 
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_COLN        , KC_DEL         , XXXXXXX       ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
     [SYM0] = LAYOUT_split_10(
-                                            CH_AT          , CH_PIPE        , CH_QUES        , CH_LPRN        , CH_RPRN        , CH_AMPR        , 
+                                            CH_AT          , CH_PIPE        , CH_QUES        , CH_PERC        , CH_LPRN        , CH_RPRN        , 
 
-                           CH_DLR         , CH_TILD        , CH_QUOT        , CH_DQUO        , CH_ASTR        , CH_SLSH        , CH_MINS        , CH_PERC        ,
+                           CH_DLR         , CH_TILD        , CH_QUOT        , CH_DQUO        , CH_MINS        , CH_SLSH        , CH_ASTR        , CH_LABK        , 
 
                                             _______        , MO(SYM1)       , _______        , _______        , MO(SYM1)       , _______
                            ),
     
     [SYM1] = LAYOUT_split_10(
-                                            XXXXXXX        , CH_HASH        , CH_EXLM        , CH_LCBR        , CH_RCBR        , CH_LABK        ,
+                                            XXXXXXX        , CH_HASH        , CH_EXLM        , CH_AMPR        , CH_LCBR        , CH_RCBR        ,
 
-                           CH_EURO        , CH_BSLS        , CH_GRV         , CH_CIRC        , CH_LBRC        , CH_RBRC        , CH_UNDS        , CH_RABK        ,
+                           CH_EURO        , CH_BSLS        , CH_GRV         , CH_CIRC        , CH_UNDS        , CH_LBRC        , CH_RBRC        , CH_RABK        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
