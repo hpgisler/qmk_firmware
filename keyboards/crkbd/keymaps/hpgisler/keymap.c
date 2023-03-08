@@ -300,16 +300,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       }
       break;
 
-    case RSFT_T(ALGR(KC_F7)):
+    case RSFT_T(ALGR(KC_B)):
       if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_F7));
+        tap_code16(ALGR(KC_B));
         return false;        // Return false to ignore further processing of key
       }
       break;
       
-    case RCTL_T(ALGR(KC_F9)):
+    case RCTL_T(ALGR(KC_L)):
       if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_F9));
+        tap_code16(ALGR(KC_L));
         return false;        // Return false to ignore further processing of key
       }
       break;
