@@ -35,7 +35,6 @@ enum layers {
   SYS1,
   NUM0,
   NUM1,
-  NUM2,
   SYM0,
   SYM1,
   FUN0,
@@ -141,22 +140,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            XXXXXXX        , CH_ODIA        , CH_ADIA        , CH_UDIA        , KC_1           , KC_2           , KC_3           , KC_0          ,
 
-                                            _______        , MO(NUM1)       , _______        , _______        , MO(NUM2)       , _______
+                                            _______        , MO(NUM1)       , _______        , _______        , MO(NUM1)       , _______
                            ),
     
     [NUM1] = LAYOUT_split_10(
                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_MINS        , CH_DOT         , KC_BSPC        , KC_ENT         ,
-
-                                            _______        , _______        , _______        , _______        , _______        , _______
-                           ),
-    
-
-    [NUM2] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_EQL         , CH_SLSH        , CH_ASTR        ,
-
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_PLUS        , CH_COLN        , KC_DEL         , XXXXXXX       ,
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_LABK        , CH_RABK        , KC_BSPC        , KC_ENT         ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -164,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYM0] = LAYOUT_split_10(
                                             CH_AT          , CH_PIPE        , CH_QUES        , CH_PERC        , CH_LPRN        , CH_RPRN        , 
 
-                           CH_DLR         , CH_TILD        , CH_QUOT        , CH_DQUO        , CH_MINS        , CH_SLSH        , CH_ASTR        , CH_LABK        , 
+                           CH_EURO        , CH_TILD        , CH_QUOT        , CH_DQUO        , CH_MINS        , CH_SLSH        , CH_ASTR        , CH_PLUS        , 
 
                                             _______        , MO(SYM1)       , _______        , _______        , MO(SYM1)       , _______
                            ),
@@ -172,7 +162,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYM1] = LAYOUT_split_10(
                                             XXXXXXX        , CH_HASH        , CH_EXLM        , CH_AMPR        , CH_LCBR        , CH_RCBR        ,
 
-                           CH_EURO        , CH_BSLS        , CH_GRV         , CH_CIRC        , CH_UNDS        , CH_LBRC        , CH_RBRC        , CH_RABK        ,
+                           CH_DLR         , CH_BSLS        , CH_GRV         , CH_CIRC        , CH_UNDS        , CH_LBRC        , CH_RBRC        , CH_EQL         ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -186,17 +176,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                            ),
 
     [FUN1] = LAYOUT_split_10(
-                                            LCTL_T(KC_F9)  , KC_F8        ,LSFT_T(KC_F7) ,RSFT_T(ALGR(KC_F7)) ,ALGR(KC_F8) ,RCTL_T(ALGR(KC_F9)) ,
+                                            LCTL_T(KC_F9)  , KC_F8        ,LSFT_T(KC_F7) ,RSFT_T(ALGR(KC_B))  , ALGR(KC_H) ,RCTL_T(ALGR(KC_L))  ,
 
-                          ALGR(LSFT(KC_Q)), KC_F12         , KC_F11         , KC_F10         ,ALGR_T(KC_F10)  , ALGR_T(KC_F11) , ALGR_T(KC_F12)  , KC_LGUI       ,
+                           XXXXXXX        , KC_F12         , KC_F11         , KC_F10         , ALGR(KC_J)     , ALGR(KC_K)     , ALGR(KC_ENT)   , ALGR(KC_P)     ,
 
-                                            _______        , _______        , _______        , _______        , _______        , _______
+                                            _______        , MO(FUN3)       , _______        , _______        , _______        , _______
                            ),
 
     [FUN2] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_L)     ,
+                                            KC_LCTL        , XXXXXXX        , KC_LSFT        ,ALGR(KC_F7)     , ALGR(KC_F8) ,ALGR(KC_F9) ,                     
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_J)     , ALGR(KC_K)     , ALGR(KC_ENT)   , ALGR(KC_P)     ,
+                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        ,ALGR(KC_F10)  , ALGR_T(KC_F11) , ALGR_T(KC_F12)  , KC_LGUI       ,    
 
                                             _______        , _______        , _______        , _______        , MO(FUN3)       , _______        
                            ),
@@ -204,7 +194,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN3] = LAYOUT_split_10(
                                             XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_I)     , ALGR(KC_D)     , 
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_M)     , ALGR(KC_T)     , XXXXXXX      ,ALGR(LSFT(KC_C)) , 
+                           ALGR(LSFT(KC_Q)),XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_M)     , ALGR(KC_T)     , XXXXXXX      ,ALGR(LSFT(KC_C)) , 
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
