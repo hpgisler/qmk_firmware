@@ -90,23 +90,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                            LSFT_T(KC_I)   , LT(NUM0,KC_S)  , LT(SYM0,KC_T)  , LT(SYS0 ,KC_R) , LT(SYS0, KC_N) , LT(SYM0, KC_E) , LT(NUM0,KC_A)  , RSFT_T(KC_C)   ,
 
-                                            XXXXXXX         , OSL(ALA1)     ,LT(SPC0, KC_SPC), REPEAT         , OSL(ALA2)      , XXXXXXX
+                                            XXXXXXX       ,LT(ALA1, KC_SPC) , REPEAT         , OSL(ALA3)      , OSL(ALA2)      , XXXXXXX
                            ),
 
     [ALA1] = LAYOUT_split_10(
-                                            LSFT(KC_L)     , LSFT(KC_D)     , LSFT(KC_G)     , KC_F           , CH_COMM ,         CH_Z           ,
+                                            LSFT(KC_L)     , LSFT(KC_D)     , LSFT(KC_G)     , LSFT(KC_H)     , LSFT(KC_U)     , LSFT(CH_O)     ,
 
-                           LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_T)     , LSFT(KC_R)     , RALT_T(KC_B)   , LCTL_T(CH_DOT), KC_X           , CH_Y           ,
+                           LSFT(KC_I)     , LSFT(KC_S)     , LSFT(KC_T)     , LSFT(KC_R)     , LSFT(KC_N)     , LSFT(KC_E)     , LSFT(KC_A)     , LSFT(CH_C)     ,
 
-                                            _______        , _______        , _______        , _______        , MO(ALA3)        , _______
+                                            _______        , _______        , _______        , _______        , _______        , _______
                            ),
     
     [ALA2] = LAYOUT_split_10(
-                                            KC_V           , KC_M           , KC_W           , LSFT(KC_H)     , LSFT(KC_U)     , LSFT(CH_O)     ,
+                                            KC_V           , KC_M           , KC_W           , KC_F           , CH_COMM        , CH_Z           ,               
 
-                           KC_Q           , KC_J           , LCTL_T(KC_K)   , LALT_T(KC_P)   , LSFT(KC_N)     , LSFT(KC_E)     , LSFT(KC_A)     , LSFT(CH_C)     ,
+                           KC_Q           , KC_J           , LCTL_T(KC_K)   , LALT_T(KC_P)   , RALT_T(KC_B)   , LCTL_T(CH_DOT) , KC_X           , CH_Y           ,
 
-                                            _______        , MO(ALA3)       , _______        , _______        , _______      , _______
+                                            _______        , _______        , _______        , _______        , MO(ALA3)       , _______                        
                            ),
  
     [ALA3] = LAYOUT_split_10(
@@ -228,8 +228,8 @@ uint8_t oneshot_mod_state;
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LT(SPC0, KC_SPC):
-            return TAPPING_TERM + 1000;
+      ;;        case LT(SPC0, KC_SPC):
+      ;;      return TAPPING_TERM + 1000;
         default:
             return TAPPING_TERM;
     }
