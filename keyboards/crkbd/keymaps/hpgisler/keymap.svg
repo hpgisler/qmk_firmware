@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="2.3712327"
-     inkscape:cx="1035.1156"
-     inkscape:cy="292.46391"
-     inkscape:window-width="2560"
-     inkscape:window-height="1578"
+     inkscape:zoom="3.8766932"
+     inkscape:cx="394.66626"
+     inkscape:cy="219.64596"
+     inkscape:window-width="1500"
+     inkscape:window-height="979"
      inkscape:window-x="0"
-     inkscape:window-y="22"
+     inkscape:window-y="20"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer22"
+     inkscape:current-layer="layer9"
      showguides="true"
      inkscape:lockguides="true">
     <inkscape:grid
@@ -7635,7 +7635,7 @@
            x="1516.571"
            y="1012.7888"
            id="text18261"
-           transform="rotate(-15,-1896.2792,4622.9235)"><tspan
+           transform="rotate(30,2334.7703,-1667.2027)"><tspan
              sodipodi:role="line"
              id="tspan18259"
              x="1516.571"
@@ -7668,7 +7668,7 @@
            x="1516.571"
            y="1012.7888"
            id="text7550"
-           transform="rotate(15,3840.8342,-4255.9223)"><tspan
+           transform="rotate(-15,-1931.2198,4627.5235)"><tspan
              sodipodi:role="line"
              id="tspan7548"
              x="1516.571"
@@ -7762,7 +7762,7 @@
            x="1576.6021"
            y="902.05945"
            id="text2193"
-           transform="translate(-1054.2657,-776.2207)"><tspan
+           transform="translate(-1054.2657,-785.49883)"><tspan
              sodipodi:role="line"
              id="tspan2191"
              x="1576.6021"
@@ -7773,7 +7773,7 @@
            x="1624.8141"
            y="896.16608"
            id="text2197"
-           transform="translate(-1052.4777,-775.32733)"><tspan
+           transform="translate(-1052.4777,-784.60546)"><tspan
              sodipodi:role="line"
              id="tspan2195"
              x="1624.8141"
@@ -7784,7 +7784,7 @@
            x="1674.2097"
            y="900.95233"
            id="text2201"
-           transform="translate(-1051.8734,-774.94216)"><tspan
+           transform="translate(-1051.8734,-784.22029)"><tspan
              sodipodi:role="line"
              id="tspan2199"
              x="1674.2097"
@@ -7795,7 +7795,7 @@
            x="1576.6045"
            y="953.52246"
            id="text2205"
-           transform="translate(-1054.2681,-777.68371)"><tspan
+           transform="translate(-1054.2681,-786.96184)"><tspan
              sodipodi:role="line"
              id="tspan2203"
              x="1576.6045"
@@ -7806,7 +7806,7 @@
            x="1625.4847"
            y="944.34167"
            id="text2209"
-           transform="translate(-1053.1484,-773.50292)"><tspan
+           transform="translate(-1053.1484,-782.78105)"><tspan
              sodipodi:role="line"
              id="tspan2207"
              x="1625.4847"
@@ -7817,7 +7817,7 @@
            x="1674.8461"
            y="950.70923"
            id="text2213"
-           transform="translate(-1052.5097,-774.69905)"><tspan
+           transform="translate(-1052.5097,-783.97718)"><tspan
              sodipodi:role="line"
              id="tspan2211"
              x="1674.8461"
@@ -7838,7 +7838,7 @@
            x="1735.3845"
            y="957.71936"
            id="text2221"
-           transform="translate(-1063.0482,-766.88061)"><tspan
+           transform="translate(-1063.0482,-776.15874)"><tspan
              sodipodi:role="line"
              id="tspan2219"
              x="1735.3845"
@@ -7899,7 +7899,7 @@
            x="1576.1909"
            y="902.05609"
            id="text2682"
-           transform="translate(-1053.8546,-785.41735)"><tspan
+           transform="translate(-1053.8546,-776.21735)"><tspan
              sodipodi:role="line"
              id="tspan2680"
              x="1576.1909"
@@ -7910,7 +7910,7 @@
            x="1674.0977"
            y="902.18982"
            id="text2690"
-           transform="translate(-1051.7613,-785.37965)"><tspan
+           transform="translate(-1051.7613,-776.17965)"><tspan
              sodipodi:role="line"
              id="tspan2688"
              x="1674.0977"
@@ -7965,7 +7965,7 @@
            x="1576.4941"
            y="953.36554"
            id="text2710"
-           transform="translate(-1054.1578,-786.72679)"><tspan
+           transform="translate(-1054.1578,-777.52679)"><tspan
              sodipodi:role="line"
              id="tspan2708"
              x="1576.4941"
@@ -7976,7 +7976,7 @@
            x="1624.675"
            y="944.73035"
            id="text2714"
-           transform="translate(-1052.3387,-783.09159)"><tspan
+           transform="translate(-1052.3387,-773.89159)"><tspan
              sodipodi:role="line"
              id="tspan2712"
              x="1624.675"
@@ -7987,7 +7987,7 @@
            x="1674.2162"
            y="951.20746"
            id="text2718"
-           transform="translate(-1051.8798,-784.39729)"><tspan
+           transform="translate(-1051.8798,-775.19729)"><tspan
              sodipodi:role="line"
              id="tspan2716"
              x="1674.2162"
@@ -7998,7 +7998,7 @@
            x="1724.9469"
            y="967.29816"
            id="text2722"
-           transform="translate(-1052.6105,-785.65941)"><tspan
+           transform="translate(-1052.6105,-776.45941)"><tspan
              sodipodi:role="line"
              id="tspan2720"
              x="1724.9469"
@@ -8063,7 +8063,7 @@
            x="1516.571"
            y="1012.7888"
            id="text18251"
-           transform="rotate(-15,-1966.1602,4632.1235)"><tspan
+           transform="rotate(30,2369.1052,-1658.0027)"><tspan
              sodipodi:role="line"
              id="tspan18249"
              x="1516.571"
@@ -8074,7 +8074,7 @@
            x="1636.6909"
            y="946.88837"
            id="text2762"
-           transform="translate(-1064.3545,-835.24962)"><tspan
+           transform="translate(-1064.3545,-826.04962)"><tspan
              sodipodi:role="line"
              id="tspan2760"
              x="1636.6909"
@@ -8085,7 +8085,7 @@
            x="1516.571"
            y="1012.7888"
            id="text4660"
-           transform="rotate(15,3805.8936,-4260.5223)"><tspan
+           transform="rotate(-15,-1896.2792,4622.9235)"><tspan
              sodipodi:role="line"
              id="tspan4658"
              x="1516.571"
@@ -8266,7 +8266,7 @@
            x="1315.5085"
            y="1008.7588"
            id="text1730"
-           transform="rotate(26.638035,2451.0109,-1459.7653)"><tspan
+           transform="rotate(11.638035,4652.7319,-4537.7552)"><tspan
              sodipodi:role="line"
              id="tspan1728"
              x="1315.5085"
@@ -8277,7 +8277,7 @@
            x="1454.1251"
            y="1023.8745"
            id="text1738"
-           transform="rotate(-15,-2004.5447,4395.9044)"><tspan
+           transform="rotate(30,2341.401,-1540.5342)"><tspan
              sodipodi:role="line"
              id="tspan1736"
              x="1454.1251"
@@ -8288,7 +8288,7 @@
            x="1516.571"
            y="1012.7888"
            id="text1742"
-           transform="rotate(-15,-2001.1006,4636.7235)"><tspan
+           transform="rotate(30,2386.2726,-1653.4027)"><tspan
              sodipodi:role="line"
              id="tspan1740"
              x="1516.571"
@@ -8480,7 +8480,7 @@
            x="1516.571"
            y="1012.7888"
            id="text4664"
-           transform="rotate(15,3910.715,-4246.7223)"><tspan
+           transform="rotate(-15,-2001.1006,4636.7235)"><tspan
              sodipodi:role="line"
              id="tspan4662"
              x="1516.571"
@@ -8491,7 +8491,7 @@
            x="1454.1251"
            y="1023.8745"
            id="text7554"
-           transform="rotate(15,3886.6537,-4008.6175)"><tspan
+           transform="rotate(-15,-2039.4853,4400.5044)"><tspan
              sodipodi:role="line"
              id="tspan7552"
              x="1454.1251"
