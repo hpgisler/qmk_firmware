@@ -86,35 +86,35 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
-                                            LCTL_T(KC_M)   , LT(FUN0 ,KC_L) , LALT_T(KC_C)   , LALT_T(KC_J)   , LT(FUN0,CH_DOT), RCTL_T(CH_COMM),
+                                            LCTL_T(KC_C)   , LT(FUN0 ,KC_L) , LALT_T(KC_D)   , LALT_T(KC_O)   , LT(FUN0,KC_U), RCTL_T(KC_B),
 
-                           LSFT_T(KC_R)   , LT(NUM0,KC_S)  , LT(SYM0,KC_N)  , LT(SYS0 ,KC_T) , LT(SYS0, KC_E) , LT(SYM0, KC_I) , LT(NUM0,KC_A)  , RSFT_T(KC_H)   ,
+                           LSFT_T(KC_S)   , LT(NUM0,KC_R)  , LT(SYM0,KC_N)  , LT(SYS0 ,KC_T) , LT(SYS0, KC_E) , LT(SYM0, KC_I) , LT(NUM0,KC_A)  , RSFT_T(KC_H)   ,
 
                                             XXXXXXX        , KC_SPC         , OSL(ALA1)      , REPEAT         , OSL(ALA2)      , XXXXXXX
                            ),
 
     [ALA1] = LAYOUT_split_10(
-                                            LSFT(KC_M)     , LSFT(KC_L)     , LSFT(KC_C)     , LSFT(KC_J)     , LSFT(CH_DOT)   , LSFT(CH_COMM)  ,
+                                            LSFT(KC_C)     , LSFT(KC_L)     , LSFT(KC_D)     , LSFT(KC_O)     , LSFT(KC_U)   , LSFT(KC_B)  ,
 
-                           LSFT(KC_R)     , LSFT(KC_S)     , LSFT(KC_N)     , LSFT(KC_T)     , LSFT(KC_E)     , LSFT(KC_I)     , LSFT(KC_A)     , LSFT(KC_H)     ,
+                           LSFT(KC_S)     , LSFT(KC_R)     , LSFT(KC_N)     , LSFT(KC_T)     , LSFT(KC_E)     , LSFT(KC_I)     , LSFT(KC_A)     , LSFT(KC_H)     ,
            
                                             _______        , _______        , _______        , _______        , MO(ALA3)                                                           , _______
                                             //_______        , _______        , _______        , _______        , OSL(ALA3)      , _______
                            ),
     
     [ALA2] = LAYOUT_split_10(
-                                            KC_V           , KC_P           , KC_B           , KC_Q           , CH_Y           , KC_X           ,               
+                                            KC_J           , KC_K           , KC_V           , KC_Q           , CH_Y           , KC_P           ,               
 
-                           CH_Z           , KC_F           , LCTL_T(KC_W)   , LALT_T(KC_D)   , RALT_T(KC_K)   , LCTL_T(KC_U)   , KC_O           , KC_G           ,
+                           CH_Z           , KC_F           , LCTL_T(KC_M)   , LALT_T(KC_G)   , RALT_T(KC_X)   , LCTL_T(CH_COMM), CH_DOT         , KC_W           ,
 
                                             //_______        , _______        , OSL(ALA3)       , _______        , _______        , _______                        
                                             _______        , _______        , MO(ALA3)       , _______        , _______        , _______                        
                            ),
  
     [ALA3] = LAYOUT_split_10(
-                                            LSFT(KC_V)     , LSFT(KC_P)     , LSFT(KC_B)     , LSFT(KC_Q)     , LSFT(CH_Y)     , LSFT(KC_X)     ,
+                                            LSFT(KC_J)     , LSFT(KC_K)     , LSFT(KC_V)     , LSFT(KC_Q)     , LSFT(CH_Y)     , LSFT(KC_P)     ,
 
-                            LSFT(CH_Z)    , LSFT(KC_F)     , LSFT(KC_W)     , LSFT(KC_D)     , LSFT(KC_K)     , LSFT(KC_U)     , LSFT(KC_O)     , LSFT(KC_G)     ,
+                            LSFT(CH_Z)    , LSFT(KC_F)     , LSFT(KC_M)     , LSFT(KC_G)     , LSFT(KC_X)     , LSFT(CH_COMM)  , LSFT(CH_DOT)   , LSFT(KC_W)     ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
