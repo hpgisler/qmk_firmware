@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include "keymap_swiss_de.h"
 #include <stdio.h>
-#include "features/achordion.h"
 
 enum keycodes {
     REPEAT = SAFE_RANGE,
@@ -31,17 +30,13 @@ enum layers {
   ALA1,
   ALA2,
   ALA3,
-  SYS0,
-  SYS1,
-  NUM0,
-  NUM1,
-  SYM0,
-  SYM1,
+  NAS0,
+  NAS1,
   FUN0,
   FUN1,
   FUN2,
-  FUN3,
-  SPC0,
+  MODL,
+  MODR,
 };
 
 
@@ -86,135 +81,279 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
-                                            LCTL_T(KC_C)   , LT(FUN0 ,KC_L) , LALT_T(KC_D)   , LALT_T(KC_O)   , LT(FUN0,KC_U), RCTL_T(KC_B),
+                                            KC_R           , KC_H           , KC_D           , KC_U           , KC_O           , KC_A,
 
-                           LSFT_T(KC_S)   , LT(NUM0,KC_R)  , LT(SYM0,KC_N)  , LT(SYS0 ,KC_T) , LT(SYS0, KC_E) , LT(SYM0, KC_I) , LT(NUM0,KC_H)  , RSFT_T(KC_A)   ,
+                            OSL(MODR)     , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , OSL(MODL)       ,
 
-                                            XXXXXXX        , KC_SPC         , OSL(ALA1)      , REPEAT         , OSL(ALA2)      , XXXXXXX
+                                            XXXXXXX        , OSL(ALA2)      , OSL(NAS0)      , OSL(FUN0)      , OSL(ALA1)      , XXXXXXX
                            ),
 
     [ALA1] = LAYOUT_split_10(
-                                            LSFT(KC_C)     , LSFT(KC_L)     , LSFT(KC_D)     , LSFT(KC_O)     , LSFT(KC_U)   , LSFT(KC_B)  ,
+                                            KC_X           , KC_M           , KC_B           , CH_UDIA        , CH_ODIA        , CH_ADIA        ,   
 
-                           LSFT(KC_S)     , LSFT(KC_R)     , LSFT(KC_N)     , LSFT(KC_T)     , LSFT(KC_E)     , LSFT(KC_I)     , LSFT(KC_H)     , LSFT(KC_A)     ,
+                            _______       , KC_L           , KC_F           , KC_G           , KC_C           , CH_COMM        , CH_DOT         , _______         , 
            
-                                            _______        , _______        , _______        , _______        , MO(ALA3)                                                           , _______
-                                            //_______        , _______        , _______        , _______        , OSL(ALA3)      , _______
+                                            _______        , MO(ALA3)       , _______        , _______        , _______        , _______
                            ),
     
     [ALA2] = LAYOUT_split_10(
-                                            KC_J           , KC_K           , KC_V           , KC_Q           , CH_Y           , KC_P           ,               
+                                            KC_J           , KC_K           , KC_V           , KC_Q           , CH_QUES        , CH_SLSH        ,               
 
-                           CH_Z           , KC_F           , LCTL_T(KC_M)   , LALT_T(KC_G)   , RALT_T(KC_X)   , LCTL_T(CH_COMM), CH_DOT         , KC_W           ,
+                            _______       , KC_W           , CH_Z           , KC_P           , CH_Y           , CH_QUOT        , CH_MINS        , _______         ,
 
-                                            //_______        , _______        , OSL(ALA3)       , _______        , _______        , _______                        
-                                            _______        , _______        , MO(ALA3)       , _______        , _______        , _______                        
+                                            _______        , _______        , _______        , _______        , MO(ALA3)       , _______                        
                            ),
- 
+    
     [ALA3] = LAYOUT_split_10(
-                                            LSFT(KC_J)     , LSFT(KC_K)     , LSFT(KC_V)     , LSFT(KC_Q)     , LSFT(CH_Y)     , LSFT(KC_P)     ,
+                                            KC_1           , KC_2           , KC_3           , KC_4           , KC_5           , KC_6           ,
 
-                            LSFT(CH_Z)    , LSFT(KC_F)     , LSFT(KC_M)     , LSFT(KC_G)     , LSFT(KC_X)     , LSFT(CH_COMM)  , LSFT(CH_DOT)   , LSFT(KC_W)     ,
-
-                                            _______        , _______        , _______        , _______        , _______        , _______
-                           ),
-    
-    [SYS0] = LAYOUT_split_10(
-                                            KC_SCRL        , XXXXXXX        , XXXXXXX        , KC_TAB         , KC_LEFT        , KC_RIGHT       ,
-
-                            KC_LSFT       , KC_LCTL        , KC_LALT        , LCTL(KC_G)     , KC_DOWN        , KC_UP          , KC_BSPC        , KC_ENT         ,
-
-                                            _______        , MO(SYS1)       , _______        , _______        , MO(SYS1)       , _______
-                           ),
-    
-
-    [SYS1] = LAYOUT_split_10(
-                                            KC_PSCR        , XXXXXXX        , XXXXXXX        , LSFT(KC_TAB)   , KC_HOME        , KC_END         ,
-
-                            KC_LSFT       , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_PGDN        , KC_PGUP        , KC_DEL         , LSFT(KC_ENT)   ,
+                            _______       , KC_7           , KC_8           , KC_9           , KC_0           , CH_ASTR        , REPEAT         , _______        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
-    
-    
-    [NUM0] = LAYOUT_split_10(
-                                            CH_EGRV        , CH_AGRV        , CH_EACU        , KC_4           , KC_5           , KC_6           , 
 
-                           XXXXXXX        , CH_ODIA        , CH_ADIA        , CH_UDIA        , KC_1           , KC_2           , KC_3           , KC_0          ,
 
-                                            _______        , MO(NUM1)       , _______        , _______        , MO(NUM1)       , _______
+    [NAS0] = LAYOUT_split_10(
+                                            CH_CIRC        , CH_AMPR       , KC_TAB          , KC_BSPC        , KC_LEFT        , KC_RIGHT       ,
+
+                            _______       , KC_ESC         , CH_DLR        , CH_TILD         , KC_DOWN        , KC_UP          , KC_ENT         , _______        , 
+
+                                            _______        , _______       , _______         , _______        , MO(NAS1)       , _______
                            ),
     
-    [NUM1] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_7           , KC_8           , KC_9           ,
 
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , CH_LABK        , CH_RABK        , KC_BSPC        , KC_ENT         ,
+    [NAS1] = LAYOUT_split_10(
+                                            CH_EGRV        , CH_AGRV       , CH_EACU         , KC_PSCR        , KC_HOME        , KC_END         ,
 
-                                            _______        , _______        , _______        , _______        , _______        , _______
+                            _______       , CH_CCED        , CH_HASH       , CH_SECT         , KC_PGDN        , KC_PGUP        , CH_EQL         , _______        ,
+
+                                            _______        , _______       , _______         , _______        , _______        , _______
                            ),
-    
-    [SYM0] = LAYOUT_split_10(
-                                            CH_AT          , CH_PIPE        , CH_QUES        , CH_PERC        , CH_LPRN        , CH_RPRN        , 
 
-                           CH_EURO        , CH_TILD        , CH_QUOT        , CH_DQUO        , CH_MINS        , CH_SLSH        , CH_ASTR        , CH_PLUS        , 
-
-                                            _______        , MO(SYM1)       , _______        , _______        , MO(SYM1)       , _______
-                           ),
-    
-    [SYM1] = LAYOUT_split_10(
-                                            XXXXXXX        , CH_HASH        , CH_EXLM        , CH_AMPR        , CH_LCBR        , CH_RCBR        ,
-
-                           CH_DLR         , CH_BSLS        , CH_GRV         , CH_CIRC        , CH_UNDS        , CH_LBRC        , CH_RBRC        , CH_EQL         ,
-
-                                            _______        , _______        , _______        , _______        , _______        , _______
-                           ),
 
     [FUN0] = LAYOUT_split_10(
-                                             LCTL_T(KC_F6) , KC_F5        ,LSFT_T(KC_F4) ,RSFT_T(ALGR(KC_F4)) ,ALGR(KC_F5) ,RCTL_T(ALGR(KC_F6)) , 
+                                            ALGR(KC_F1)    , ALGR(KC_F2)   , ALGR(KC_F3)     , ALGR(KC_F4)    , ALGR(KC_F5)    , ALGR(KC_F6)    ,
 
-                           XXXXXXX        , KC_F3          , KC_F2          , KC_F1          , ALGR(KC_F1)    , ALGR(KC_F2)    , ALGR(KC_F3)    , ALGR(KC_P)     ,
+                            _______       , ALGR(KC_F7)    , ALGR(KC_F8)   , ALGR(KC_F9)     , ALGR(KC_J )    , ALGR(KC_K )    , ALGR(KC_P )    , _______        ,
 
-                                            _______        , MO(FUN2)       , _______        , _______        , MO(FUN1)       , _______
+                                            _______        , MO(FUN1)      , MO(FUN2)        , _______        , _______        , _______
                            ),
+
 
     [FUN1] = LAYOUT_split_10(
-                                            LCTL_T(KC_F9)  , KC_F8        ,LSFT_T(KC_F7) ,RSFT_T(ALGR(KC_B))  , ALGR(KC_H) ,RCTL_T(ALGR(KC_L))  ,
+                                           ALGR(LSFT(KC_Q)),ALGR(LSFT(KC_C)), KC_LGUI        , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_L)     ,
 
-                           XXXXXXX        , KC_F12         , KC_F11         , KC_F10         , ALGR(KC_J)     , ALGR(KC_K)     , ALGR(KC_ENT)   , ALGR(KC_P)     ,
-
-                                            _______        , MO(FUN3)       , _______        , _______        , _______        , _______
-                           ),
-
-    [FUN2] = LAYOUT_split_10(
-                                            KC_LCTL        , XXXXXXX        , KC_LSFT        ,ALGR(KC_F7)     , ALGR(KC_F8) ,ALGR(KC_F9) ,                     
-
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        ,ALGR(KC_F10)  , ALGR_T(KC_F11) , ALGR_T(KC_F12)  , KC_LGUI       ,    
-
-                                            _______        , _______        , _______        , _______        , MO(FUN3)       , _______        
-                           ),
-                                            
-    [FUN3] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_I)     , ALGR(KC_D)     , 
-
-                           ALGR(LSFT(KC_Q)),XXXXXXX        , XXXXXXX        , XXXXXXX        , ALGR(KC_M)     , ALGR(KC_T)     , XXXXXXX      ,ALGR(LSFT(KC_C)) , 
+                            _______       , _______       , _______         , _______        , ALGR(KC_I)     , ALGR(KC_D)     , _______        , _______      ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
 
-    [SPC0] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        ,
-
-                           XXXXXXX        , XXXXXXX        , XXXXXXX        , XXXXXXX        , KC_ENT         , KC_BSPC        , KC_DEL         , XXXXXXX        , 
-
-                                            _______        , _______        , _______        , _______        , _______        , _______
-                           ),
     
+    [FUN2] = LAYOUT_split_10(
+                                            KC_F1          , KC_F2         , KC_F3           , KC_F4          , KC_F5          , KC_F6          ,
+
+                            _______       , KC_F7          , KC_F8         , KC_F9           , KC_F10         , KC_F11         , KC_F12         , _______        ,
+
+                                            _______        , _______       , _______         , _______        , _______        , _______
+                           ),
+
+    
+    [MODL] = LAYOUT_split_10(
+                                            KC_RALT        , _______       , KC_LGUI         , _______        , _______        , _______        ,
+
+                            _______       , KC_LALT        , KC_LSFT       , KC_LCTL         , _______        , _______        , _______        , _______        ,
+
+                                            _______        , _______       , _______         , _______        , _______        , _______
+                            ),
+
+    
+    [MODR] = LAYOUT_split_10(
+                                            _______        , _______       , _______         , KC_RGUI        , _______        , KC_RALT        ,
+
+                            _______       , _______        , _______       , _______         , KC_RCTL        , KC_RSFT        , KC_LALT        , _______        ,
+
+                                            _______        , _______       , _______         , _______        , _______        , _______
+                            )
 };
                                
 
-const uint16_t PROGMEM esc_combo[] = {LT(SYS0 ,KC_T) , LT(SYS0, KC_E), COMBO_END};
-combo_t key_combos[COMBO_COUNT] = {
-  COMBO(esc_combo, KC_ESC),
+// ALA2
+// ----
+const key_override_t ko_0  = ko_make_basic(MOD_MASK_SHIFT, CH_QUES, CH_EXLM); // ? : !
+const key_override_t ko_1  = ko_make_basic(MOD_MASK_SHIFT, CH_SLSH, CH_BSLS); // / : \ .
+const key_override_t ko_2  = ko_make_basic(MOD_MASK_SHIFT, CH_QUOT, CH_DQUO); // ' : "
+const key_override_t ko_3  = ko_make_basic(MOD_MASK_SHIFT, CH_MINS, CH_UNDS); // - : _
+
+// ALA3
+// ----
+const key_override_t ko_4  = ko_make_basic(MOD_MASK_SHIFT, KC_1   , CH_PLUS); // 1 : +    
+const key_override_t ko_5  = ko_make_basic(MOD_MASK_SHIFT, KC_2   , CH_LABK); // 2 : <    
+const key_override_t ko_6  = ko_make_basic(MOD_MASK_SHIFT, KC_3   , CH_RABK); // 3 : >    
+const key_override_t ko_7  = ko_make_basic(MOD_MASK_SHIFT, KC_4   , CH_LCBR); // 4 : {    
+const key_override_t ko_8  = ko_make_basic(MOD_MASK_SHIFT, KC_5   , CH_RCBR); // 5 : }    
+// const key_override_t ko_9  = ko_make_basic(MOD_MASK_SHIFT, KC_6   , );     // 6 :
+const key_override_t ko_10 = ko_make_basic(MOD_MASK_SHIFT, KC_7   , CH_AT  ); // 7 : @    
+const key_override_t ko_11 = ko_make_basic(MOD_MASK_SHIFT, KC_8   , CH_LBRC); // 8 : [    
+const key_override_t ko_12 = ko_make_basic(MOD_MASK_SHIFT, KC_9   , CH_RBRC); // 9 : ]    
+const key_override_t ko_13 = ko_make_basic(MOD_MASK_SHIFT, KC_0   , CH_LPRN); // 0 : (    
+const key_override_t ko_14 = ko_make_basic(MOD_MASK_SHIFT, CH_ASTR, CH_RPRN); // * : )    
+// const key_override_t ko_15 = ko_make_basic(MOD_MASK_SHIFT, REPEAT , );     // REPEAT :
+
+
+// NAS0
+// ----
+const key_override_t ko_16 = ko_make_basic(MOD_MASK_SHIFT, CH_CIRC , CH_DEG );    // ^ : °  
+const key_override_t ko_17 = ko_make_basic(MOD_MASK_SHIFT, CH_AMPR , CH_PERC);    // & : %
+// const key_override_t ko_18 = ko_make_basic(MOD_MASK_SHIFT, KC_TAB  , );           // : sft
+const key_override_t ko_19 = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC , KC_DEL);     // :
+// const key_override_t ko_20 = ko_make_basic(MOD_MASK_SHIFT, KC_LEFT , );           // : sft
+// const key_override_t ko_21 = ko_make_basic(MOD_MASK_SHIFT, KC_RIGHT, );           // : sft
+const key_override_t ko_22 = ko_make_basic(MOD_MASK_SHIFT, KC_ESC  , LCTL(KC_G)); // esc : emacs escape     
+const key_override_t ko_23 = ko_make_basic(MOD_MASK_SHIFT, CH_DLR  , CH_EURO   ); // $ : €  
+const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, CH_TILD , KC_SCRL   ); // ~ : scroll lock     
+// const key_override_t ko_25 = ko_make_basic(MOD_MASK_SHIFT, KC_DOWN , );           // : sft
+// const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, KC_UP   , );           // : sft
+// const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, KC_UP   , );           // : sft
+
+// NAS1
+// ----
+// const key_override_t ko_28 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EGRV :           
+// const key_override_t ko_29 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_AGRV :           
+// const key_override_t ko_20 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EACU :           
+// const key_override_t ko_21 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PSCR :           
+// const key_override_t ko_22 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_HOME : sft       
+// const key_override_t ko_23 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_END  : sft       
+// const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_CCED :           
+const key_override_t ko_25 = ko_make_basic(MOD_MASK_SHIFT, CH_HASH, CH_PIPE); // # : |  
+// const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_SECT :           
+// const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGDN : sft       
+// const key_override_t ko_28 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGUP : sft       
+const key_override_t ko_29 = ko_make_basic(MOD_MASK_SHIFT, CH_EQL, CH_GRV); // = : `   
+
+
+// FUN0
+// ----
+// const key_override_t ko_30 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F1,)); // dwm F1 : sft dwm move to 
+// const key_override_t ko_31 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F2,)); // dwm F2 : sft dwm move to
+// const key_override_t ko_32 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F3,)); // dwm F3 : sft dwm move to
+// const key_override_t ko_33 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F4,)); // dwm F4 : sft dwm move to
+// const key_override_t ko_34 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F5,)); // dwm F5 : sft dwm move to
+// const key_override_t ko_35 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F6,)); // dwm F6 : sft dwm move to
+// const key_override_t ko_36 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F7,)); // dwm F7 : sft dwm move to
+// const key_override_t ko_37 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F8,)); // dwm F8 : sft dwm move to
+// const key_override_t ko_38 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F9,)); // dwm F9 : sft dwm move to
+const key_override_t ko_39 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_J ), ALGR(KC_M)  ); // dwm next : dwm monocle 
+const key_override_t ko_40 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_K ), ALGR(KC_T)  ); // dwm prev : dwm tiled 
+const key_override_t ko_41 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_P ), ALGR(KC_ENT)); // dwm new : dwm flip 
+
+// FUN1
+// ----
+// KC_F1  : sft
+// ..
+// KC_F12 : sft
+// const key_override_t ko_42 = ko_make_basic(MOD_MASK_SHIFT, KC_F1 , ); // F1 : sft 
+// const key_override_t ko_43 = ko_make_basic(MOD_MASK_SHIFT, KC_F2 , ); // F2 : sft 
+// const key_override_t ko_44 = ko_make_basic(MOD_MASK_SHIFT, KC_F3 , ); // F3 : sft 
+// const key_override_t ko_45 = ko_make_basic(MOD_MASK_SHIFT, KC_F4 , ); // F4 : sft 
+// const key_override_t ko_46 = ko_make_basic(MOD_MASK_SHIFT, KC_F5 , ); // F5 : sft 
+// const key_override_t ko_47 = ko_make_basic(MOD_MASK_SHIFT, KC_F6 , ); // F6 : sft 
+// const key_override_t ko_48 = ko_make_basic(MOD_MASK_SHIFT, KC_F7 , ); // F7 : sft 
+// const key_override_t ko_49 = ko_make_basic(MOD_MASK_SHIFT, KC_F8 , ); // F8 : sft 
+// const key_override_t ko_50 = ko_make_basic(MOD_MASK_SHIFT, KC_F9 , ); // F9 : sft 
+// const key_override_t ko_51 = ko_make_basic(MOD_MASK_SHIFT, KC_F10, ); // F10 : sft 
+// const key_override_t ko_52 = ko_make_basic(MOD_MASK_SHIFT, KC_F11, ); // F11 : sft 
+// const key_override_t ko_53 = ko_make_basic(MOD_MASK_SHIFT, KC_F12, ); // F12 : sft 
+
+
+const key_override_t** key_overrides = (const key_override_t*[]){
+
+// ALA2
+// ----
+   &ko_0  ,// ? : !
+   &ko_1  ,// / : \ .
+   &ko_2  ,// ' : "
+   &ko_3  ,// - : _
+
+// ALA3
+// ----
+   &ko_4  ,// 1 : +    
+   &ko_5  ,// 2 : <    
+   &ko_6  ,// 3 : >    
+   &ko_7  ,// 4 : {    
+   &ko_8  ,// 5 : }    
+// &ko_9  ,// 6 :
+   &ko_10 ,// 7 : @    
+   &ko_11 ,// 8 : [    
+   &ko_12 ,// 9 : ]    
+   &ko_13 ,// 0 : (    
+   &ko_14 ,// * : )    
+// &ko_15 ,// REPEAT :
+
+
+// NAS0
+// ----
+   &ko_16 ,// ^ : °  
+   &ko_17 ,// & : %
+// &ko_18 ,// : sft
+   &ko_19 ,// :
+// &ko_20 ,// : sft
+// &ko_21 ,// : sft
+   &ko_22 ,// esc : emacs escape     
+   &ko_23 ,// $ : €  
+   &ko_24 ,// ~ : scroll lock     
+// &ko_25 ,// : sft
+// &ko_26 ,// : sft
+// &ko_27 ,// : sft
+
+// NAS1
+// ----
+// &ko_28 ,// CH_EGRV :           
+// &ko_29 ,// CH_AGRV :           
+// &ko_20 ,// CH_EACU :           
+// &ko_21 ,// KC_PSCR :           
+// &ko_22 ,// KC_HOME : sft       
+// &ko_23 ,// KC_END  : sft       
+// &ko_24 ,// CH_CCED :           
+   &ko_25 ,// # : |  
+// &ko_26 ,// CH_SECT :           
+// &ko_27 ,// KC_PGDN : sft       
+// &ko_28 ,// KC_PGUP : sft       
+   &ko_29 ,// = : `   
+
+
+// FUN0
+// ----
+// &ko_30 ,// dwm F1 : sft dwm move to 
+// &ko_31 ,// dwm F2 : sft dwm move to
+// &ko_32 ,// dwm F3 : sft dwm move to
+// &ko_33 ,// dwm F4 : sft dwm move to
+// &ko_34 ,// dwm F5 : sft dwm move to
+// &ko_35 ,// dwm F6 : sft dwm move to
+// &ko_36 ,// dwm F7 : sft dwm move to
+// &ko_37 ,// dwm F8 : sft dwm move to
+// &ko_38 ,// dwm F9 : sft dwm move to
+   &ko_39 ,// dwm next : dwm monocle 
+   &ko_40 ,// dwm prev : dwm tiled 
+   &ko_41 ,// dwm new : dwm flip 
+
+// FUN1
+// ----
+// KC_F1  : sft
+// ..
+// KC_F12 : sft
+// &ko_42 ,// F1 : sft 
+// &ko_43 ,// F2 : sft 
+// &ko_44 ,// F3 : sft 
+// &ko_45 ,// F4 : sft 
+// &ko_46 ,// F5 : sft 
+// &ko_47 ,// F6 : sft 
+// &ko_48 ,// F7 : sft 
+// &ko_49 ,// F8 : sft 
+// &ko_50 ,// F9 : sft 
+// &ko_51 ,// F10 : sft 
+// &ko_52 ,// F11 : sft 
+// &ko_53 ,// F12 : sft 
+    NULL
 };
 
 // Used to extract the basic tapping keycode from a dual-role key.
@@ -222,20 +361,11 @@ combo_t key_combos[COMBO_COUNT] = {
 #define GET_TAP_KC(dual_role_key) dual_role_key & 0xFF
 uint16_t last_keycode = KC_NO;
 uint8_t last_modifier = 0;
-
 // Initialize variables holding the bitfield
 // representation of active modifiers.
 uint8_t mod_state;
 uint8_t oneshot_mod_state;
 
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-      ;;        case LT(SPC0, KC_SPC):
-      ;;      return TAPPING_TERM + 1000;
-        default:
-            return TAPPING_TERM;
-    }
-}
 
 void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
     if (keycode != REPEAT) {
@@ -276,74 +406,4 @@ void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
     }
 }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
-    process_repeat_key(keycode, record);
-    if (!process_achordion(keycode, record)) {
-      return false;
-    }
-
-    // It's important to update the mod variables *after* calling process_repeat_key, or else
-    // only a single modifier from the previous key is repeated (e.g. Ctrl+Shift+T then Repeat produces Shift+T)
-    mod_state = get_mods();
-    oneshot_mod_state = get_oneshot_mods();
-    switch (keycode) {
-
-    case RSFT_T(ALGR(KC_F4)):
-      if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_F4));
-        return false;        // Return false to ignore further processing of key
-      }
-      
-    case RCTL_T(ALGR(KC_F6)):
-      if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_F6));
-        return false;        // Return false to ignore further processing of key
-      }
-      break;
-
-    case RSFT_T(ALGR(KC_B)):
-      if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_B));
-        return false;        // Return false to ignore further processing of key
-      }
-      break;
-      
-    case RCTL_T(ALGR(KC_L)):
-      if (record->tap.count && record->event.pressed) {
-        tap_code16(ALGR(KC_L));
-        return false;        // Return false to ignore further processing of key
-      }
-      break;
-    }
-    return true;
-};
-
-void matrix_scan_user(void) {
-  achordion_task();
-}
-
-bool achordion_chord(uint16_t tap_hold_keycode,
-                     keyrecord_t* tap_hold_record,
-                     uint16_t other_keycode,
-                     keyrecord_t* other_record) {
-  // Exceptionally consider the following chords as holds, even though they are on the same hand.
-  /* switch (tap_hold_keycode) { */
-  /*   case HOME_A:  // A + U. */
-  /*     if (other_keycode == HOME_U) { return true; } */
-  /*     break; */
-
-  /*   case HOME_S:  // S + H and S + G. */
-  /*     if (other_keycode == HOME_H || other_keycode == KC_G) { return true; } */
-  /*     break; */
-  /* } */
-
-  // Also allow same-hand holds when the other key is in the rows below the
-  // alphas. I need the `% (MATRIX_ROWS / 2)` because my keyboard is split.
-  if (other_record->event.key.row % (MATRIX_ROWS / 2) >= 3 /*thumbs rows*/) {
-    return true;
-  }
-
-  // Otherwise, follow the opposite hands rule.
-  return achordion_opposite_hands(tap_hold_record, other_record);
-}
