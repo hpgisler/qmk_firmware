@@ -23,6 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 enum keycodes {
     REPEAT = SAFE_RANGE,
+    MODS_L,
+    MODS_R
 };
 
 enum layers {
@@ -83,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
                                             KC_R           , KC_H           , KC_D           , KC_U           , KC_O           , KC_A,
 
-                            MO(MODL)      , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , MO(MODR)        ,
+                            MODS_L        , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , MODS_R          ,
 
                                             XXXXXXX        , OSL(ALA2)      , OSL(NAS0)      , OSL(FUN0)      , OSL(ALA1)      , XXXXXXX
                            ),
@@ -406,4 +408,91 @@ void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
     }
 }
 
+static bool mods_l_active = false;
+static bool mods_r_active = false;
 
+static bool mod_lalt = false;
+static bool mod_ralt = false;
+
+static bool mod_lsft = false;
+static bool mod_rsft = false;
+
+static bool mod_lctl = false;
+static bool mod_rctl = false;
+
+static bool mod_lgui = false;
+static bool mod_rgui = false;
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+
+  bool key_pressed = record->event.pressed;
+
+  switch(keycode) {
+  case MODS_L:
+    if(!mods_l_active && key_pressed) {
+      mods_l_active = true;
+    }
+    break;
+  case MODS_R:
+    mods_r_active = key_pressed;
+    break;
+  case KC_LALT:
+    mod_lalt = key_pressed;
+    break;
+  case KC_RALT:
+    mod_ralt = key_pressed;
+    break;
+  case KC_LSFT:
+    mod_lsft = key_pressed;
+    break;
+  case KC_RSFT:
+    mod_rsft = key_pressed;
+    break;
+  case KC_LCTL:
+    mod_lctl = key_pressed;
+    break;
+  case KC_RCTL:
+    mod_rctl = key_pressed;
+    break;
+  case KC_LGUI:
+    mod_lgui = key_pressed;
+    break;
+  case KC_RGUI:
+    mod_rgui = key_pressed;
+    break;
+  }
+
+  if(!mods_l_active && !mod_lalt && !mod_lsft && !mod_lctl && !mod_lgui && !mod_ralt) {
+    layer_off(MODL);
+  }
+  if(!mods_r_active && !mod_lalt && !mod_rsft && !mod_rctl && !mod_rgui && !mod_ralt) {
+    layer_off(MODR);
+  }
+
+
+  if (keycode == MODS_L) {
+    if (record->event.pressed) {  // On pressed.
+      tap_deadline = timer_read32() + 200;  // Set 200 ms tap deadline.
+      layer_on(LTOSL_MO_LAYER);
+      ltosl_state = 1;  // Set undetermined state.
+    } else {  // On release.
+      layer_off(LTOSL_MO_LAYER);
+      if (ltosl_state && !timer_expired32(timer_read32(), tap_deadline)) {
+        // LTOSL was released without pressing another key within 200 ms.
+        layer_on(LTOSL_OSL_LAYER);
+        ltosl_state = 2;  // Acting like OSL.
+      }
+    }
+  }
+
+  // Other macros...
+  return true;
+}
+
+void post_process_record_user(uint16_t keycode, keyrecord_t* record) {
+  // Turn off the layer if another key is pressed while acting like OSL. The
+  // `(ltosl_state >>= 1)` both tests that state = 2 and shifts it toward zero.
+  if (keycode != LTOSL && (ltosl_state >>= 1)) {
+    layer_off(LTOSL_OSL_LAYER);
+  }
+}
