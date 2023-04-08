@@ -93,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA1] = LAYOUT_split_10(
                                             KC_X           , KC_M           , KC_B           , CH_UDIA        , CH_ODIA        , CH_ADIA        ,   
 
-                            _______       , KC_L           , KC_F           , KC_G           , KC_C           , CH_QUOT        , CH_MINS        , _______         , 
+                            _______       , KC_L           , KC_F           , KC_G           , KC_C           , OSM(MOD_LALT)  , CH_MINS        , _______         , 
            
                                             _______        , MO(ALA3)       , _______        , _______        , _______        , _______
                            ),
