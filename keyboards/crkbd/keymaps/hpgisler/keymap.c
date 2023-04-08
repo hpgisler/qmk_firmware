@@ -79,6 +79,8 @@ enum layers {
     { KC_NO, KC_NO, KC_NO, R33, R32, R31 }  \
   }
 
+// REPEAT
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
                                             KC_R           , KC_H           , KC_D           , KC_U           , KC_O           , KC_A,
@@ -107,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA3] = LAYOUT_split_10(
                                             KC_1           , KC_2           , KC_3           , KC_4           , KC_5           , KC_6           ,
 
-                            _______       , KC_7           , KC_8           , KC_9           , KC_0           , CH_ASTR        , REPEAT         , _______        ,
+                            _______       , KC_7           , KC_8           , KC_9           , KC_0           , CH_ASTR        , CH_QUOT        , _______        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
