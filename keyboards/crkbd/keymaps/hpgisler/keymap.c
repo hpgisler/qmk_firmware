@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
                                             KC_R           , KC_H           , KC_D           , KC_U           , KC_O           , KC_A,
 
-                            MO(MODL)      , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , MO(MODR)        ,
+                  OSM(MOD_MASK_CTRL)      , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , OSM(MOD_MASK_SHIFT)        ,
 
                                             XXXXXXX        , OSL(ALA2)      , OSL(NAS0)      , OSL(FUN0)      , OSL(ALA1)      , XXXXXXX
                            ),
@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA1] = LAYOUT_split_10(
                                             KC_X           , KC_M           , KC_B           , CH_UDIA        , CH_ODIA        , CH_ADIA        ,   
 
-                            _______       , KC_L           , KC_F           , KC_G           , KC_C           , CH_COMM        , CH_DOT         , _______         , 
+                            _______       , KC_L           , KC_F           , KC_G           , KC_C           , CH_QUOT        , CH_MINS        , _______         , 
            
                                             _______        , MO(ALA3)       , _______        , _______        , _______        , _______
                            ),
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA2] = LAYOUT_split_10(
                                             KC_J           , KC_K           , KC_V           , KC_Q           , CH_QUES        , CH_SLSH        ,               
 
-                            _______       , KC_W           , CH_Z           , KC_P           , CH_Y           , CH_QUOT        , CH_MINS        , _______         ,
+                            _______       , KC_W           , CH_Z           , KC_P           , CH_Y           , CH_COMM        , CH_DOT         , _______         ,
 
                                             _______        , _______        , _______        , _______        , MO(ALA3)       , _______                        
                            ),
