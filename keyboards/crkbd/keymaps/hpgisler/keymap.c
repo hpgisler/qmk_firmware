@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
                                             KC_R           , KC_H           , KC_D           , KC_U           , KC_O           , KC_A,
 
-                KC_CAPS /*OSM(MOD_LCTL)*/ , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , OSM(MOD_RSFT)   ,
+                            OSM(MOD_RSFT) , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , KC_CAPS /*OSM(MOD_LCTL)*/ ,
 
                                             XXXXXXX        , OSL(ALA2)      , OSL(NAS0)      , OSL(FUN0)      , OSL(ALA1)      , XXXXXXX
                            ),
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                             _______       , KC_L           , KC_F           , KC_G           , KC_C           , OSM(MOD_LALT)  , CH_MINS        , _______         , 
            
-                                            _______        , MO(ALA3)       , _______        , _______        , _______        , _______
+                                            _______        , MO(ALA3)       , MO(NAS1)       , _______        , _______        , _______
                            ),
     
     [ALA2] = LAYOUT_split_10(
@@ -103,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                             _______       , KC_W           , CH_Z           , KC_P           , CH_Y           , CH_COMM        , CH_DOT         , _______         ,
 
-                                            _______        , _______        , _______        , _______        , MO(ALA3)       , _______                        
+                                            _______        , _______        , _______        , MO(FUN1)       , MO(ALA3)       , _______                        
                            ),
     
     [ALA3] = LAYOUT_split_10(
@@ -118,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NAS0] = LAYOUT_split_10(
                                             CH_CIRC        , CH_AMPR       , KC_TAB          , KC_BSPC        , KC_LEFT        , KC_RIGHT       ,
 
-                            _______       , KC_ESC         , CH_DLR        , CH_TILD         , KC_DOWN        , KC_UP          , KC_ENT         , _______        , 
+                            _______       , KC_LCTL        , CH_DLR        , CH_TILD         , KC_DOWN        , KC_UP          , KC_ENT         , _______        , 
 
                                             _______        , _______       , _______         , _______        , MO(NAS1)       , _______
                            ),
@@ -215,7 +215,7 @@ const key_override_t ko_23 = ko_make_basic(MOD_MASK_SHIFT, CH_DLR  , CH_EURO   )
 const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, CH_TILD , KC_SCRL   ); // ~ : scroll lock     
 // const key_override_t ko_25 = ko_make_basic(MOD_MASK_SHIFT, KC_DOWN , );           // : sft
 // const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, KC_UP   , );           // : sft
-// const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, KC_UP   , );           // : sft
+// const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, KC_ENT  , );           // : sft
 
 // NAS1
 // ----
@@ -227,7 +227,7 @@ const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, CH_TILD , KC_SCRL   )
 // const key_override_t ko_23 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_END  : sft       
 // const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_CCED :           
 const key_override_t ko_25 = ko_make_basic(MOD_MASK_SHIFT, CH_HASH, CH_PIPE); // # : |  
-// const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_SECT :           
+// const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_SECT : CH_DEG          
 // const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGDN : sft       
 // const key_override_t ko_28 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGUP : sft       
 const key_override_t ko_29 = ko_make_basic(MOD_MASK_SHIFT, CH_EQL, CH_GRV); // = : `   
