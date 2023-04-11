@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
                                             KC_R           , KC_H           , KC_D           , KC_U           , KC_O           , KC_A,
 
-                            OSM(MOD_RSFT) , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , KC_CAPS /*OSM(MOD_LCTL)*/ ,
+                            OSM(MOD_LSFT) , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , CTL_T(KC_ESC) /* KC_CAPS */ /*OSM(MOD_LCTL)*/ ,
 
                                             XXXXXXX        , OSL(ALA2)      , OSL(NAS0)      , OSL(FUN0)      , OSL(ALA1)      , XXXXXXX
                            ),
