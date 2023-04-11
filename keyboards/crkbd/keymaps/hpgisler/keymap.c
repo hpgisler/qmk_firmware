@@ -23,8 +23,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 enum keycodes {
     REPEAT = SAFE_RANGE,
-    SFT_DWN,
-    SFT_UP
 };
 
 enum layers {
@@ -147,7 +145,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN1] = LAYOUT_split_10(
                                            ALGR(LSFT(KC_Q)),ALGR(LSFT(KC_C)), KC_LGUI        , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_L)     ,
 
-                            _______       , SFT_DWN        , SFT_UP         , _______        , ALGR(KC_I)     , ALGR(KC_D)     , _______        , _______      ,
+                            _______       , _______        , _______        , KC_CAPS        , ALGR(KC_I)     , ALGR(KC_D)     , _______        , _______      ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -409,17 +407,12 @@ void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
         }
     }
 }
-
+// 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) { // This will do most of the grunt work with the keycodes.
-    case SFT_DWN:
-      if (record->event.pressed) {
-        register_code(KC_LSFT);
-      }
-      break;
-    case SFT_UP:
-      if (record->event.pressed) {
-        unregister_code(KC_LSFT);
+    case KC_ESC:
+      if (record->event.pressed && USB_LED_CAPS_LOCK) {
+        register_code(KC_CAPS);
       }
       break;
   }
