@@ -409,13 +409,16 @@ void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
 }
 // 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) { // This will do most of the grunt work with the keycodes.
-    case KC_ESC:
-      if (record->event.pressed && USB_LED_CAPS_LOCK) {
-        register_code(KC_CAPS);
-      }
-      break;
-  }
   return true;
 }
 
+void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case CTL_T(KC_ESC):
+      // if locked: unlock CAPS after releasing ESC key (want to fallback to known state)
+      if (!record->event.pressed && (host_keyboard_leds() & (1<<USB_LED_CAPS_LOCK))) {
+        tap_code16(KC_CAPS);
+      }
+      break;
+  }
+}
