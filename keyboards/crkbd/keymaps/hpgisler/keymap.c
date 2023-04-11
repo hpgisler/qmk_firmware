@@ -127,7 +127,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
 
     [NAS1] = LAYOUT_split_10(
-                                            CH_EGRV        , CH_AGRV       , CH_EACU         , KC_PSCR        , KC_HOME        , KC_END         ,
+                                            CH_EGRV        , CH_AGRV       , CH_EACU         , KC_DEL         , KC_HOME        , KC_END         ,
 
                             _______       , CH_CCED        , CH_HASH       , CH_SECT         , KC_PGDN        , KC_PGUP        , CH_EQL         , _______        ,
 
@@ -206,10 +206,10 @@ const key_override_t ko_14 = ko_make_basic(MOD_MASK_SHIFT, CH_ASTR, CH_RPRN); //
 
 // NAS0
 // ----
-const key_override_t ko_16 = ko_make_basic(MOD_MASK_SHIFT, CH_CIRC , CH_DEG );    // ^ : °  
+const key_override_t ko_16 = ko_make_basic(MOD_MASK_SHIFT, CH_CIRC , KC_PSCR );    // ^ : print screen  
 const key_override_t ko_17 = ko_make_basic(MOD_MASK_SHIFT, CH_AMPR , CH_PERC);    // & : %
 // const key_override_t ko_18 = ko_make_basic(MOD_MASK_SHIFT, KC_TAB  , );           // : sft
-const key_override_t ko_19 = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC , KC_DEL);     // :
+// const key_override_t ko_19 = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC , );     // : sft
 // const key_override_t ko_20 = ko_make_basic(MOD_MASK_SHIFT, KC_LEFT , );           // : sft
 // const key_override_t ko_21 = ko_make_basic(MOD_MASK_SHIFT, KC_RIGHT, );           // : sft
 const key_override_t ko_22 = ko_make_basic(MOD_MASK_SHIFT, KC_ESC  , LCTL(KC_G)); // esc : emacs escape     
@@ -224,12 +224,12 @@ const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, CH_TILD , KC_SCRL   )
 // const key_override_t ko_28 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EGRV :           
 // const key_override_t ko_29 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_AGRV :           
 // const key_override_t ko_20 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EACU :           
-// const key_override_t ko_21 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PSCR :           
+// const key_override_t ko_21 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_DEL :           
 // const key_override_t ko_22 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_HOME : sft       
 // const key_override_t ko_23 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_END  : sft       
 // const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_CCED :           
 const key_override_t ko_25 = ko_make_basic(MOD_MASK_SHIFT, CH_HASH, CH_PIPE); // # : |  
-// const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_SECT : CH_DEG          
+const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, CH_SECT, CH_DEG); // CH_SECT : CH_DEG          
 // const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGDN : sft       
 // const key_override_t ko_28 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGUP : sft       
 const key_override_t ko_29 = ko_make_basic(MOD_MASK_SHIFT, CH_EQL, CH_GRV); // = : `   
@@ -296,10 +296,10 @@ const key_override_t** key_overrides = (const key_override_t*[]){
 
 // NAS0
 // ----
-   &ko_16 ,// ^ : °  
+   &ko_16 ,// ^ : print screen 
    &ko_17 ,// & : %
 // &ko_18 ,// : sft
-   &ko_19 ,// :
+// &ko_19 ,// :
 // &ko_20 ,// : sft
 // &ko_21 ,// : sft
    &ko_22 ,// esc : emacs escape     
@@ -319,7 +319,7 @@ const key_override_t** key_overrides = (const key_override_t*[]){
 // &ko_23 ,// KC_END  : sft       
 // &ko_24 ,// CH_CCED :           
    &ko_25 ,// # : |  
-// &ko_26 ,// CH_SECT :           
+   &ko_26 ,// CH_SECT : CH_DEG
 // &ko_27 ,// KC_PGDN : sft       
 // &ko_28 ,// KC_PGUP : sft       
    &ko_29 ,// = : `   
