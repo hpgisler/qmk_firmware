@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                             _______       , KC_LCTL        , CH_DLR        , CH_TILD         , KC_DOWN        , KC_UP          , KC_ENT         , _______        , 
 
-                                            _______        , _______       , _______         , _______        , MO(NAS1)       , _______
+                                            _______        , _______       , _______         , XXXXXXX        , MO(NAS1)       , _______
                            ),
     
 
