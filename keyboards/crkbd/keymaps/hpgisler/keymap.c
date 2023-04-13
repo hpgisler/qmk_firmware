@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 enum keycodes {
     REPEAT = SAFE_RANGE,
+    MODS,
 };
 
 enum layers {
@@ -32,6 +33,7 @@ enum layers {
   ALA3,
   NAS0,
   NAS1,
+  NAS2,
   FUN0,
   FUN1,
   FUN2,
@@ -116,18 +118,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
     [NAS0] = LAYOUT_split_10(
-                                            CH_CIRC        , CH_AMPR       , KC_TAB          , KC_BSPC        , KC_LEFT        , KC_RIGHT       ,
+                                            CH_DLR         , CH_AMPR       , CH_TILD         , KC_BSPC        , KC_LEFT        , KC_RIGHT       ,
 
-                            _______       , KC_LCTL        , CH_DLR        , CH_TILD         , KC_DOWN        , KC_UP          , KC_ENT         , _______        , 
+                            _______       , MODS           , XXXXXXX       , KC_TAB          , KC_DOWN        , KC_UP          , KC_ENT         , _______        , 
 
-                                            _______        , _______       , _______         , XXXXXXX        , MO(NAS1)       , _______
+                                            _______        , _______       , _______         , MO(NAS2)       , MO(NAS1)       , _______
                            ),
     
 
     [NAS1] = LAYOUT_split_10(
-                                            CH_EGRV        , CH_AGRV       , CH_EACU         , KC_DEL         , KC_HOME        , KC_END         ,
+                                            XXXXXXX        , XXXXXXX       , CH_PND          , KC_DEL         , KC_HOME        , KC_END         ,
 
-                            _______       , CH_CCED        , CH_HASH       , CH_DEG          , KC_PGDN        , KC_PGUP        , CH_EQL         , _______        ,
+                            _______       , CH_DEG         , CH_HASH       , CH_PIPE         , KC_PGDN        , KC_PGUP        , CH_EQL         , _______        ,
+
+                                            _______        , _______       , _______         , _______        , _______        , _______
+                           ),
+
+
+    [NAS2] = LAYOUT_split_10(
+                                            XXXXXXX        , XXXXXXX       , KC_PSCR         , CH_SECT        , XXXXXXX        , CH_AGRV         ,
+
+                            _______       , XXXXXXX        , XXXXXXX       , KC_SCRL         , CH_CCED        , CH_EACU        , CH_EGRV         , _______        ,
 
                                             _______        , _______       , _______         , _______        , _______        , _______
                            ),
@@ -204,7 +215,7 @@ const key_override_t ko_14 = ko_make_basic(MOD_MASK_SHIFT, CH_ASTR, CH_RPRN); //
 
 // NAS0
 // ----
-const key_override_t ko_16 = ko_make_basic(MOD_MASK_SHIFT, CH_CIRC , KC_PSCR );    // ^ : print screen  
+//const key_override_t ko_16 = ko_make_basic(MOD_MASK_SHIFT, ,  );    // 
 const key_override_t ko_17 = ko_make_basic(MOD_MASK_SHIFT, CH_AMPR , CH_PERC);    // & : %
 // const key_override_t ko_18 = ko_make_basic(MOD_MASK_SHIFT, KC_TAB  , );           // : sft
 // const key_override_t ko_19 = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC , );     // : sft
@@ -212,7 +223,7 @@ const key_override_t ko_17 = ko_make_basic(MOD_MASK_SHIFT, CH_AMPR , CH_PERC);  
 // const key_override_t ko_21 = ko_make_basic(MOD_MASK_SHIFT, KC_RIGHT, );           // : sft
 const key_override_t ko_22 = ko_make_basic(MOD_MASK_SHIFT, KC_ESC  , LCTL(KC_G)); // esc : emacs escape     
 const key_override_t ko_23 = ko_make_basic(MOD_MASK_SHIFT, CH_DLR  , CH_EURO   ); // $ : €  
-const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, CH_TILD , KC_SCRL   ); // ~ : scroll lock     
+const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, CH_TILD , CH_CIRC  ); // ~ : ^ 
 // const key_override_t ko_25 = ko_make_basic(MOD_MASK_SHIFT, KC_DOWN , );           // : sft
 // const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, KC_UP   , );           // : sft
 // const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, KC_ENT  , );           // : sft
@@ -221,16 +232,16 @@ const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, CH_TILD , KC_SCRL   )
 // ----
 // const key_override_t ko_28 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EGRV :           
 // const key_override_t ko_29 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_AGRV :           
-// const key_override_t ko_20 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EACU :           
-// const key_override_t ko_21 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_DEL :           
-// const key_override_t ko_22 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_HOME : sft       
-// const key_override_t ko_23 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_END  : sft       
-// const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_CCED :           
-const key_override_t ko_25 = ko_make_basic(MOD_MASK_SHIFT, CH_HASH, CH_PIPE); // # : |  
-const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, CH_DEG, CH_SECT); // CH_DEG : CH_SECT 
-// const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGDN : sft       
-// const key_override_t ko_28 = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGUP : sft       
-const key_override_t ko_29 = ko_make_basic(MOD_MASK_SHIFT, CH_EQL, CH_GRV); // = : `   
+// const key_override_t ko_20b = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EACU :           
+// const key_override_t ko_21b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_DEL :           
+// const key_override_t ko_22b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_HOME : sft       
+// const key_override_t ko_23b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_END  : sft       
+// const key_override_t ko_24b = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_CCED :           
+// const key_override_t ko_25b = ko_make_basic(MOD_MASK_SHIFT, , ); // : sft  
+// const key_override_t ko_26b = ko_make_basic(MOD_MASK_SHIFT, , ); // : sft
+// const key_override_t ko_27b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGDN : sft       
+// const key_override_t ko_28b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGUP : sft       
+const key_override_t ko_29b = ko_make_basic(MOD_MASK_SHIFT, CH_EQL, CH_GRV); // = : `   
 
 
 // FUN0
@@ -294,7 +305,7 @@ const key_override_t** key_overrides = (const key_override_t*[]){
 
 // NAS0
 // ----
-   &ko_16 ,// ^ : print screen 
+// &ko_16 ,// : sft
    &ko_17 ,// & : %
 // &ko_18 ,// : sft
 // &ko_19 ,// :
@@ -311,16 +322,16 @@ const key_override_t** key_overrides = (const key_override_t*[]){
 // ----
 // &ko_28 ,// CH_EGRV :           
 // &ko_29 ,// CH_AGRV :           
-// &ko_20 ,// CH_EACU :           
-// &ko_21 ,// KC_PSCR :           
-// &ko_22 ,// KC_HOME : sft       
-// &ko_23 ,// KC_END  : sft       
-// &ko_24 ,// CH_CCED :           
-   &ko_25 ,// # : |  
-   &ko_26 ,// CH_DEG : CH_SECT
-// &ko_27 ,// KC_PGDN : sft       
-// &ko_28 ,// KC_PGUP : sft       
-   &ko_29 ,// = : `   
+// &ko_20b ,// CH_EACU :           
+// &ko_21b ,// KC_PSCR :           
+// &ko_22b ,// KC_HOME : sft       
+// &ko_23b ,// KC_END  : sft       
+// &ko_24b ,// CH_CCED :           
+// &ko_25b ,// : sft  
+// &ko_26b ,// : sft
+// &ko_27b ,// KC_PGDN : sft       
+// &ko_28b ,// KC_PGUP : sft       
+   &ko_29b ,// = : `   
 
 
 // FUN0
