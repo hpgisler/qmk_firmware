@@ -31,6 +31,7 @@ enum layers {
   ALA1,
   ALA2,
   ALA3,
+  ALA4,
   NAS0,
   NAS1,
   NAS2,
@@ -105,10 +106,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                             _______       , KC_W           , CH_Z           , KC_P           , CH_Y           , CH_COMM        , CH_DOT         , _______         ,
 
-                                            _______        , _______        , _______        , MO(FUN1)       , MO(ALA3)       , _______                        
+                                            _______        , _______        , _______        , MO(FUN1)       , MO(ALA4)       , _______                        
                            ),
     
     [ALA3] = LAYOUT_split_10(
+                                            CH_PLUS        , CH_LABK        , CH_RABK        , CH_LCBR        , CH_RCBR        , XXXXXXX        ,
+
+                            _______       , CH_AT          , CH_LBRC        , CH_RBRC        , CH_LPRN        , CH_RPRN        , CH_DQUO        , _______        ,
+
+                                            _______        , _______        , _______        , _______        , _______        , _______
+                           ),
+
+    [ALA4] = LAYOUT_split_10(
                                             KC_1           , KC_2           , KC_3           , KC_4           , KC_5           , KC_6           ,
 
                             _______       , KC_7           , KC_8           , KC_9           , KC_0           , CH_ASTR        , CH_QUOT        , _______        ,
