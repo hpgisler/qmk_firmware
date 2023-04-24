@@ -183,7 +183,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MODL] = LAYOUT_split_10(
                                             KC_RALT        , _______       , KC_LGUI         , _______        , _______        , _______        ,
 
-                            _______       , KC_LALT        , KC_LSFT       , KC_LCTL         , _______        , _______        , _______        , _______        ,
+                            _______       , KC_LALT        , KC_LSFT       , KC_LCTL         , _______        , _______        , _______        , TG(MODL)       ,
 
                                             _______        , _______       , _______         , _______        , _______        , _______
                             ),
@@ -192,7 +192,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MODR] = LAYOUT_split_10(
                                             _______        , _______       , _______         , KC_RGUI        , _______        , KC_RALT        ,
 
-                            _______       , _______        , _______       , _______         , KC_RCTL        , KC_RSFT        , KC_LALT        , _______        ,
+                            _______       , _______        , _______       , _______         , KC_RCTL        , KC_RSFT        , KC_LALT        , TG(MODR)       ,
 
                                             _______        , _______       , _______         , _______        , _______        , _______
                             )
@@ -344,6 +344,19 @@ void process_repeat_key(uint16_t keycode, const keyrecord_t *record) {
 }
 // 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  const uint8_t shifted = get_mods() & MOD_MASK_SHIFT;
+  switch (keycode) {
+  case MODS:
+    if (record->event.pressed ) {
+      if(shifted){
+        layer_on(MODR);
+      }
+      else{
+        layer_on(MODL);
+      }
+    }
+    break;
+  }
   return true;
 }
 
