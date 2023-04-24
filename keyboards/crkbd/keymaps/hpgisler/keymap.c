@@ -355,7 +355,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         layer_on(MODL);
       }
     }
-    break;
+    return false;
   }
   return true;
 }
