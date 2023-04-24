@@ -127,16 +127,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
     [NAS0] = LAYOUT_split_10(
-                                            CH_DLR         , CH_AMPR       , CH_TILD         , KC_BSPC        , KC_LEFT        , KC_RIGHT       ,
+                                            CH_PERC        , CH_AMPR       , CH_CIRC         , KC_BSPC        , KC_LEFT        , KC_RIGHT       ,
 
-                            _______       , MODS           , XXXXXXX       , KC_TAB          , KC_DOWN        , KC_UP          , KC_ENT         , _______        , 
+                            _______       , MODS           , CH_TILD       , KC_TAB          , KC_DOWN        , KC_UP          , KC_ENT         , _______        , 
 
                                             _______        , _______       , _______         , MO(NAS2)       , MO(NAS1)       , _______
                            ),
     
 
     [NAS1] = LAYOUT_split_10(
-                                            XXXXXXX        , XXXXXXX       , CH_PND          , KC_DEL         , KC_HOME        , KC_END         ,
+                                            CH_EURO        , CH_DLR        , CH_PND          , KC_DEL         , KC_HOME        , KC_END         ,
 
                             _______       , CH_DEG         , CH_HASH       , CH_PIPE         , KC_PGDN        , KC_PGUP        , CH_EQL         , _______        ,
 
@@ -198,184 +198,99 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             )
 };
                                
+// SHIFT overrides
+// ===============
+
+// ALA0
+// ----
+
+// ALA1
+// ----
+const key_override_t ko_ala1_0  = ko_make_basic(MOD_MASK_SHIFT, CH_MINS, CH_UNDS); // - : _
 
 // ALA2
 // ----
-const key_override_t ko_0  = ko_make_basic(MOD_MASK_SHIFT, CH_QUES, CH_EXLM); // ? : !
-const key_override_t ko_1  = ko_make_basic(MOD_MASK_SHIFT, CH_SLSH, CH_BSLS); // / : \ .
-const key_override_t ko_2  = ko_make_basic(MOD_MASK_SHIFT, CH_QUOT, CH_DQUO); // ' : "
-const key_override_t ko_3  = ko_make_basic(MOD_MASK_SHIFT, CH_MINS, CH_UNDS); // - : _
+const key_override_t ko_ala2_0  = ko_make_basic(MOD_MASK_SHIFT, CH_QUES, CH_EXLM); // ? : !
+const key_override_t ko_ala2_1  = ko_make_basic(MOD_MASK_SHIFT, CH_SLSH, CH_BSLS); // / : \ .
+const key_override_t ko_ala2_2  = ko_make_basic(MOD_MASK_SHIFT, CH_COMM, CH_SCLN); // , : ;
+const key_override_t ko_ala2_3  = ko_make_basic(MOD_MASK_SHIFT, CH_DOT , CH_COLN); // . : :
 
 // ALA3
 // ----
-const key_override_t ko_4  = ko_make_basic(MOD_MASK_SHIFT, KC_1   , CH_PLUS); // 1 : +    
-const key_override_t ko_5  = ko_make_basic(MOD_MASK_SHIFT, KC_2   , CH_LABK); // 2 : <    
-const key_override_t ko_6  = ko_make_basic(MOD_MASK_SHIFT, KC_3   , CH_RABK); // 3 : >    
-const key_override_t ko_7  = ko_make_basic(MOD_MASK_SHIFT, KC_4   , CH_LCBR); // 4 : {    
-const key_override_t ko_8  = ko_make_basic(MOD_MASK_SHIFT, KC_5   , CH_RCBR); // 5 : }    
-// const key_override_t ko_9  = ko_make_basic(MOD_MASK_SHIFT, KC_6   , );     // 6 :
-const key_override_t ko_10 = ko_make_basic(MOD_MASK_SHIFT, KC_7   , CH_AT  ); // 7 : @    
-const key_override_t ko_11 = ko_make_basic(MOD_MASK_SHIFT, KC_8   , CH_LBRC); // 8 : [    
-const key_override_t ko_12 = ko_make_basic(MOD_MASK_SHIFT, KC_9   , CH_RBRC); // 9 : ]    
-const key_override_t ko_13 = ko_make_basic(MOD_MASK_SHIFT, KC_0   , CH_LPRN); // 0 : (    
-const key_override_t ko_14 = ko_make_basic(MOD_MASK_SHIFT, CH_ASTR, CH_RPRN); // * : )    
-// const key_override_t ko_15 = ko_make_basic(MOD_MASK_SHIFT, REPEAT , );     // REPEAT :
+
+// ALA4
+// ----
 
 
 // NAS0
 // ----
-//const key_override_t ko_16 = ko_make_basic(MOD_MASK_SHIFT, ,  );    // 
-const key_override_t ko_17 = ko_make_basic(MOD_MASK_SHIFT, CH_AMPR , CH_PERC);    // & : %
-// const key_override_t ko_18 = ko_make_basic(MOD_MASK_SHIFT, KC_TAB  , );           // : sft
-// const key_override_t ko_19 = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC , );     // : sft
-// const key_override_t ko_20 = ko_make_basic(MOD_MASK_SHIFT, KC_LEFT , );           // : sft
-// const key_override_t ko_21 = ko_make_basic(MOD_MASK_SHIFT, KC_RIGHT, );           // : sft
-const key_override_t ko_22 = ko_make_basic(MOD_MASK_SHIFT, KC_ESC  , LCTL(KC_G)); // esc : emacs escape     
-const key_override_t ko_23 = ko_make_basic(MOD_MASK_SHIFT, CH_DLR  , CH_EURO   ); // $ : €  
-const key_override_t ko_24 = ko_make_basic(MOD_MASK_SHIFT, CH_TILD , CH_CIRC  ); // ~ : ^ 
-// const key_override_t ko_25 = ko_make_basic(MOD_MASK_SHIFT, KC_DOWN , );           // : sft
-// const key_override_t ko_26 = ko_make_basic(MOD_MASK_SHIFT, KC_UP   , );           // : sft
-// const key_override_t ko_27 = ko_make_basic(MOD_MASK_SHIFT, KC_ENT  , );           // : sft
 
 // NAS1
 // ----
-// const key_override_t ko_28 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EGRV :           
-// const key_override_t ko_29 = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_AGRV :           
-// const key_override_t ko_20b = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_EACU :           
-// const key_override_t ko_21b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_DEL :           
-// const key_override_t ko_22b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_HOME : sft       
-// const key_override_t ko_23b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_END  : sft       
-// const key_override_t ko_24b = ko_make_basic(MOD_MASK_SHIFT, , ); // CH_CCED :           
-// const key_override_t ko_25b = ko_make_basic(MOD_MASK_SHIFT, , ); // : sft  
-// const key_override_t ko_26b = ko_make_basic(MOD_MASK_SHIFT, , ); // : sft
-// const key_override_t ko_27b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGDN : sft       
-// const key_override_t ko_28b = ko_make_basic(MOD_MASK_SHIFT, , ); // KC_PGUP : sft       
-const key_override_t ko_29b = ko_make_basic(MOD_MASK_SHIFT, CH_EQL, CH_GRV); // = : `   
+
+// NAS2
+// ----
 
 
 // FUN0
 // ----
-// const key_override_t ko_30 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F1,)); // dwm F1 : sft dwm move to 
-// const key_override_t ko_31 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F2,)); // dwm F2 : sft dwm move to
-// const key_override_t ko_32 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F3,)); // dwm F3 : sft dwm move to
-// const key_override_t ko_33 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F4,)); // dwm F4 : sft dwm move to
-// const key_override_t ko_34 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F5,)); // dwm F5 : sft dwm move to
-// const key_override_t ko_35 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F6,)); // dwm F6 : sft dwm move to
-// const key_override_t ko_36 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F7,)); // dwm F7 : sft dwm move to
-// const key_override_t ko_37 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F8,)); // dwm F8 : sft dwm move to
-// const key_override_t ko_38 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_F9,)); // dwm F9 : sft dwm move to
-const key_override_t ko_39 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_J ), ALGR(KC_M)  ); // dwm next : dwm monocle 
-const key_override_t ko_40 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_K ), ALGR(KC_T)  ); // dwm prev : dwm tiled 
-const key_override_t ko_41 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_P ), ALGR(KC_ENT)); // dwm new : dwm flip 
+const key_override_t ko_fun0_0 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_J ), ALGR(KC_M)  ); // dwm next : dwm monocle 
+const key_override_t ko_fun0_1 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_K ), ALGR(KC_T)  ); // dwm prev : dwm tiled 
+const key_override_t ko_fun0_2 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_P ), ALGR(KC_ENT)); // dwm new : dwm flip 
 
 // FUN1
 // ----
-// KC_F1  : sft
-// ..
-// KC_F12 : sft
-// const key_override_t ko_42 = ko_make_basic(MOD_MASK_SHIFT, KC_F1 , ); // F1 : sft 
-// const key_override_t ko_43 = ko_make_basic(MOD_MASK_SHIFT, KC_F2 , ); // F2 : sft 
-// const key_override_t ko_44 = ko_make_basic(MOD_MASK_SHIFT, KC_F3 , ); // F3 : sft 
-// const key_override_t ko_45 = ko_make_basic(MOD_MASK_SHIFT, KC_F4 , ); // F4 : sft 
-// const key_override_t ko_46 = ko_make_basic(MOD_MASK_SHIFT, KC_F5 , ); // F5 : sft 
-// const key_override_t ko_47 = ko_make_basic(MOD_MASK_SHIFT, KC_F6 , ); // F6 : sft 
-// const key_override_t ko_48 = ko_make_basic(MOD_MASK_SHIFT, KC_F7 , ); // F7 : sft 
-// const key_override_t ko_49 = ko_make_basic(MOD_MASK_SHIFT, KC_F8 , ); // F8 : sft 
-// const key_override_t ko_50 = ko_make_basic(MOD_MASK_SHIFT, KC_F9 , ); // F9 : sft 
-// const key_override_t ko_51 = ko_make_basic(MOD_MASK_SHIFT, KC_F10, ); // F10 : sft 
-// const key_override_t ko_52 = ko_make_basic(MOD_MASK_SHIFT, KC_F11, ); // F11 : sft 
-// const key_override_t ko_53 = ko_make_basic(MOD_MASK_SHIFT, KC_F12, ); // F12 : sft 
+
+// FUN2
+// ----
 
 
 const key_override_t** key_overrides = (const key_override_t*[]){
 
-// ALA2
-// ----
-   &ko_0  ,// ? : !
-   &ko_1  ,// / : \ .
-   &ko_2  ,// ' : "
-   &ko_3  ,// - : _
+   // ALA0
+   // ----
 
-// ALA3
-// ----
-   &ko_4  ,// 1 : +    
-   &ko_5  ,// 2 : <    
-   &ko_6  ,// 3 : >    
-   &ko_7  ,// 4 : {    
-   &ko_8  ,// 5 : }    
-// &ko_9  ,// 6 :
-   &ko_10 ,// 7 : @    
-   &ko_11 ,// 8 : [    
-   &ko_12 ,// 9 : ]    
-   &ko_13 ,// 0 : (    
-   &ko_14 ,// * : )    
-// &ko_15 ,// REPEAT :
+   // ALA1
+   // ----
+   &ko_ala1_0 ,// - : _
 
+   // ALA2
+   // ----
+   &ko_ala2_0  ,// ? : !
+   &ko_ala2_1  ,// / : \ .
+   &ko_ala2_2  ,// , : ;
+   &ko_ala2_3  ,// . : :
 
-// NAS0
-// ----
-// &ko_16 ,// : sft
-   &ko_17 ,// & : %
-// &ko_18 ,// : sft
-// &ko_19 ,// :
-// &ko_20 ,// : sft
-// &ko_21 ,// : sft
-   &ko_22 ,// esc : emacs escape     
-   &ko_23 ,// $ : €  
-   &ko_24 ,// ~ : scroll lock     
-// &ko_25 ,// : sft
-// &ko_26 ,// : sft
-// &ko_27 ,// : sft
+   // ALA3
+   // ----
+ 
+   // ALA4
+   // ----
+ 
+    
+   // NAS0
+   // ----
+ 
+   // NAS1
+   // ----
 
-// NAS1
-// ----
-// &ko_28 ,// CH_EGRV :           
-// &ko_29 ,// CH_AGRV :           
-// &ko_20b ,// CH_EACU :           
-// &ko_21b ,// KC_PSCR :           
-// &ko_22b ,// KC_HOME : sft       
-// &ko_23b ,// KC_END  : sft       
-// &ko_24b ,// CH_CCED :           
-// &ko_25b ,// : sft  
-// &ko_26b ,// : sft
-// &ko_27b ,// KC_PGDN : sft       
-// &ko_28b ,// KC_PGUP : sft       
-   &ko_29b ,// = : `   
+   // NAS2
+   // ----
 
 
-// FUN0
-// ----
-// &ko_30 ,// dwm F1 : sft dwm move to 
-// &ko_31 ,// dwm F2 : sft dwm move to
-// &ko_32 ,// dwm F3 : sft dwm move to
-// &ko_33 ,// dwm F4 : sft dwm move to
-// &ko_34 ,// dwm F5 : sft dwm move to
-// &ko_35 ,// dwm F6 : sft dwm move to
-// &ko_36 ,// dwm F7 : sft dwm move to
-// &ko_37 ,// dwm F8 : sft dwm move to
-// &ko_38 ,// dwm F9 : sft dwm move to
-   &ko_39 ,// dwm next : dwm monocle 
-   &ko_40 ,// dwm prev : dwm tiled 
-   &ko_41 ,// dwm new : dwm flip 
+   // FUN0
+   // ----
+   &ko_fun0_0 ,// dwm next : dwm monocle 
+   &ko_fun0_1 ,// dwm prev : dwm tiled 
+   &ko_fun0_2 ,// dwm new : dwm flip 
 
-// FUN1
-// ----
-// KC_F1  : sft
-// ..
-// KC_F12 : sft
-// &ko_42 ,// F1 : sft 
-// &ko_43 ,// F2 : sft 
-// &ko_44 ,// F3 : sft 
-// &ko_45 ,// F4 : sft 
-// &ko_46 ,// F5 : sft 
-// &ko_47 ,// F6 : sft 
-// &ko_48 ,// F7 : sft 
-// &ko_49 ,// F8 : sft 
-// &ko_50 ,// F9 : sft 
-// &ko_51 ,// F10 : sft 
-// &ko_52 ,// F11 : sft 
-// &ko_53 ,// F12 : sft 
-    NULL
+   // FUN1
+   // ----
+
+   // FUN2
+   // ----
+
+   NULL
 };
 
 // Used to extract the basic tapping keycode from a dual-role key.
