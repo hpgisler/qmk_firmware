@@ -86,17 +86,17 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
-                                            KC_R           , KC_H           , KC_D           , KC_U           , KC_O           , KC_A,
+                                            KC_L           , KC_N           , KC_D           , KC_U           , KC_O           , KC_A,
 
-                            OSM(MOD_LSFT) , KC_N           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , CTL_T(KC_ESC) /* KC_CAPS */ /*OSM(MOD_LCTL)*/ ,
+                            OSM(MOD_LSFT) , KC_R           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , CTL_T(KC_ESC) /* KC_CAPS */ /*OSM(MOD_LCTL)*/ ,
 
                                             XXXXXXX        , OSL(ALA2)      , OSL(NAS0)      , OSL(FUN0)      , OSL(ALA1)      , XXXXXXX
                            ),
 
     [ALA1] = LAYOUT_split_10(
-                                            KC_X           , KC_M           , KC_B           , CH_UDIA        , CH_ODIA        , CH_ADIA        ,   
+                                            KC_X           , KC_F           , KC_B           , CH_UDIA        , CH_ODIA        , CH_ADIA        ,   
 
-                            _______       , KC_L           , KC_F           , KC_G           , KC_C           , OSM(MOD_LALT)  , CH_MINS        , _______         , 
+                            _______       , KC_H           , KC_M           , KC_G           , KC_C           , OSM(MOD_LALT)  , CH_MINS        , _______         , 
            
                                             _______        , MO(ALA3)       , MO(NAS1)       , _______        , _______        , _______
                            ),
@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA2] = LAYOUT_split_10(
                                             KC_J           , KC_K           , KC_V           , KC_Q           , CH_QUES        , CH_SLSH        ,               
 
-                            _______       , KC_W           , CH_Z           , KC_P           , CH_Y           , CH_COMM        , CH_DOT         , _______         ,
+                            _______       , KC_Z           , CH_W           , KC_P           , CH_Y           , CH_COMM        , CH_DOT         , _______         ,
 
                                             _______        , _______        , _______        , MO(FUN1)       , MO(ALA4)       , _______                        
                            ),
