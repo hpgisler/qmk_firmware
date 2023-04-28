@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA2] = LAYOUT_split_10(
                                             KC_J           , KC_K           , KC_V           , KC_Q           , CH_QUES        , CH_SLSH        ,               
 
-                            _______       , KC_Z           , CH_W           , KC_P           , CH_Y           , CH_COMM        , CH_DOT         , _______         ,
+                            _______       , CH_Z           , CH_W           , KC_P           , CH_Y           , CH_COMM        , CH_DOT         , _______         ,
 
                                             _______        , _______        , _______        , MO(FUN1)       , MO(ALA4)       , _______                        
                            ),
