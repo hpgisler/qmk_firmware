@@ -86,26 +86,26 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
-                                            KC_L           , KC_N           , KC_D           , KC_U           , KC_O           , KC_A,
+                                            KC_N           , KC_S           , KC_D           , CH_MINS        , KC_O           , CH_UDIA ,
 
-                            OSM(MOD_LSFT) , KC_R           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , CTL_T(KC_ESC) /* KC_CAPS */ /*OSM(MOD_LCTL)*/ ,
+                            OSM(MOD_LSFT) , KC_R           , KC_H           , KC_T           , KC_SPC         , KC_E           , KC_I           , CTL_T(KC_ESC) /* KC_CAPS */ /*OSM(MOD_LCTL)*/ ,
 
                                             XXXXXXX        , OSL(ALA2)      , OSL(NAS0)      , OSL(FUN0)      , OSL(ALA1)      , XXXXXXX
                            ),
 
     [ALA1] = LAYOUT_split_10(
-                                            KC_X           , KC_F           , KC_B           , CH_UDIA        , CH_ODIA        , CH_ADIA        ,   
+                                            KC_J           , KC_K           , KC_V           , CH_SLSH        , KC_Q           , CH_ODIA        ,               
 
-                            _______       , KC_H           , KC_M           , KC_G           , KC_C           , OSM(MOD_LALT)  , CH_MINS        , _______         , 
-           
+                            _______       , CH_W           , CH_Z           , KC_P           , KC_C           , CH_COMM        , CH_Y           , _______         ,
+
                                             _______        , MO(ALA3)       , MO(NAS1)       , _______        , _______        , _______
                            ),
     
     [ALA2] = LAYOUT_split_10(
-                                            KC_J           , KC_K           , KC_V           , KC_Q           , CH_QUES        , CH_SLSH        ,               
+                                            KC_X           , KC_M           , KC_B           , OSM(MOD_LALT)  , CH_QUES        , CH_ADIA        ,   
 
-                            _______       , CH_Z           , CH_W           , KC_P           , CH_Y           , CH_COMM        , CH_DOT         , _______         ,
-
+                            _______       , KC_L           , KC_F           , KC_G           , KC_U           , CH_DOT         , KC_A           , _______         , 
+           
                                             _______        , _______        , _______        , MO(FUN1)       , MO(ALA4)       , _______                        
                            ),
     
