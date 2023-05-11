@@ -183,7 +183,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MODL] = LAYOUT_split_10(
                                             KC_RALT        , _______       , KC_LGUI         , _______        , _______        , _______        ,
 
-                            _______       , KC_LALT        , KC_LSFT       , KC_LCTL         , _______        , _______        , _______        , TG(MODL)       ,
+                            TG(MODL)      , KC_LALT        , KC_LSFT       , KC_LCTL         , _______        , _______        , _______        , _______        ,
 
                                             _______        , _______       , _______         , _______        , _______        , _______
                             ),
