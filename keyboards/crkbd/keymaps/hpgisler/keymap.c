@@ -86,7 +86,7 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA0] = LAYOUT_split_10(
-                                            KC_N           , KC_H           , KC_D           , CH_MINS        , KC_O           , CH_UDIA ,
+                                            KC_N           , KC_H           , KC_D           , KC_U           , KC_O           , KC_A ,
 
                             OSM(MOD_LSFT) , KC_R           , KC_S           , KC_T           , KC_SPC         , KC_E           , KC_I           , CTL_T(KC_ESC) /* KC_CAPS */ /*OSM(MOD_LCTL)*/ ,
 
@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA2] = LAYOUT_split_10(
                                             KC_X           , KC_M           , KC_B           , OSM(MOD_LALT)  , CH_QUES        , CH_ADIA        ,   
 
-                            _______       , KC_L           , KC_F           , KC_G           , KC_U           , CH_DOT         , KC_A           , _______         , 
+                            _______       , KC_L           , KC_F           , KC_G           , CH_MINS        , CH_DOT         , CH_UDIA           , _______         , 
            
                                             _______        , _______        , _______        , MO(FUN1)       , MO(ALA4)       , _______                        
                            ),
@@ -154,27 +154,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
     [FUN0] = LAYOUT_split_10(
-                                            ALGR(KC_F1)    , ALGR(KC_F2)   , ALGR(KC_F3)     , ALGR(KC_F4)    , ALGR(KC_F5)    , ALGR(KC_F6)    ,
+                                            ALGR(KC_F4)    , ALGR(KC_F5)   , ALGR(KC_F6)     , ALGR(KC_F7)    , ALGR(KC_F8)   , ALGR(KC_F9)     , 
 
-                            _______       , ALGR(KC_F7)    , ALGR(KC_F8)   , ALGR(KC_F9)     , ALGR(KC_J )    , ALGR(KC_K )    , ALGR(KC_P )    , _______        ,
+                            _______       , ALGR(KC_F1)    , ALGR(KC_F2)   , ALGR(KC_F3)     , ALGR(KC_J )    , ALGR(KC_K )   , ALGR(KC_P )     , _______        ,
 
-                                            _______        , MO(FUN1)      , MO(FUN2)        , _______        , _______        , _______
+                                            _______        , MO(FUN1)      , MO(FUN2)        , _______        , _______       , _______
                            ),
 
 
     [FUN1] = LAYOUT_split_10(
                                            ALGR(LSFT(KC_Q)),ALGR(LSFT(KC_C)), KC_LGUI        , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_L)     ,
 
-                            _______       , _______        , _______        , KC_CAPS        , ALGR(KC_I)     , ALGR(KC_D)     , _______        , _______      ,
+                            _______       , _______        , _______       , KC_CAPS         , ALGR(KC_I)     , ALGR(KC_D)     , _______        , _______      ,
 
-                                            _______        , _______        , _______        , _______        , _______        , _______
+                                            _______        , _______       , _______         , _______        , _______        , _______
                            ),
 
     
     [FUN2] = LAYOUT_split_10(
-                                            KC_F1          , KC_F2         , KC_F3           , KC_F4          , KC_F5          , KC_F6          ,
+                                            KC_F4          , KC_F5         , KC_F6           , KC_F7          , KC_F8          , KC_F9          , 
 
-                            _______       , KC_F7          , KC_F8         , KC_F9           , KC_F10         , KC_F11         , KC_F12         , _______        ,
+                            _______       , KC_F1          , KC_F2         , KC_F3           , KC_F10         , KC_F11         , KC_F12         , _______        ,
 
                                             _______        , _______       , _______         , _______        , _______        , _______
                            ),
