@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA3] = LAYOUT_split_10(
                                             CH_PLUS        , CH_LABK        , CH_RABK        , CH_LCBR        , CH_RCBR        , XXXXXXX        ,
 
-                            _______       , CH_AT          , CH_LBRC        , CH_RBRC        , CH_LPRN        , CH_RPRN        , CH_DQUO        , _______        ,
+                            _______       , CH_AT          , CH_LBRC        , CH_RBRC        , CH_LPRN        , CH_RPRN        , CH_ASTR        , _______        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [ALA4] = LAYOUT_split_10(
                                             KC_4           , KC_5           , KC_6           , KC_7           , KC_8           , KC_9           , 
 
-                            _______       , KC_1           , KC_2           , KC_3           , KC_0           , CH_ASTR        , CH_QUOT        , _______        ,
+                            _______       , KC_1           , KC_2           , KC_3           , KC_0           , CH_QUOT        , CH_DQUO        , _______        ,
 
                                             _______        , _______        , _______        , _______        , _______        , _______
                            ),
