@@ -165,7 +165,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN1] = LAYOUT_split_10(
                                            ALGR(LSFT(KC_Q)),ALGR(LSFT(KC_C)), KC_LGUI        , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_L)     ,
 
-                            _______       , _______        , _______       , KC_CAPS         , ALGR(KC_I)     , ALGR(KC_D)     , _______        , _______      ,
+                            _______       , _______        , _______       , KC_CAPS         , ALGR(KC_I)     , ALGR(KC_D)     , KC_RCTL        , _______      ,
 
                                             _______        , _______       , _______         , _______        , _______        , _______
                            ),
