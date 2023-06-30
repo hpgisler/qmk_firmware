@@ -220,6 +220,7 @@ const key_override_t ko_ala2_3  = ko_make_basic(MOD_MASK_SHIFT, CH_DOT , CH_COLN
 
 // ALA4
 // ----
+const key_override_t ko_ala4_0  = ko_make_basic(MOD_MASK_SHIFT, KC_7 , KC_BSPC); // 7 : BSPC
 
 
 // NAS0
@@ -266,8 +267,9 @@ const key_override_t** key_overrides = (const key_override_t*[]){
  
    // ALA4
    // ----
- 
-    
+   &ko_ala4_0  ,// 7 : BSPC
+
+
    // NAS0
    // ----
  
