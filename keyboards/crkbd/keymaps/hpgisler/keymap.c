@@ -165,7 +165,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [FUN1] = LAYOUT_split_10(
                                            ALGR(LSFT(KC_Q)),ALGR(LSFT(KC_C)), KC_LGUI        , ALGR(KC_B)     , ALGR(KC_H)     , ALGR(KC_L)     ,
 
-                            _______       , _______        , _______       , KC_CAPS         , ALGR(KC_I)     , ALGR(KC_D)     , KC_RCTL        , _______      ,
+                            _______       , _______        , _______       , KC_CAPS         , ALGR(KC_M)     , ALGR(KC_T)     , KC_ENT         , _______      ,
 
                                             _______        , _______       , _______         , _______        , _______        , _______
                            ),
@@ -235,9 +235,9 @@ const key_override_t ko_ala4_0  = ko_make_basic(MOD_MASK_SHIFT, KC_7 , KC_BSPC);
 
 // FUN0
 // ----
-const key_override_t ko_fun0_0 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_J ), ALGR(KC_M)  ); // dwm next : dwm monocle 
-const key_override_t ko_fun0_1 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_K ), ALGR(KC_T)  ); // dwm prev : dwm tiled 
-const key_override_t ko_fun0_2 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_P ), ALGR(KC_ENT)); // dwm new : dwm flip 
+const key_override_t ko_fun0_0 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_J ), ALGR(KC_I)  ); // dwm next : dwm increase 
+const key_override_t ko_fun0_1 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_K ), ALGR(KC_D)  ); // dwm prev : dwm decrease
+const key_override_t ko_fun0_2 = ko_make_basic(MOD_MASK_SHIFT, ALGR(KC_P ), ALGR(KC_RCTL)); // dwm new : RCTL
 
 // FUN1
 // ----
@@ -282,9 +282,9 @@ const key_override_t** key_overrides = (const key_override_t*[]){
 
    // FUN0
    // ----
-   &ko_fun0_0 ,// dwm next : dwm monocle 
-   &ko_fun0_1 ,// dwm prev : dwm tiled 
-   &ko_fun0_2 ,// dwm new : dwm flip 
+   &ko_fun0_0 ,// dwm next : dwm increase 
+   &ko_fun0_1 ,// dwm prev : dwm decrease
+   &ko_fun0_2 ,// dwm new  : RCTL
 
    // FUN1
    // ----
